@@ -1,0 +1,45 @@
+{
+	"contentSource": "./content/",
+	"buildDestination": "./build/",
+	"domain": "fndn.dk/",
+	"sitename": "Tobacco Playbook",
+	"frontimage": "/lib/front-004.jpg",
+	"keymessage": "The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.",
+	"feedOptions": {
+		"general": {
+			"image_url": "",
+			"managingEditor": "tobaccofree@euro.who.int (WHO Regional Office for Europe)",
+			"copyright": "WHO Regional Office for Europe",
+			"ttl": 60
+		},
+		"en": {
+			"title": "Tobacco playbook of arguments",
+			"description": "The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.",
+			"language": "en",
+			"categories": ["second-hand smoke", "health effects", "smokefree legislation", "exposure", "indoor public places", "enforcement", "tobacco products", "product packaging", "tobacco industry", "warnings", "plain packaging", "smokefree policy", "public places", "hospitality industry", "tobacco marketing", "children", "young people", "tobacco advertising", "promotion", "sponsorship", "Illicit tobacco trade", "tobacco taxation", "tobacco market", "smuggling", "counterfeiting", "tobacco prices", "health intervention", "revenue", "tobacco consumption", "economy", "public health", "Trade law", "trade agreements", "WHO FCTC", "WTO", "case law", "investment law", "sovereign right of states", "commercial rights", "intellectual property"]
+		},
+		"ru": {
+			"title": "RU Tobacco playbook of arguments",
+			"description": "RU this is the description",
+			"language": "ru",
+			"categories": ["ru-health", "ru-who", "ru-tobacco"]
+		}
+	},
+	"strings": {
+		"Share": ["Share", "RU-Share"],
+		"Subscribe": ["Subscribe", "RU-Subscribe"],
+		"Report an Issue": ["Report an Issue", "RU-Report an Issue"],
+		"Read More": ["Read More", "RU-Read More"],
+		"Previous Argument": ["Previous Argument", "RU-Previous accessed on"],
+		"Next Argument": ["Next Argument", "RU-Next accessed on"],
+		"References": ["References", "RU-References"],
+		"References accessed on": ["References accessed on", "RU-References accessed on"],
+		"This is the first commit": ["This is the first commit", "RU-This is the first commit"],
+		"Modified": ["Modified", "RU-Modified"],
+		"Added": ["Added", "RU-Added"],
+	},
+	"mailinglist_en": "",
+	"mailinglist_ru": "",
+	"trackingcode_en": "",
+	"trackingcode_ru": "",
+}

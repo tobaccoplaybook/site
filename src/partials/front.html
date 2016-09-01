@@ -1,0 +1,90 @@
+
+
+<div class="front content">
+
+<div class="teaser">
+	<p>
+		<span>
+	While the tobacco industry and its allies have always opposed tobacco control measures, their strategies have now become more determined, focussed, misleading, aggressive and sophisticated.
+		</span>
+	</p>
+
+	<p><span>
+	Until now there has been no single source explaining how tobacco industry players act and how governments and the public health community can respond to their arguments.
+	</span></p>
+
+	<p><span>
+	The <strong>Tobacco Control Playbook</strong> is a living collection of evidence-based arguments and responses, developed by tobacco control leaders to counteract and succeed against the tobacco industry.
+	</span></p>
+	
+	<p>
+		<a href="introduction.html">Read more...</a>
+	</p>
+</div>
+<style type="text/css">
+	#cover h1 {
+		color: #000;
+		text-shadow: none;
+	}
+	#cover.coverimage {
+		
+		background-image: none;
+		background-color: #fff;
+		
+		/*
+		height: 40rem;
+		background-image: url(/lib/front-003.jpg);
+		*/
+	}
+	time.datetime {
+		display: none;
+	}
+
+	table.toc h3 a {
+		color: #000;
+	}
+	table.toc td {
+		vertical-align: top;
+	}
+	table.toc td.idcell {
+		border-right: 1px solid #ddd;
+	}
+	table {
+		border: none;
+	}
+</style>
+
+
+
+{{#docs}}
+<div class="{{#tags}}tag-{{lcname}} {{/tags}}argument">
+
+	<table class="toc">
+		<tr>
+			<td class="idcell">
+				<span class="pubdate">&nbsp;</span>
+				<h3>{{argumentId}}</h3>
+			</td>
+			<td>
+				<span class="pubdate">{{documentDateDisplay}}</span>
+				<h3><a class="title" href="{{{url}}}">{{title}}</a></h3>
+				
+				<!--<p><span class="author">By: {{author}}</span></p>-->
+				
+				<div class="moztags">
+					<ul>
+					{{#tags}}
+						<li><a class="tag" href="{{{link}}}">{{name}}</a></li>
+					{{/tags}}
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+{{/docs}}
+
+
+</div>
+<!-- end content --> 
+<!-- end template front -->

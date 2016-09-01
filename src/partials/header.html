@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+<head>
+	<meta charset="utf-8"/>
+
+	<title>{{sitename}}: {{title}}</title>
+	<meta property="og:title" content="{{sitename}}: {{title}}" />
+	<meta property="og:description" content="{{keymessage}}" name="description" />
+
+	<meta name="approved_date" content="{{approvedDate}}"/>
+	<meta name="approved_by" content="{{approvedBy}}"/>
+	<meta name="public_date" content="{{publicDate}}"/>
+	<meta name="revision" content="{{revision}}"/>
+	<meta name="author" content="{{author}}"/>
+
+	<meta name="keywords" content="{{feedOptions.en.categories}}" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="../lib/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../lib/article.css">    
+    <link rel="stylesheet" type="text/css" href="../lib/icomoon.css">
+
+    <link href="feed.xml" rel="alternate" type="application/rss+xml" title="Updates" />
+
+	<style type="text/css">
+		/* Prevent coverimage load (as its hidden on handhelds) */
+		.coverimage {
+			background: #fff no-repeat scroll center center/cover;
+			background-image: url({{{coverImageHref}}});
+		}
+	</style>
+</head>
+<body>
+<!-- end header -->
