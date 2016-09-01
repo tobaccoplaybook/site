@@ -1,6 +1,6 @@
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/311/badge)](https://bestpractices.coreinfrastructure.org/projects/311)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d057d3f46f2b4cada7ab7ca9a1a2fe94)](https://www.codacy.com/app/baseio/who-tobaccoplaybook?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tobaccoplaybook/site&amp;utm_campaign=Badge_Grade)/baseio/who-fctc-stories)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d057d3f46f2b4cada7ab7ca9a1a2fe94)](https://www.codacy.com/app/baseio/who-tobaccoplaybook?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tobaccoplaybook/site&amp;utm_campaign=Badge_Grade)
 [![Codacy grade](https://img.shields.io/codacy/grade/d057d3f46f2b4cada7ab7ca9a1a2fe94.svg?maxAge=25)]()
 
 
