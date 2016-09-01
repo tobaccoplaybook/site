@@ -26,17 +26,17 @@
 		}
 	},
 	"strings": {
-		"Share": ["Share", "RU-Share"],
-		"Subscribe": ["Subscribe", "RU-Subscribe"],
-		"Report an Issue": ["Report an Issue", "RU-Report an Issue"],
-		"Read More": ["Read More", "RU-Read More"],
-		"Previous Argument": ["Previous Argument", "RU-Previous accessed on"],
-		"Next Argument": ["Next Argument", "RU-Next accessed on"],
-		"References": ["References", "RU-References"],
-		"References accessed on": ["References accessed on", "RU-References accessed on"],
+		"Share": ["Share", "Поделиться"],
+		"Subscribe": ["Subscribe", "Подписаться"],
+		"Report an Issue": ["Report an Issue", "Сообщить о проблеме"],
+		"Read More": ["Read More", "Дополнительная информация"],
+		"Previous Argument": ["Previous Argument", "Предыдущий аргумент"],
+		"Next Argument": ["Next Argument", "Следующий аргумент"],
+		"References": ["References", "Библиография"],
+		"References accessed on": ["References accessed on", "Источники информации доступны по состоянию на"],
 		"This is the first commit": ["This is the first commit", "RU-This is the first commit"],
-		"Modified": ["Modified", "RU-Modified"],
-		"Added": ["Added", "RU-Added"]
+		"Modified": ["Modified", "Изменен"],
+		"Added": ["Added", "Добавлен"]
 	},
 	"mailinglist_en": "",
 	"mailinglist_ru": "",
