@@ -62,11 +62,11 @@ Examples:
 
 ```
 $ npm install
-$ npm start
+$ node index.js
 ```
 This will install the dependencies and start the dev server, which
 - Rebuilds the site into `build/`
-- Starts a live-reload server (so you can browse the result) at http://127.0.0.1:8989/
+- Starts a live-reload server (so you can browse the result) at [http://127.0.0.1:8181/](http://127.0.0.1:8181/)
 - Starts a file wathcer, that rebuilds when sourcefiles change.
 
 ### Git Setup:

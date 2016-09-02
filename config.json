@@ -34,7 +34,7 @@
 		"Next Argument": ["Next Argument", "Следующий аргумент"],
 		"References": ["References", "Библиография"],
 		"References accessed on": ["References accessed on", "Источники информации доступны по состоянию на"],
-		"This is the first commit": ["This is the first commit", "RU-This is the first commit"],
+		"This is the first commit": ["Initial version", "Первая версия"],
 		"Modified": ["Modified", "Изменен"],
 		"Added": ["Added", "Добавлен"]
 	},
