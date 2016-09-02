@@ -32,11 +32,10 @@ module.exports = function(config, content){
 		if( DEBUG > 0 ) console.log('DOCS', docs );
 
 		var extra = {
-			headline: config.sitename,
+			title: 'Index',
 			documentDateDisplay: '', //date of last update?',
 			t_lang: (lang === 'en') ? 'Русский' : 'English',
 			t_url:  (lang === 'en') ? '/ru/index.html' : '/en/index.html',
-			title: 'index',
 			coverImageHref: config.frontimage,
 			teaser: t,
 		}
@@ -51,10 +50,14 @@ module.exports = function(config, content){
 
 		var props = Object.assign({}, extra, {language:lang}, {docs:docs}, {aux:content.aux[lang]}, config, strings);
 		
-		var result = mustache.render(header, props)
-		+ mustache.render(pagetop, props)
-		+ mustache.render(front,  props)
-		+ mustache.render(footer, props);
+		var result = mustache.render(header, props);
+
+		/// Set title for cover display
+		props.title = config.sitename;
+
+		result += mustache.render(pagetop, props)
+			+ mustache.render(front,  props)
+			+ mustache.render(footer, props);
 
 		var destination = path.normalize( config.buildDestination + lang + '/index.html' );
 		console.log( chalk.yellow(' > writing'), chalk.green('IDX'), destination);
