@@ -4,7 +4,7 @@
         <description><![CDATA[The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.]]></description>
         <link>https://tobaccoplaybook.net/en/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 02 Sep 2016 11:19:39 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 02 Sep 2016 13:00:56 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/en/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
         <language><![CDATA[en]]></language>
@@ -91,6 +91,20 @@
             <link>https://tobaccoplaybook.net/en/006-Tobacco_taxation_is_one_of_the_most_cost-effective_health_interventions-_government_revenues_increase_while_smoking_rates_fall.html</link>
             <guid isPermaLink="false">bc18136713f113c2d827b7431ab56917</guid>
             <pubDate>Tue, 13 Sep 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[WTO law provides regulatory space for tobacco control measures]]></title>
+            <description><![CDATA[International trade agreements recognize the sovereign right of states to regulate in the interests of public health, as confirmed by case law.]]></description>
+            <link>https://tobaccoplaybook.net/en/007-WTO_law_provides_regulatory_space_for_tobacco_control_measures.html</link>
+            <guid isPermaLink="false">7713ae51bb84aba777d2696a4a5652c4</guid>
+            <pubDate>Tue, 13 Sep 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Governments can enact tobacco control public health measures without infringing the tobacco industry’s commercial rights]]></title>
+            <description><![CDATA[International trade and investment law recognize the sovereign right of states to regulate in the interests of public health as confirmed by international instruments, World Trade Organization (WTO) case law and investment arbitral tribunal decisions.]]></description>
+            <link>https://tobaccoplaybook.net/en/008-Governments_can_enact_tobacco_control_public_health_measures_without_infringing_the_tobacco_industrys_commercial_rights.html</link>
+            <guid isPermaLink="false">8f0e04e5f2f549cd632e1cf170ff9e7a</guid>
+            <pubDate>Fri, 02 Sep 2016 13:00:56 GMT</pubDate>
         </item>
     </channel>
 </rss>

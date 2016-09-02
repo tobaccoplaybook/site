@@ -14,10 +14,6 @@ module.exports = function(config, content){
 	var front   = fs.readFileSync( __dirname + '/../partials/front.html').toString();
 	var footer  = fs.readFileSync( __dirname + '/../partials/footer.html').toString();
 
-	//var front_contnet = fs.readFileSync( __dirname + '../../' + config.contentSource)
-
-	console.log('FRONT TEASER', content.front );
-
 	content.languages.map( (lang) => {
 
 
@@ -27,9 +23,6 @@ module.exports = function(config, content){
 			.replace(/<p>/g, '<p><span>')
 			.replace(/<\/p>/g, '</span></p>');
 		t += '<p><a href="introduction.html">'+ config.strings.read_more[ (lang === 'en') ? 0 : 1] +'...</a></p>';
-
-		console.log('t', t);
-
 
 		var docs = [];
 

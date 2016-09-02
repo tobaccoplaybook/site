@@ -27,6 +27,3 @@ Your privacy on the Internet is of the utmost importance to us at WHO/Europe (th
 
 #### Information collected and stored automatically
 Under contract, we use a third-party online partner that collects information about your visit to the Tobacco Playbook web site. To do this, we use web cookies. Although the company logs the information coming from our site on our behalf, we control how it may be used. The type of information we collect includes: the Internet protocol (IP) address from which you access the Internet, the date and time, the Internet address of the web site from which you linked directly to our site, the name of the file or the words that you searched, and the browser used to access our site. We use this information to measure the number of visitors to the various sections of our site and system performance, and to identify problem areas. It helps us learn about the geographical distribution of our visitors and the technology they use to access our site. We also use this information to help us expand the coverage of the site and to make it more useful. This information is never connected with personal information.
-
-
-
