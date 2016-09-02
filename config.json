@@ -1,7 +1,7 @@
 {
 	"contentSource": "./content/",
 	"buildDestination": "./build/",
-	"domain": "fndn.dk/",
+	"domain": "https://tobaccoplaybook.net/",
 	"sitename": "Tobacco Playbook",
 	"frontimage": "/lib/front-004.jpg",
 	"keymessage": "The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.",
