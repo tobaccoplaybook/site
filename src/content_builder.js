@@ -25,12 +25,12 @@ function getFrontmatter(f){
 	return frontMatter;
 }
 
-module.exports.aux = function(filename, language, config){
+module.exports.generic = function(filename, language, config){
 	var f = fs.readFileSync(filename).toString();
 	var frontMatter = getFrontmatter(f);
 
 	var meta = {
-		url: filename.replace('articles', '').replace('.md', '.html').split("/").pop(),
+		url: filename.replace('arguments', '').replace('.md', '.html').split("/").pop(),
 		guid: md5(frontMatter.body.trim())
 	}
 	return Object.assign({}, frontMatter.attributes, meta, {body:frontMatter.body.trim()} );
@@ -118,7 +118,7 @@ module.exports.article = function(filename, language, config){
 
 	var meta = Object.assign({}, frontMatter.attributes, hist, extra);
 
-	var url  = filename.replace('articles', '').replace('.md', '.html').split("/").pop();
+	var url  = filename.replace('arguments', '').replace('.md', '.html').split("/").pop();
 	var body = frontMatter.body.trim();
 
 	meta.guid = md5(body);

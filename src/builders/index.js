@@ -4,6 +4,7 @@ var path 	= require('path');
 var chalk 	= require('chalk');
 var moment 	= require('moment');
 var mustache= require('mustache');
+var md 		= require('markdown-it')();
 
 
 module.exports = function(config, content){
@@ -13,7 +14,22 @@ module.exports = function(config, content){
 	var front   = fs.readFileSync( __dirname + '/../partials/front.html').toString();
 	var footer  = fs.readFileSync( __dirname + '/../partials/footer.html').toString();
 
+	//var front_contnet = fs.readFileSync( __dirname + '../../' + config.contentSource)
+
+	console.log('FRONT TEASER', content.front );
+
 	content.languages.map( (lang) => {
+
+
+		/// the Teaser is a little special
+		var t = md.render( content.front[lang][0].body );
+		t = t
+			.replace(/<p>/g, '<p><span>')
+			.replace(/<\/p>/g, '</span></p>');
+		t += '<p><a href="introduction.html">'+ config.strings.read_more[ (lang === 'en') ? 0 : 1] +'...</a></p>';
+
+		console.log('t', t);
+
 
 		var docs = [];
 
@@ -28,7 +44,8 @@ module.exports = function(config, content){
 			t_lang: (lang === 'en') ? 'Русский' : 'English',
 			t_url:  (lang === 'en') ? '/ru/index.html' : '/en/index.html',
 			title: 'index',
-			coverImageHref: config.frontimage
+			coverImageHref: config.frontimage,
+			teaser: t,
 		}
 
 		/// Prepare UI-Strings

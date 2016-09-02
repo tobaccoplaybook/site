@@ -9,9 +9,10 @@ var rmrf  	= require('rmrf');
 var config  = {};
 var configured = false;
 
-// main content builder
+// content builder
 var content_builder 	= require('./content_builder');
 
+// page builders
 var builders = [
 	require('./builders/articles'),
 	require('./builders/index'),
@@ -43,13 +44,11 @@ module.exports.run = function(cb){
   	});
 
 	/// create structure to hold all data
-	var content = {'aux':[], 'languages':lang};
+	var content = {'languages':lang};
 
 	/// populate
 	lang.map( (language) => {
-		content[language] = [];
-		content['aux'][language] = [];
-
+		
 		if( !fs.existsSync(OUT+language) ){
 			// make sure the out-directory exists
 			fs.mkdirSync(OUT+language);
@@ -59,27 +58,30 @@ module.exports.run = function(cb){
 			fs.mkdirSync(OUT+language);
 		}
 
-		glob.sync( SRC + language + "/*.md", {} ).map( function(itm){
+		/// arguments
+		glob.sync( SRC + language + "/arguments/*.md", {} ).map( function(itm){
 			var filename = SRC + itm.split(SRC)[1];
 			var doc = content_builder.article(filename, language, config);
 			if( doc !== false ){
+				content[language] = content[language] || [];
 				content[language].push( doc );
 			}
 		});
 
-		glob.sync( SRC + language + "/aux/*.md", {} ).map( function(itm){
-			var filename = SRC + itm.split(SRC)[1];
-			var doc = content_builder.aux(filename, language, config );
-			if( doc !== false ){
-				content['aux'][language].push( doc );
-			}
+		/// generic pages
+		['aux', 'front'].map( (section) => {
+			content[section] 			= content[section] || [];
+			content[section][language] 	= content[section][language] || [];
+			glob.sync( SRC + language + "/"+ section +"/*.md", {} ).map( function(itm){
+				var filename = SRC + itm.split(SRC)[1];
+				var doc = content_builder.generic(filename, language, config );
+				if( doc !== false ){			
+					content[section][language].push( doc );
+				}
+			});
 		});
-
-		//console.log( util.inspect(content, showHidden=false, depth=null, colorize=true) );
 	});
 	
-	//console.log( util.inspect(content.aux, showHidden=false, depth=null, colorize=true) );
-
 	/// Build site
 	console.log( chalk.yellow('Rebuilding:') );
 	builders.map( (fn) => fn(config, content) );

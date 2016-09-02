@@ -7,24 +7,39 @@ var mustache= require('mustache');
 
 var md 		= require('markdown-it')();
 
-var header	= fs.readFileSync( __dirname + '/../partials/header.html').toString();
-var footer 	= fs.readFileSync( __dirname + '/../partials/footer.html').toString();
-var tpl 	= fs.readFileSync( __dirname + '/../partials/aux.html').toString();
 
 function lowercaseFirstLetter(string) {
     return string.charAt(0).toLowerCase() + string.slice(1);
 }
 
 module.exports = function(config, content){
+	
+	var header	= fs.readFileSync( __dirname + '/../partials/header.html').toString();
+	var pagetop = fs.readFileSync( __dirname + '/../partials/pagetop.html').toString();
+	var footer 	= fs.readFileSync( __dirname + '/../partials/footer.html').toString();
+	var tpl 	= fs.readFileSync( __dirname + '/../partials/aux.html').toString();
 	//console.log('AUX');
 	//console.log('aux', content.aux);
 	
 	content.languages.map( (lang) => {
 		content['aux'][lang].map( (itm) => {
+
+			var extra = {
+				t_lang: (lang === 'en') ? 'Русский' : 'English',
+				t_url:  (lang === 'en') ? '/ru/'+itm.url : '/en/'+itm.url,
+			}
+
+			/// Prepare UI-Strings
+			var strings = {};
+			Object.keys(config.strings).map( (k) => {
+				strings[k] = config.strings[k][ (lang === 'en') ? 0 : 1];
+			});
+			//console.log('strings', strings);
 		
-			var props  = Object.assign({}, itm, config, {body:md.render(itm.body)}, {aux:content.aux[lang]});
+			var props  = Object.assign({}, itm, config, {body:md.render(itm.body)}, {aux:content.aux[lang]}, extra, strings);
 
 			var result = mustache.render(header, props);
+			result += mustache.render(pagetop, props);
 			result += mustache.render(tpl, props);
 			result += mustache.render(footer, props);
 
