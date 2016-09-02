@@ -9,6 +9,7 @@ var md 		= require('markdown-it')().use(require('markdown-it-footnote'));
 module.exports = function(config, content){
 	
 	var header	= fs.readFileSync( __dirname + '/../partials/header.html').toString();
+	var pagetop = fs.readFileSync( __dirname + '/../partials/pagetop.html').toString();
 	var footer 	= fs.readFileSync( __dirname + '/../partials/footer.html').toString();
 	var article = fs.readFileSync( __dirname + '/../partials/article.html').toString();
 	var pn_tpl 	= fs.readFileSync( __dirname + '/../partials/prevnext.html').toString();
@@ -41,11 +42,24 @@ module.exports = function(config, content){
 				t_urllang: other_lang,
 			};
 
-			var props = Object.assign({}, itm.meta, translated, prevnext, {aux:content.aux[lang]}, config);
+			/// Prepare UI-Strings
+			var strings = {};
+			Object.keys(config.strings).map( (k) => {
+				strings[k] = config.strings[k][ (lang === 'en') ? 0 : 1];
+			});
+			//console.log('strings', strings);
+
+
+			var props = Object.assign({}, itm.meta, translated, prevnext, {aux:content.aux[lang]}, config, strings);
 			if( DEBUG > 0 ) console.log('props', props);
 
 			/// begin with the page header
 			var result = mustache.render(header, props);
+
+			result += mustache.render(pagetop, props);
+			
+			/// render the prev- next navigation
+			var pn_parsed = mustache.render(pn_tpl, props);
 
 			/// convert the itm md to html
 			var body = md.render(itm.text);
@@ -54,13 +68,13 @@ module.exports = function(config, content){
 			props.headline = body.split("\n").slice(0,1)[0].replace('<h1>', '').replace('</h1>','');
 			props.body = body.split("\n").slice(1).join("\n"); // ?
 
+			/// inject prev- next navigation at the top of the article
+			props.body = pn_parsed + props.body;
+
 			/// render the page template
 			var page = mustache.render(article, props);
 
-			// insert prev-next before the footnotes section:
-			var pn_parsed = mustache.render(pn_tpl, props);
-
-			/// inject prev- next navigation
+			/// inject prev- next navigation before the footnotes section
 			var parts = page.split('<hr class="footnotes-sep">');
 			page = parts[0]+
 				'<hr class="footnotes-sep">'+

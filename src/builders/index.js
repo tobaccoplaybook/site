@@ -24,14 +24,22 @@ module.exports = function(config, content){
 
 		var extra = {
 			headline: config.sitename,
-			documentDateDisplay: '{xxdate of last update}',
+			documentDateDisplay: '', //date of last update?',
 			t_lang: (lang === 'en') ? 'Русский' : 'English',
 			t_url:  (lang === 'en') ? '/ru/index.html' : '/en/index.html',
 			title: 'index',
 			coverImageHref: config.frontimage
 		}
 
-		var props = Object.assign({}, extra, {language:lang}, {docs:docs}, {aux:content.aux[lang]}, config);
+		/// Prepare UI-Strings
+		var strings = {};
+		Object.keys(config.strings).map( (k) => {
+			strings[k] = config.strings[k][ (lang === 'en') ? 0 : 1];
+		});
+		//console.log('strings', strings);
+
+
+		var props = Object.assign({}, extra, {language:lang}, {docs:docs}, {aux:content.aux[lang]}, config, strings);
 		
 		var result = mustache.render(header, props)
 		+ mustache.render(pagetop, props)

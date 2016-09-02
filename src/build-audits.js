@@ -11,9 +11,9 @@ var gitcfg = {
 };
 
 
-module.exports = function(file){
+module.exports = function(filename, language, config){
 
-	//console.log('getCommitHistory for', file);
+	//console.log('getCommitHistory for', filename, "with CONF:", config);
 
 	// get all
 	var commits = gitlog(gitcfg);
@@ -21,13 +21,17 @@ module.exports = function(file){
 	// remove those not concerning $filename
 	commits = commits.filter( (itm) => {
 		//return itm.files.indexOf(file) > -1;
-		var idx = itm.files.indexOf(file);
+		var idx = itm.files.indexOf(filename);
 		var action = itm.status[idx]; // D, M, A
 		return idx > -1 && action !== 'D';
 	});
 	//console.log('commits', commits);
 
-	if( commits.length < 1 ) return {auditTrail:'This is the first commit.'};
+	if( commits.length < 1 ){
+		return {
+			auditTrail: config.strings.first_commit[ language === 'en' ? 0 : 1 ] // 'This is the first commit.'
+		};
+	}
 
 
 	// https://github.com/fndn/who-fctc-stories/commits/52ddaa17ea2044eb2eee37fb5b56dc88a130d7a3/articles/000-partial.md
@@ -43,18 +47,24 @@ module.exports = function(file){
 
 	var commitList = commits.map( (itm) => {
 
-		var idx = itm.files.indexOf(file);
+		var idx = itm.files.indexOf(filename);
 		var action = itm.status[idx]; // D, M, A
 		
-		itm.action = action === 'D' ? 'Deleted' : action === 'M' ? 'Modified' : 'Added';
+		var label_deleted 	= 'Deleted';
+		var label_modified 	= config.strings.modified[ language === 'en' ? 0:1];
+		var label_added 	= config.strings.added[ language === 'en' ? 0:1];
+
+		itm.action = action === 'D' ? label_deleted : action === 'M' ? label_modified : label_added;
+		//itm.action = action === 'D' ? 'Deleted' : action === 'M' ? 'Modified' : 'Added';
+
 		delete itm.files;
 		delete itm.status;
 
-		//itm.date = moment().utc(itm.authorDate).format();
-		itm.date = moment("2016-06-10 08:53:59 +0200").format("YYMMDD HH:mm")
+		itm.date = moment().utc(itm.authorDate).format();
+		//itm.date = moment("2016-06-10 08:53:59 +0200").format("YYMMDD HH:mm")
 
 		//itm.commitslink = 'https://github.com/fndn/who-fctc-stories/commits/'+ itm.hash +'/'+ file;
-		itm.commitslink = 'https://github.com/fndn/who-fctc-stories/commit/'+ itm.hash +'?diff=split';
+		itm.commitslink = 'https://github.com/tobaccoplaybook/site/commit/'+ itm.hash +'?diff=split';
 
 		itm.message = itm.action 
 			+' by '+ itm.authorName +' &lt;'+ itm.authorEmail +'&gt;'
@@ -68,8 +78,8 @@ module.exports = function(file){
 		return itm;
 	});
 
-	var historylink   = 'https://github.com/fndn/who-fctc-stories/commit/'+ commitList[0].hash +'#'+ file;
-	var revisionslink = 'https://github.com/fndn/who-fctc-stories/commit/'+ commitList[0].hash +'?diff=split';
+	var historylink   = 'https://github.com/tobaccoplaybook/site/commit/'+ commitList[0].hash +'#'+ filename;
+	var revisionslink = 'https://github.com/tobaccoplaybook/site/commit/'+ commitList[0].hash +'?diff=split';
 	var lastLink      = commitList[0].shortmessage;
 
 	var auditTrail    = 'Last '+ lastLink +'. See <a target="_blank" href="'+ historylink +'">History</a> and <a target="_blank" href="'+ revisionslink +'">Revisions</a>'

@@ -1,22 +1,22 @@
 {
-  "name": "who-fctc-stories",
-  "version": "0.0.4",
+  "name": "who-tobaccoplaybook",
+  "version": "0.0.5",
   "description": "static site generator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG='tinylr tinylr:*' node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://baseio@github.com/fndn/who-fctc-stories.git"
+    "url": "git+https://tobaccoplaybook@github.com/tobaccoplaybook/site.git"
   },
   "author": "Jørgen Skogmo <js@base.io> (http://base.io/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fndn/who-fctc-stories/issues"
+    "url": "https://github.com/tobaccoplaybook/site/issues"
   },
-  "homepage": "https://github.com/fndn/who-fctc-stories#readme",
+  "homepage": "https://github.com/tobaccoplaybook/site#readme",
   "dependencies": {
     "gitlog": "git://github.com/baseio/node-gitlog.git#sync",
     "markdown-it-footnote": "git://github.com/baseio/markdown-it-footnote.git",

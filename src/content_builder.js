@@ -25,7 +25,7 @@ function getFrontmatter(f){
 	return frontMatter;
 }
 
-module.exports.aux = function(filename, language){
+module.exports.aux = function(filename, language, config){
 	var f = fs.readFileSync(filename).toString();
 	var frontMatter = getFrontmatter(f);
 
@@ -36,7 +36,7 @@ module.exports.aux = function(filename, language){
 	return Object.assign({}, frontMatter.attributes, meta, {body:frontMatter.body.trim()} );
 }
 
-module.exports.article = function(filename, language){
+module.exports.article = function(filename, language, config){
 	var f = fs.readFileSync(filename).toString();
 	var frontMatter = getFrontmatter(f);
 	//console.log('frontMatter', frontMatter);
@@ -108,17 +108,13 @@ module.exports.article = function(filename, language){
 
 	// Reference Access Date
 	if( frontMatter.attributes.referenceAccessDate ){
-		var tmpdate = new moment(frontMatter.attributes.referenceAccessDate).format("MMMM Do, YYYY"); // 23 May 2016
-		frontMatter.attributes.referenceAccessDate = (language === 'en') ? 'References accessed on' : 'RUReferences accessed on';
-		frontMatter.attributes.referenceAccessDate += ' ';
-		frontMatter.attributes.referenceAccessDate += tmpdate;
-		frontMatter.attributes.referenceAccessDate += '.';
+		frontMatter.attributes.referenceAccessDate = new moment(frontMatter.attributes.referenceAccessDate).format("MMMM Do, YYYY"); // 23 May 2016
 	}else{
 		frontMatter.attributes.referenceAccessDate = '';
 	}
 	
 	// get commit history
-	var hist = build_audit(filename);
+	var hist = build_audit(filename, language, config);
 
 	var meta = Object.assign({}, frontMatter.attributes, hist, extra);
 

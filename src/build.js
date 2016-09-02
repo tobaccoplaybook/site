@@ -61,7 +61,7 @@ module.exports.run = function(cb){
 
 		glob.sync( SRC + language + "/*.md", {} ).map( function(itm){
 			var filename = SRC + itm.split(SRC)[1];
-			var doc = content_builder.article(filename, language );
+			var doc = content_builder.article(filename, language, config);
 			if( doc !== false ){
 				content[language].push( doc );
 			}
@@ -69,7 +69,7 @@ module.exports.run = function(cb){
 
 		glob.sync( SRC + language + "/aux/*.md", {} ).map( function(itm){
 			var filename = SRC + itm.split(SRC)[1];
-			var doc = content_builder.aux(filename, language, OUT );
+			var doc = content_builder.aux(filename, language, config );
 			if( doc !== false ){
 				content['aux'][language].push( doc );
 			}
@@ -78,7 +78,7 @@ module.exports.run = function(cb){
 		//console.log( util.inspect(content, showHidden=false, depth=null, colorize=true) );
 	});
 	
-	console.log( util.inspect(content.aux, showHidden=false, depth=null, colorize=true) );
+	//console.log( util.inspect(content.aux, showHidden=false, depth=null, colorize=true) );
 
 	/// Build site
 	console.log( chalk.yellow('Rebuilding:') );

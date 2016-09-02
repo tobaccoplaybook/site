@@ -26,20 +26,20 @@
 		}
 	},
 	"strings": {
-		"Share": ["Share", "Поделиться"],
-		"Subscribe": ["Subscribe", "Подписаться"],
-		"Report an Issue": ["Report an Issue", "Сообщить о проблеме"],
-		"Read More": ["Read More", "Дополнительная информация"],
-		"Previous Argument": ["Previous Argument", "Предыдущий аргумент"],
-		"Next Argument": ["Next Argument", "Следующий аргумент"],
-		"References": ["References", "Библиография"],
-		"References accessed on": ["References accessed on", "Источники информации доступны по состоянию на"],
-		"This is the first commit": ["Initial version", "Первая версия"],
-		"Modified": ["Modified", "Изменен"],
-		"Added": ["Added", "Добавлен"]
-	},
-	"mailinglist_en": "",
-	"mailinglist_ru": "",
-	"trackingcode_en": "",
-	"trackingcode_ru": ""
+		"share": ["Share", "Поделиться"],
+		"subscribe": ["Subscribe", "Подписаться"],
+		"previous_arg": ["Previous Argument", "Предыдущий аргумент"],
+		"next_arg": ["Next Argument", "Следующий аргумент"],
+		"report_an_issue": ["Report an Issue", "Сообщить о проблеме"],
+		"references_accessed_on": ["References accessed on", "Источники информации доступны по состоянию на"],
+		"read_more": ["Read More", "Дополнительная информация"],
+		"first_commit": ["Initial version", "Первая версия"],
+		"modified": ["Modified", "Изменен"],
+		"added": ["Added", "Добавлен"],
+
+		"trackingcode": ["<!-- trackingcode-en -->", "<!-- trackingcode-ru -->"],
+		"mailinglist": ["<!-- mailinglist-en -->", "<!-- mailinglist-ru -->"],
+
+		"References": ["References", "Библиография"]
+	}
 }
