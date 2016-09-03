@@ -755,6 +755,12 @@ Header buttons
 }
 
 @media only screen and (max-width: 414px){
+
+    div.content div.teaser {
+        margin-top: -1rem;
+    }
+
+
     #sharebtn, #subscribebtn{
        height: 2rem;
        padding-left: 1.8rem;
