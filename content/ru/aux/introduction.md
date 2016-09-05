@@ -1,8 +1,7 @@
 ---
-Title: ВВЕДЕНИЕ
+Title: Введение в
 Revision: 001
-Headline: "[RU]Tobacco playbook of arguments"
-documentDateDisplay: "[RU]Introduction to"
+documentDateDisplay: "Сборник аргументов"
 coverImageHref: /lib/front-003.jpg
 ---
 

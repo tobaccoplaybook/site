@@ -38,6 +38,10 @@ module.exports = function(config, content){
 		
 			var props  = Object.assign({}, itm, config, {body:md.render(itm.body)}, {aux:content.aux[lang]}, extra, strings);
 
+			/// switch title and documentDateDisplay so
+			props.title = props.documentDateDisplay;
+			props.documentDateDisplay = itm.title;
+
 			var result = mustache.render(header, props);
 			result += mustache.render(pagetop, props);
 			result += mustache.render(tpl, props);

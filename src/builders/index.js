@@ -53,7 +53,7 @@ module.exports = function(config, content){
 		var result = mustache.render(header, props);
 
 		/// Set title for cover display
-		props.title = config.sitename;
+		props.title = config.sitetitle[(lang === 'en') ? 0 : 1];
 
 		result += mustache.render(pagetop, props)
 			+ mustache.render(front,  props)

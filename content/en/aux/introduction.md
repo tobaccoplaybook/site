@@ -1,8 +1,7 @@
 ---
 Title: Introduction
 Revision: 001
-Headline: Tobacco playbook of arguments
-documentDateDisplay: Introduction to
+documentDateDisplay: Tobacco playbook of arguments
 coverImageHref: /lib/front-003.jpg
 ---
 

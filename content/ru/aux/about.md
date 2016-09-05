@@ -1,8 +1,7 @@
 ---
-Title: About
+Title: "О проекте"
 Revision: 001
-Headline: Сборник аргументов для борьбы с табаком 
-documentDateDisplay: About
+documentDateDisplay: "Сборник аргументов"
 coverImageHref: https://source.unsplash.com/le60j2br1BI/1600x900
 ---
 

@@ -1,8 +1,7 @@
 ---
 Title: About
 Revision: 001
-Headline: Tobacco playbook of arguments
-documentDateDisplay: About
+documentDateDisplay: Tobacco playbook of arguments
 coverImageHref: https://source.unsplash.com/le60j2br1BI/1600x900
 ---
 
