@@ -3,7 +3,7 @@ var fs 		= require('fs');
 var path 	= require('path');
 var chalk 	= require('chalk');
 var mustache= require('mustache');
-var md 		= require('markdown-it')().use(require('markdown-it-footnote'));
+var md 		= require('markdown-it')({linkify:true}).use(require('markdown-it-footnote'));
 
 
 module.exports = function(config, content){
