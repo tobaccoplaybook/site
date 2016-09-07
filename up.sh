@@ -28,6 +28,8 @@ done
 echo "message: ${MESSAGE}"
 #exit
 
+npm version patch
+
 # copy everything in build to _site
 rm -rf _site/*
 cp -v -R build/* _site/
