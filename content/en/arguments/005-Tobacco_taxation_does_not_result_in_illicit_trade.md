@@ -8,9 +8,10 @@ PublicDate: 2016-09-13
 HeaderImage: https://unsplash.com/photos/OZdKEwDXXJU
 Tags: Illicit tobacco trade, tobacco taxation, tobacco market, smuggling, counterfeiting; tobacco prices  
 Short: Illicit tobacco trade is not a result of tobacco taxation, but a result of poor controls over organized smuggling, counterfeiting, and cross-border imports.
-SourceFile: FINAL 5 Tobacco taxation does  not result in illicit.docx
+SourceFile: FINAL 5 Tobacco taxation does not result in illicit.docx
 ReferenceAccessDate: 2016-08-04
 ArgumentId: "5"
+Slug: "illicit-trade"
 ---
 
 # Tobacco taxation does not result in illicit trade

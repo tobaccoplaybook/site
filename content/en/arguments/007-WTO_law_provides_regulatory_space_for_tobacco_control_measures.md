@@ -11,6 +11,7 @@ Short: International trade agreements recognize the sovereign right of states to
 SourceFile: FINAL 7 WTO law provides regulatory space for tobacco control measures.docx
 ReferenceAccessDate: 2016-08-11
 ArgumentId: "7"
+Slug: "regulatory-space"
 ---
 
 # WTO law provides regulatory space for tobacco control measures

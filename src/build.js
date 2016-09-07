@@ -80,6 +80,12 @@ module.exports.run = function(cb){
 				}
 			});
 		});
+
+		/// local config (index.md)
+		var localConfig = content_builder.generic(SRC + language + "/index.md", language, config );
+		delete localConfig.url; delete localConfig.guid; delete localConfig.body;
+		content.locals = content.locals || {};
+		content.locals[language] = localConfig;
 	});
 	
 	/// Build site

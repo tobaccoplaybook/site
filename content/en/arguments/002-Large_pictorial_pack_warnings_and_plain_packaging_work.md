@@ -11,6 +11,7 @@ Short: Evidence consistently shows that pictorial tobacco pack warnings and plai
 SourceFile: FINAL 2 Large pictorial pack warnings and plain packaging work.docx
 ReferenceAccessDate: 2016-08-04
 ArgumentId: "2"
+Slug: "packaging"
 ---
 
 # Large pictorial pack warnings and plain packaging work

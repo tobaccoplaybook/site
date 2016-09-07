@@ -11,6 +11,7 @@ Short: Tobacco taxation is one of the most cost-effective health interventions, 
 SourceFile: FINAL 6 Tobacco taxation is one of the most cost-effective health.docx
 ReferenceAccessDate: 2016-08-09
 ArgumentId: "6"
+Slug: "taxation"
 ---
 
 # Tobacco taxation is one of the most cost-effective health interventions: government revenues increase while smoking rates fall

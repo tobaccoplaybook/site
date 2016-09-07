@@ -11,6 +11,7 @@ Short: Second-hand smoke has serious effects on the health of others. The only w
 SourceFile: FINAL 1 Comprehensive smokefree legislation is essential in protecting the health of others.docx
 ReferenceAccessDate: 2016-08-03
 ArgumentId: "1"
+Slug: "comprehensive-smokefree-legislation"
 ---
 
 # Comprehensive smokefree legislation is essential in protecting the health of others

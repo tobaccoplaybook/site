@@ -11,6 +11,7 @@ Short: Smokefree legislation does not harm the hospitality industry. In many cou
 SourceFile: FINAL 3 Smokefree legislation does  not  harm the  hospitality  industry.docx
 ReferenceAccessDate: 2016-08-03
 ArgumentId: "3"
+Slug: "smokefree-legislation"
 ---
 
 # Smokefree legislation does not harm the hospitality industry

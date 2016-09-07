@@ -8,9 +8,10 @@ Public date: 2016-09-13
 Header Image: the one used currently
 Tags: Investment law, sovereign right of states, commercial rights, intellectual property, WTO
 Short: Both international trade law and investment law recognize the sovereign right of states to regulate in the interests of public health.
-Source file: FINAL 8 Governments can enact tob acco control public health measures without infringing the tobacco industry’s commercial rights.docx
+Source file: FINAL 8 Governments can enact tobacco control public health measures without infringing the tobacco industry’s commercial rights.docx
 ReferenceAccessDate: 2016-08-04
 ArgumentId: "8"
+Slug: "commercial-rights"
 ---
 
 # Governments can enact tobacco control public health measures without infringing the tobacco industry’s commercial rights 

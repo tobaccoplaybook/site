@@ -11,6 +11,7 @@ Short: Tobacco marketing is often targeted at children and young people, so it i
 Source file: FINAL 4 Tobacco marketing is targeted at children and young people.docx
 ReferenceAccessDate: 2016-08-05
 ArgumentId: "4"
+Slug: "marketing"
 ---
 
 # Tobacco marketing is targeted at children and young people
