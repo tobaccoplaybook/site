@@ -5,6 +5,7 @@ var glob 	= require('glob');
 var chalk 	= require('chalk');
 var moment 	= require('moment');
 var rmrf  	= require('rmrf');
+var pack 	= require('../package.json');
 
 var config  = {};
 var configured = false;
@@ -86,6 +87,8 @@ module.exports.run = function(cb){
 		delete localConfig.url; delete localConfig.guid; delete localConfig.body;
 		content.locals = content.locals || {};
 		content.locals[language] = localConfig;
+
+		config.package_version = pack.version;
 	});
 	
 	/// Build site
