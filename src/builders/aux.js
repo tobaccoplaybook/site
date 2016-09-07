@@ -27,6 +27,8 @@ module.exports = function(config, content){
 			var extra = {
 				t_lang: (lang === 'en') ? 'Русский' : 'English',
 				t_url:  (lang === 'en') ? '/ru/'+itm.url : '/en/'+itm.url,
+				localizedDesc: 		config.feedOptions[lang].description,
+				localizedKeywords: 	config.feedOptions[lang].categories,
 			}
 
 			/// Prepare UI-Strings

@@ -40,6 +40,8 @@ module.exports = function(config, content){
 					: '/'+ other_lang +'/index.html',
 				t_lang: (lang === 'en') ? "Русский" : 'English',
 				t_urllang: other_lang,
+				localizedDesc: 		config.feedOptions[lang].description,
+				localizedKeywords: 	config.feedOptions[lang].categories,
 			};
 
 			/// Prepare UI-Strings

@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title><![CDATA[RU Tobacco playbook of arguments]]></title>
-        <description><![CDATA[RU this is the description]]></description>
+        <title><![CDATA[Сборник аргументов для борьбы с табаком]]></title>
+        <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 07 Sep 2016 10:31:49 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 07 Sep 2016 11:50:12 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
-        <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
+        <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
         <managingEditor><![CDATA[tobaccofree@euro.who.int (WHO Regional Office for Europe)]]></managingEditor>
         <ttl>60</ttl>
-        <category><![CDATA[ru-health]]></category>
-        <category><![CDATA[ru-who]]></category>
-        <category><![CDATA[ru-tobacco]]></category>
+        <category><![CDATA[вторичный табачный дым]]></category>
+        <category><![CDATA[влияние на здоровье человека]]></category>
+        <category><![CDATA[законодательство о запрете курения]]></category>
+        <category><![CDATA[воздействие]]></category>
+        <category><![CDATA[закрытые общественные места]]></category>
+        <category><![CDATA[осуществление]]></category>
+        <category><![CDATA[табачные изделия]]></category>
+        <category><![CDATA[упаковка]]></category>
+        <category><![CDATA[табачная промышленность]]></category>
+        <category><![CDATA[предупреждения о вреде для здоровья]]></category>
+        <category><![CDATA[простая упаковка]]></category>
+        <category><![CDATA[политика по обеспечению бездымной среды]]></category>
+        <category><![CDATA[места общественного пользования]]></category>
+        <category><![CDATA[гостинично-ресторанный бизнес]]></category>
+        <category><![CDATA[табачный маркетинг]]></category>
+        <category><![CDATA[дети]]></category>
+        <category><![CDATA[молодые люди]]></category>
+        <category><![CDATA[реклама табачных изделий]]></category>
+        <category><![CDATA[стимулирование продажи]]></category>
+        <category><![CDATA[спонсорство]]></category>
+        <category><![CDATA[незаконная торговля табачными изделиями]]></category>
+        <category><![CDATA[налогообложение табачных изделий]]></category>
+        <category><![CDATA[рынок табачных изделий]]></category>
+        <category><![CDATA[контрабанда]]></category>
+        <category><![CDATA[производство контрафактной продукции]]></category>
+        <category><![CDATA[цены на табак]]></category>
+        <category><![CDATA[вмешательства по укреплению здоровья]]></category>
+        <category><![CDATA[поступления]]></category>
+        <category><![CDATA[потребление табачной продукции]]></category>
+        <category><![CDATA[экономика]]></category>
+        <category><![CDATA[общественное здравоохранение]]></category>
+        <category><![CDATA[торговое право]]></category>
+        <category><![CDATA[торговые соглашения]]></category>
+        <category><![CDATA[РКБТ ВОЗ]]></category>
+        <category><![CDATA[ВТО]]></category>
+        <category><![CDATA[судебная практика]]></category>
+        <category><![CDATA[инвестиционное право, суверенное право государств, коммерческие права, интеллектуальная собственность]]></category>
         <item>
             <title><![CDATA[Комплексное законодательство о запрете курения в общественных местах имеет важнейшее значение для защиты здоровья некурящих людей ]]></title>
             <description><![CDATA[Имеющиеся фактические данные убедительно и последовательно указывают на то, что вторичный табачный дым (альтернативные синонимы: вторичный дым, окружающий табачный дым, табачный дым в окружающей среде и т.д.) наносит серьезный вред здоровью некурящих людей и что единственным способом защиты от вторичного табачного дыма является всеобъемлющее законодательство о запрете курения во всех закрытых общественных местах. Табачная промышленность пытается сдерживать реализацию законодательства о запрете курения в закрытых общественных местах, смещая фокус на ряд других вопросов и используя выводы так называемой «науки», финансируемой самой табачной промышленностью, а также деятельность групп якобы независимых активистов для распространения вводящих в заблуждение аргументов о том, что такие меры, как вентиляция или частичное ограничение курения являются адекватными.]]></description>

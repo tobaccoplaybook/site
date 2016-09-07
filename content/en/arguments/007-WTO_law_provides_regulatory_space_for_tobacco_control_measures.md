@@ -5,7 +5,7 @@ ApprovedBy: Gauden Galea
 ApprovedDate: 2016-09-12
 Revision: "001"
 PublicDate: 2016-09-13
-HeaderImage: https://unsplash.com/photos/random
+HeaderImage: https://unsplash.com/photos/5Kt4DKFUiQk
 Tags: Trade law, trade agreements, WHO FCTC, WTO, public health, case law
 Short: International trade agreements recognize the sovereign right of states to regulate in the interests of public health, as confirmed by case law.
 SourceFile: FINAL 7 WTO law provides regulatory space for tobacco control measures.docx

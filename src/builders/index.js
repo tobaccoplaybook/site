@@ -39,6 +39,8 @@ module.exports = function(config, content){
 			t_url:  (lang === 'en') ? '/ru/index.html' : '/en/index.html',
 			coverImageHref: config.frontimage,
 			teaser: t,
+			localizedDesc: 		config.feedOptions[lang].description,
+			localizedKeywords: 	config.feedOptions[lang].categories,
 		}
 
 		/// Prepare UI-Strings

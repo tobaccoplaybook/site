@@ -36,9 +36,11 @@ function subscribe(){
 	window.open("//who.us4.list-manage.com/subscribe/post?u=bb832ff4c9f8efad547ffcf69&amp;id=9a54f5fae2");
 }
 
+var current_tag = '';
 
 function markTag(){
 	var h = document.location.hash.replace('#','tag-');
+	console.log('h', h);
 	var all = document.getElementsByClassName('argument');
 	Array.prototype.forEach.call(all, function(elm, index) {
 		if( elm.className.split(" ").indexOf(h) === -1 ){
@@ -49,7 +51,33 @@ function markTag(){
 			//elm.style.display = 'block';
 		}
 	});
+
+	Array.prototype.forEach.call(document.getElementsByClassName("tag"), function(elm, index) {
+		elm.className = 'tag';
+		elm.onclick = tagClicked;
+	});
+	var active_tag = document.location.hash.replace('#', '');
+
+	var active = document.getElementsByName(active_tag);
+	var active = document.querySelectorAll('a[data-tagname="'+ active_tag + '"]');
+	console.log('active', active);
+
+	Array.prototype.forEach.call(active, function(elm, index) {
+		elm.className = 'tag active';
+	});
+
+	current_tag = active_tag;
 }
+
+function tagClicked( elm ){
+	console.log('tagClicked', elm.target.hash, elm);
+	var active_tag = elm.target.hash.replace("#", '');
+	if( active_tag === current_tag ){
+		// deselect all
+		document.location = document.location.href.split('#')[0];
+	}
+}
+
 
 window.onload = function() {
 
