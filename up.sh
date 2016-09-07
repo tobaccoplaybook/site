@@ -28,8 +28,6 @@ done
 echo "message: ${MESSAGE}"
 #exit
 
-npm version patch
-
 # copy everything in build to _site
 rm -rf _site/*
 cp -v -R build/* _site/
@@ -48,3 +46,5 @@ git push origin master
 git log --stat -1
 
 echo $GREEN"Published as '$DATE update'" $ENDCOLOR
+
+npm version patch
