@@ -88,8 +88,8 @@ module.exports = function(config, content){
 			/// add footer
 			result += mustache.render(footer, props);
 
-			//var destination = path.join(config.buildDestination, itm.meta.language, itm.url);
-			var destination = path.join(config.buildDestination, itm.meta.language, itm.meta.slug +'.html');
+			var destination = path.join(config.buildDestination, itm.meta.language, itm.url);
+			//var destination = path.join(config.buildDestination, itm.meta.language, itm.meta.slug +'.html');
 
 			console.log( chalk.yellow(' > writing'), chalk.green('ARG'), destination);
 			fs.writeFileSync(destination, result);

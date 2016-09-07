@@ -2,7 +2,7 @@
 	"contentSource": "./content/",
 	"buildDestination": "./build/",
 	"domain": "https://tobaccoplaybook.net/",
-	"sitename": "Tobacco Playbook",
+	"sitename": "Tobacco Control Playbook",
 	"frontimage": "/lib/front-004.jpg",
 	"keymessage": "The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.",
 	"feedOptions": {
@@ -32,14 +32,10 @@
 		"next_arg": ["Next Argument", "Следующий аргумент"],
 		"report_an_issue": ["Report an Issue", "Сообщить о проблеме"],
 		"references_accessed_on": ["References accessed on", "Источники информации доступны по состоянию на"],
-		"read_more": ["Read More", "Дополнительная информация"],
+		"read_more": ["Read More", "Читать далее"],
 		"first_commit": ["Initial version", "Первая версия"],
 		"modified": ["Modified", "Изменен"],
 		"added": ["Added", "Добавлен"],
-
-		"trackingcode": ["<!-- trackingcode-en -->", "<!-- trackingcode-ru -->"],
-		"mailinglist": ["<!-- mailinglist-en -->", "<!-- mailinglist-ru -->"],
-
 		"References": ["References", "Библиография"]
 	}
 }

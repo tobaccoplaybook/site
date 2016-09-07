@@ -33,7 +33,7 @@ function share(id){
 }
 
 function subscribe(){
-	window.open("//base.us13.list-manage.com/subscribe/?u=57aa79f1090691d1e473f3ac5&amp;id=fc24ece223");
+	window.open("//who.us4.list-manage.com/subscribe/post?u=bb832ff4c9f8efad547ffcf69&amp;id=9a54f5fae2");
 }
 
 

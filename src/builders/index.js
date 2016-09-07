@@ -28,6 +28,7 @@ module.exports = function(config, content){
 
 		content[lang].map( (itm) => {
 			docs.push( Object.assign({}, itm.meta, {url:itm.url}) );
+			console.log(' documentDateDisplay', itm.meta.documentDateDisplay);
 		});
 		if( DEBUG > 0 ) console.log('DOCS', docs );
 
@@ -54,7 +55,7 @@ module.exports = function(config, content){
 
 		/// Set title for cover display
 		//props.title = config.sitetitle[(lang === 'en') ? 0 : 1];
-		props.title = "ex"+ content.locals[ lang ].title;
+		props.title = content.locals[ lang ].title;
 
 		result += mustache.render(pagetop, props)
 			+ mustache.render(front,  props)
@@ -62,6 +63,7 @@ module.exports = function(config, content){
 
 		var destination = path.normalize( config.buildDestination + lang + '/index.html' );
 		console.log( chalk.yellow(' > writing'), chalk.green('IDX'), destination);
+
 		fs.writeFileSync(destination, result );
 
 	});

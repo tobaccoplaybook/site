@@ -4,6 +4,7 @@ var fm 		= require('front-matter');
 var md5 	= require('md5');
 var moment 	= require('moment');
 var chalk 	= require('chalk');
+var leftPad = require('left-pad');
 
 var build_audit = require('./build-audits');
 
@@ -79,7 +80,7 @@ module.exports.article = function(filename, language, config){
 	}
 
 	// Display date
-	if( DEBUG > 0 ) console.log('frontMatter.attributes.approvedDate', frontMatter.attributes.approvedDate);
+	if( DEBUG > 0 ) console.log('frontMatter.attributes.approvedDate', frontMatter.attributes.publicDate);
 	extra.documentDateISO	  = new moment(frontMatter.attributes.publicDate).toISOString();
 	extra.documentDateDisplay = new moment(frontMatter.attributes.publicDate).format("MMMM Do, YYYY"); // 23 May 2016
 
@@ -118,7 +119,8 @@ module.exports.article = function(filename, language, config){
 
 	var meta = Object.assign({}, frontMatter.attributes, hist, extra);
 
-	var url  = filename.replace('arguments', '').replace('.md', '.html').split("/").pop();
+	//var url  = filename.replace('arguments', '').replace('.md', '.html').split("/").pop();
+	var url  = leftPad(meta.argumentId, 3, 0) +'-'+ meta.slug + '.html';
 	var body = frontMatter.body.trim();
 
 	meta.guid = md5(body);
