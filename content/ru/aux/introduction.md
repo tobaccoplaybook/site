@@ -2,7 +2,7 @@
 Title: Введение
 Revision: 001
 documentDateDisplay: "Сборник аргументов"
-coverImageHref: /lib/front-003.jpg
+coverImageHref: /lib/introduction.jpg
 ---
 
 ### ВВЕДЕНИЕ

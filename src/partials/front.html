@@ -21,7 +21,7 @@
 	
 	#cover.coverimage {
 		/* height: 40rem; */
-		background-image: url(/lib/front-002.jpg);
+		/* background-image: url(/lib/front-002.jpg); */
 	}
 	time.datetime {
 		display: none;
@@ -41,7 +41,13 @@
 	}
 
 	#cover-share {
-	    background-color: #09f;
+	    /* background-color: #09f; */
+		position: relative;
+    	top: 7rem;
+	}
+
+	.menutitle {
+		display: none;
 	}
 	
 	.covercontent {
@@ -51,11 +57,19 @@
 		.covercontent {
 			padding-top: 1rem;
 		}
+		#cover h1 {
+			color: #000;
+		}
+		#cover-share {
+		    /* background-color: #09f; */
+			position: inherit;
+		}
+		.menutitle {
+			display: inline-block;
+		}
 	}
 	
-	.menutitle {
-		display: none;
-	}
+	
 </style>
 
 
