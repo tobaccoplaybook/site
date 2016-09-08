@@ -75,8 +75,14 @@ module.exports.article = function(filename, language, config){
 	}
 	
 	if( frontMatter.attributes.headerImage ){
-		var id = frontMatter.attributes.headerImage.split('/').pop();
-		extra.coverImageHref = 'https://source.unsplash.com/'+ id +'/1600x900';
+		var img = frontMatter.attributes.headerImage;
+		var id  = img.split('/').pop();
+		
+		/// load images from unsplash.com
+		//extra.coverImageHref = 'https://source.unsplash.com/'+ id +'/1600x900';
+		
+		/// load images from local cache
+		extra.coverImageHref = '/unsplash.com/'+ id +'.jpg';
 	}
 
 	// Display date
