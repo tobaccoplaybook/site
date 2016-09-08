@@ -2,7 +2,7 @@
 Title: About
 Revision: 001
 documentDateDisplay: Tobacco playbook of arguments
-coverImageHref: https://source.unsplash.com/le60j2br1BI/1600x900
+HeaderImage: https://unsplash.com/photos/le60j2br1BI
 ---
 
 

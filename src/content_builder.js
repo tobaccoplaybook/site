@@ -34,7 +34,19 @@ module.exports.generic = function(filename, language, config){
 		url: filename.replace('arguments', '').replace('.md', '.html').split("/").pop(),
 		guid: md5(frontMatter.body.trim())
 	}
-	return Object.assign({}, frontMatter.attributes, meta, {body:frontMatter.body.trim()} );
+
+	if( frontMatter.attributes.headerImage ){
+		var img = frontMatter.attributes.headerImage;
+		var id  = img.split('/').pop();
+		
+		/// load images from unsplash.com
+		//extra.coverImageHref = 'https://source.unsplash.com/'+ id +'/1600x900';
+		
+		/// load images from local cache
+		var coverImageHref = '/unsplash.com/'+ id +'.jpg';
+	}
+
+	return Object.assign({}, frontMatter.attributes, meta, {body:frontMatter.body.trim()}, {coverImageHref:coverImageHref} );
 }
 
 module.exports.article = function(filename, language, config){
