@@ -1,31 +1,55 @@
 var path 	= require('path');
 var gitlog 	= require('gitlog');
 var moment 	= require('moment');
+var request = require('sync-request');
+
+var cwd = process.cwd();
 
 // See: https://github.com/domharrington/node-gitlog
 var gitcfg = { 
-	repo: path.normalize(__dirname + '/../'),
+	//repo: path.normalize(__dirname + '/../'),
 	//repo: path.normalize(__dirname + '/../_site/'),
-	number: 10,
-	fields: ['hash', 'authorName', 'authorEmail', 'authorDate', 'subject', 'body']
+	repo: cwd,
+	number: 40,
+	//fields: ['hash', 'authorName', 'authorEmail', 'authorDate', 'subject', 'body']
+	fields: ['authorName', 'authorEmail', 'authorDate', 'subject', 'body', 'hash', 'abbrevHash', 'treeHash', 'abbrevTreeHash', 'parentHashes', 'abbrevParentHashes']
 };
 
+var allCommits = gitlog(gitcfg);
+/*
+console.log('0#commits', commits);
+commits.map( (itm, index) => {
+	console.log('H', index, itm.hash);
+});
+*/
 
 module.exports = function(filename, language, config){
 
-	//console.log('getCommitHistory for', filename, "with CONF:", config);
+	var filename = filename.split(cwd)[1].slice(1);
 
-	// get all
-	var commits = gitlog(gitcfg);
+	console.log('getCommitHistory for', filename);
+
+	/*
+	// DEV
+	if( filename.indexOf('008-') < 10 ){
+		return {
+			auditTrail: config.strings.first_commit[ language === 'en' ? 0 : 1 ] // 'This is the first commit.'
+		};
+	}
+	*/
 
 	// remove those not concerning $filename
-	commits = commits.filter( (itm) => {
-		//return itm.files.indexOf(file) > -1;
+	var commits = allCommits.filter( (itm) => {
+		if( !itm.files ) return false;
+
 		var idx = itm.files.indexOf(filename);
+		
+		if( idx > 0 ) console.log('IDX', idx, itm.hash, itm.subject);
+
 		var action = itm.status[idx]; // D, M, A
 		return idx > -1 && action !== 'D';
 	});
-	//console.log('commits', commits);
+	//console.log('2#commits', commits);
 
 	if( commits.length < 1 ){
 		return {
@@ -79,13 +103,30 @@ module.exports = function(filename, language, config){
 	});
 
 	var historylink   = 'https://github.com/tobaccoplaybook/site/commit/'+ commitList[0].hash +'#'+ filename;
-	var revisionslink = 'https://github.com/tobaccoplaybook/site/commit/'+ commitList[0].hash +'?diff=split';
+	var revisionslink = 'https://github.com/tobaccoplaybook/site/commits/master/'+ filename;
 	var lastLink      = commitList[0].shortmessage;
 
 	var auditTrail    = 'Last '+ lastLink +'. See <a target="_blank" href="'+ historylink +'">History</a> and <a target="_blank" href="'+ revisionslink +'">Revisions</a>'
 
 
-	var result = {auditTrail: auditTrail, commitList:commitList};
-	//console.log('result', result);
-	return result;
+	if( config.deepGithubDiffLinks ){
+
+		var res  = request('GET', historylink); // SYNC!!!
+		var body = res.getBody().toString();
+		var diff = body.split('data-path="'+ filename)[0].split('<a name="').pop().split('"></a>')[0];
+		//console.log('diff', diff);
+
+		var historylink   = 'https://github.com/tobaccoplaybook/site/commit/'+ commitList[0].hash +'#'+ diff;
+
+		var auditTrail    = 'Last '+ lastLink +'. See <a target="_blank" href="'+ historylink +'">History</a> and <a target="_blank" href="'+ revisionslink +'">Revisions</a>'
+		
+		var result = {auditTrail: auditTrail, commitList:commitList};
+		//console.log('result', result);
+		return result;    
+	
+	}else{
+		var result = {auditTrail: auditTrail, commitList:commitList};
+		//console.log('result', result);
+		return result;
+	}
 }

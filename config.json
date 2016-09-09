@@ -2,6 +2,8 @@
 	"contentSource": "./content/",
 	"buildDestination": "./build/",
 
+	"deepGithubDiffLinks": true,
+
 	"domain": "https://tobaccoplaybook.net/",
 	"sitename": "Tobacco Control Playbook",
 	"frontimage": "/lib/WHO-TobControl-image-1600x900.jpg",

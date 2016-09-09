@@ -28,7 +28,7 @@ module.exports = function(config, content){
 
 		content[lang].map( (itm) => {
 			docs.push( Object.assign({}, itm.meta, {url:itm.url}) );
-			console.log(' documentDateDisplay', itm.meta.documentDateDisplay);
+			//console.log(' documentDateDisplay', itm.meta.documentDateDisplay);
 		});
 		if( DEBUG > 0 ) console.log('DOCS', docs );
 

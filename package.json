@@ -28,6 +28,7 @@
     "md5": "^2.1.0",
     "moment": "^2.13.0",
     "mustache": "^2.1.3",
+    "request": "^2.74.0",
     "rmrf": "^1.0.2",
     "rss": "^1.2.1",
     "watchreload": "git://github.com/baseio/watchreload.git"
