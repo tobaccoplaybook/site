@@ -3,11 +3,12 @@
 const path        = require('path');
 const watchreload = require('watchreload');
 
-const config      = require('./config.json');
+const config      = require('./config.js');
 const builder     = require('./src/build');
 
 config.contentSource    = path.join(__dirname, config.contentSource);
 config.buildDestination = path.join(__dirname, config.buildDestination);
+config.cacheDirectory 	= path.join(__dirname, config.cache);
 
 builder.configure( config );
 
