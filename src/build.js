@@ -61,8 +61,7 @@ module.exports.run = function(cb){
 		}
 
 		/// arguments
-		glob.sync( SRC + language + "/arguments/*.md", {} ).map( function(itm){
-			var filename = SRC + itm.split(SRC)[1];
+		glob.sync( SRC + language + "/arguments/*.md", {} ).map( function(filename){
 			var doc = content_builder.article(filename, language, config);
 			if( doc !== false ){
 				content[language] = content[language] || [];
