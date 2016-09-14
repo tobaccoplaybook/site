@@ -4,6 +4,7 @@ function share(id){
 	
 	var ww = 700, wh=500;
 
+	var servicenames = {tw: 'Twitter', fb: 'Facebook', gp: 'GooglePlus', li: 'LinkedIn' };
 	var services = {
 		tw: {url:'https://twitter.com/intent/tweet?riginal_referer=%URL%&text=%TXT%&url=%URL%&via=who'},
 		fb: {url:'https://www.facebook.com/sharer/sharer.php?u=%0'},
@@ -14,7 +15,15 @@ function share(id){
 	conf.url = conf.url.replace(/%URL%/g, window.location.href);
 	conf.url = conf.url.replace(/%TXT%/g, document.title.replace(/_/g, ' ') );
 
-	console.log('share', id, conf, conf.url);
+
+	console.log('share', id, servicenames[id], conf, conf.url);
+	
+	track({
+		hitType: 'social',
+		socialNetwork: servicenames[id],
+		socialAction: 'Share',
+		socialTarget: window.location.href
+	});
 
 	if( id === 'fb'){
 		var winTop  = (screen.height-wh)/2;
@@ -34,6 +43,21 @@ function share(id){
 
 function subscribe(){
 	window.open("//who.us4.list-manage.com/subscribe/post?u=bb832ff4c9f8efad547ffcf69&amp;id=9a54f5fae2");
+	track({
+		hitType: 'social',
+		socialNetwork: 'Mailinglist',
+		socialAction: 'subscribe',
+		socialTarget: window.location.href
+	});
+}
+
+function track( payload ){
+	try {
+		ga('send', payload);
+		ga('baseio.send', payload);
+	}catch(e){
+		console.log('GA Track, Error:', e);
+	}
 }
 
 var current_tag = '';
@@ -136,6 +160,21 @@ window.onload = function() {
 		window.onhashchange = markTag;
 	//}
 
+
+	//
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-83761303-1', 'auto');
+	//ga('send', 'pageview');
+
+	ga('create', 'UA-84155730-1', {'name':'baseio'});
+	//ga('baseio.send', 'pageview');
+
+	track('pageview')
 }
 
 function toggleMenu(){
@@ -143,6 +182,10 @@ function toggleMenu(){
 	el.className = (el.className === 'closed') ? '' : 'closed';
 }
 
+
+/// Cookie utils
+/// Cookies are *only* used to detect wich language the user prefers,
+/// so the correct index can be loaded on next visit
 function setCookie(key, val) {
     var d = new Date();
     var exdays = 365;
