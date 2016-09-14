@@ -51,7 +51,7 @@ module.exports = function(config, content){
 		//console.log('strings', strings);
 
 
-		var props = Object.assign({}, extra, {language:lang}, {docs:docs}, {aux:content.aux[lang]}, config, strings);
+		var props = Object.assign({}, extra, {language:lang}, {docs:docs}, {pages:content.pages[lang]}, config, strings);
 		
 		var result = mustache.render(header, props);
 

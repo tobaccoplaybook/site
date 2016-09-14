@@ -52,7 +52,7 @@ module.exports = function(config, content){
 			//console.log('strings', strings);
 
 
-			var props = Object.assign({}, itm.meta, translated, prevnext, {aux:content.aux[lang]}, config, strings);
+			var props = Object.assign({}, itm.meta, translated, prevnext, {pages:content.pages[lang]}, config, strings);
 			if( DEBUG > 0 ) console.log('props', props);
 
 			/// begin with the page header

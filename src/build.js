@@ -19,7 +19,7 @@ var builders = [
 	require('./builders/articles'),
 	require('./builders/index'),
 	require('./builders/rss'),
-	require('./builders/aux'),
+	require('./builders/pages'),
 ];
 
 module.exports.configure = function( conf ){
@@ -71,7 +71,7 @@ module.exports.run = function(cb){
 		});
 
 		/// generic pages
-		['aux', 'front'].map( (section) => {
+		['pages', 'front'].map( (section) => {
 			content[section] 			= content[section] || [];
 			content[section][language] 	= content[section][language] || [];
 			glob.sync( SRC + language + "/"+ section +"/*.md", {} ).map( function(itm){
