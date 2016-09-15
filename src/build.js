@@ -73,8 +73,7 @@ module.exports.run = function(cb){
 		['pages', 'front'].map( (section) => {
 			content[section] 			= content[section] || [];
 			content[section][language] 	= content[section][language] || [];
-			glob.sync( SRC + language + "/"+ section +"/*.md", {} ).map( function(itm){
-				var filename = SRC + itm.split(SRC)[1];
+			glob.sync( SRC + language + "/"+ section +"/*.md", {} ).map( function(filename){
 				var doc = content_builder.generic(filename, language, config );
 				if( doc !== false ){			
 					content[section][language].push( doc );

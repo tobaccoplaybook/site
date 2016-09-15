@@ -11,21 +11,37 @@ var cwd = process.cwd();
 // See: https://github.com/domharrington/node-gitlog
 var gitcfg = { 
 	repo: cwd,
-	number: 40,
+	number: 500,
 	fields: ['hash', 'authorDate']
 };
 
+/// get the gitcfg.number last commits, once.
 var allCommits = gitlog(gitcfg);
+//console.log('allCommits', allCommits);
 
 module.exports = function(filename, language, config){
 
-	var filename = filename.split(cwd)[1].slice(1);
+	//filename /Users/js/repos/who-tobaccoplaybook/content/en/arguments/001-Comprehensive_smokefree_legislation_is_essential_in_protecting_the_health_of_others.md
+	//cwd      /Users/js/repos/who-tobaccoplaybook
+	//we want  content/en/arguments/001-Comprehensive_smokefree_legislation_is_essential_in_protecting_the_health_of_others.md
 
-	// remove those not concerning $filename
+	/// convert all path-separators to "/"
+	var cwd_norm = cwd.replace(/\\/g, '/');		
+	var fn_norm  = filename.replace(/\\/g, '/');
+	/// split by cwd, to get the path relative to cwd
+	filename = fn_norm.split(cwd_norm)[1].slice(1);
+	/// convert to platform specific path-separator
+	filename = filename.replace(/\\/g, path.sep);
+
+	/// filter allCommits, remove entries that do not concern the $filename
 	var commits = allCommits.filter( (itm) => {
 		if( !itm.files ) return false;
 
-		var idx = itm.files.indexOf(filename);		
+		var idx = itm.files.indexOf(filename);
+		if( idx > -1 ){
+			console.log('AUDIT LOG:', idx, itm.authorDate, 'Found filename', filename);
+		}
+
 		var action = itm.status[idx]; // D, M, A
 		return idx > -1 && action !== 'D';
 	});
