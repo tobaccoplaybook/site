@@ -1,0 +1,375 @@
+diff --git a/build/en/001-comprehensive-smokefree-legislation.html b/build/en/001-comprehensive-smokefree-legislation.html
+index acffae8..51b0c12 100644
+--- a/build/en/001-comprehensive-smokefree-legislation.html
++++ b/build/en/001-comprehensive-smokefree-legislation.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Comprehensive smokefree legislation is essential in protecting the health of others</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Comprehensive smokefree legislation is essential in protecting the health of others" />
+diff --git a/build/en/002-packaging.html b/build/en/002-packaging.html
+index f8d6239..a19a663 100644
+--- a/build/en/002-packaging.html
++++ b/build/en/002-packaging.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Large pictorial pack warnings and plain packaging work</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Large pictorial pack warnings and plain packaging work" />
+diff --git a/build/en/003-smokefree-legislation.html b/build/en/003-smokefree-legislation.html
+index b51fcc9..e2d26d1 100644
+--- a/build/en/003-smokefree-legislation.html
++++ b/build/en/003-smokefree-legislation.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Smokefree legislation does not harm the hospitality industry</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Smokefree legislation does not harm the hospitality industry" />
+diff --git a/build/en/004-marketing.html b/build/en/004-marketing.html
+index c4ec318..41d392a 100644
+--- a/build/en/004-marketing.html
++++ b/build/en/004-marketing.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Tobacco marketing is targeted at children and young people</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Tobacco marketing is targeted at children and young people" />
+diff --git a/build/en/005-illicit-trade.html b/build/en/005-illicit-trade.html
+index 634b37c..d232c18 100644
+--- a/build/en/005-illicit-trade.html
++++ b/build/en/005-illicit-trade.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Tobacco taxation does not result in illicit trade</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Tobacco taxation does not result in illicit trade" />
+diff --git a/build/en/006-taxation.html b/build/en/006-taxation.html
+index a8989fb..dc60c95 100644
+--- a/build/en/006-taxation.html
++++ b/build/en/006-taxation.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Tobacco taxation is one of the most cost-effective health interventions: government revenues increase while smoking rates fall</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Tobacco taxation is one of the most cost-effective health interventions: government revenues increase while smoking rates fall" />
+diff --git a/build/en/007-regulatory-space.html b/build/en/007-regulatory-space.html
+index 16c4205..b32a46c 100644
+--- a/build/en/007-regulatory-space.html
++++ b/build/en/007-regulatory-space.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: WTO law provides regulatory space for tobacco control measures</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: WTO law provides regulatory space for tobacco control measures" />
+@@ -281,7 +281,7 @@ Domestic tobacco control measures implemented by members have been challenged un
+ 	<a name="history"></a>
+ 
+ 	<div id="history">
+-		Modified on September 14th, 2016. See <a target="_blank" href="https://github.com/tobaccoplaybook/site/commit/009f49fd9809f8341a477b94f3c684d640526756#diff-883c06b59a434853f9508b386fffedf4">History</a> and <a target="_blank" href="https://github.com/tobaccoplaybook/site/commits/master/content/en/arguments/007-WTO_law_provides_regulatory_space_for_tobacco_control_measures.md">Revisions</a>
++		Initial version
+ 	</div>
+ 	<!-- End history -->
+ 
+diff --git a/build/en/008-commercial-rights.html b/build/en/008-commercial-rights.html
+index f139042..eb76eb1 100644
+--- a/build/en/008-commercial-rights.html
++++ b/build/en/008-commercial-rights.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Governments can enact tobacco control public health measures without infringing the tobacco industry’s commercial rights</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Governments can enact tobacco control public health measures without infringing the tobacco industry’s commercial rights" />
+@@ -281,7 +281,7 @@
+ 	<a name="history"></a>
+ 
+ 	<div id="history">
+-		Modified on September 14th, 2016. See <a target="_blank" href="https://github.com/tobaccoplaybook/site/commit/009f49fd9809f8341a477b94f3c684d640526756#diff-883c06b59a434853f9508b386fffedf4">History</a> and <a target="_blank" href="https://github.com/tobaccoplaybook/site/commits/master/content/en/arguments/008-Governments_can_enact_tobacco_control_public_health_measures_without_infringing_the_tobacco_industrys_commercial_rights.md">Revisions</a>
++		Initial version
+ 	</div>
+ 	<!-- End history -->
+ 
+diff --git a/build/en/about.html b/build/en/about.html
+index 049f1f1..c19f4c0 100644
+--- a/build/en/about.html
++++ b/build/en/about.html
+@@ -2,7 +2,7 @@
+ <html lang="">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Tobacco Control Playbook</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Tobacco Control Playbook" />
+diff --git a/build/en/feed.xml b/build/en/feed.xml
+index 13c4e1e..4fbd363 100644
+--- a/build/en/feed.xml
++++ b/build/en/feed.xml
+@@ -4,7 +4,7 @@
+         <description><![CDATA[The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.]]></description>
+         <link>https://tobaccoplaybook.net/en/index.html</link>
+         <generator>RSS for Node</generator>
+-        <lastBuildDate>Wed, 14 Sep 2016 19:37:44 GMT</lastBuildDate>
++        <lastBuildDate>Wed, 14 Sep 2016 20:29:21 GMT</lastBuildDate>
+         <atom:link href="https://tobaccoplaybook.net/en/feed.xml" rel="self" type="application/rss+xml"/>
+         <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
+         <language><![CDATA[en]]></language>
+diff --git a/build/en/index.html b/build/en/index.html
+index 347b28e..07223a2 100644
+--- a/build/en/index.html
++++ b/build/en/index.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Index</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Index" />
+diff --git a/build/en/introduction.html b/build/en/introduction.html
+index 07045a5..fe20193 100644
+--- a/build/en/introduction.html
++++ b/build/en/introduction.html
+@@ -2,7 +2,7 @@
+ <html lang="">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Tobacco Control Playbook</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Tobacco Control Playbook" />
+diff --git a/build/ru/001-comprehensive-smokefree-legislation.html b/build/ru/001-comprehensive-smokefree-legislation.html
+index 1f9bbf1..340c8e1 100644
+--- a/build/ru/001-comprehensive-smokefree-legislation.html
++++ b/build/ru/001-comprehensive-smokefree-legislation.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Комплексное законодательство о запрете курения в общественных местах имеет важнейшее значение для защиты здоровья некурящих людей </title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Комплексное законодательство о запрете курения в общественных местах имеет важнейшее значение для защиты здоровья некурящих людей " />
+diff --git a/build/ru/002-packaging.html b/build/ru/002-packaging.html
+index 8ffcae2..76bffa1 100644
+--- a/build/ru/002-packaging.html
++++ b/build/ru/002-packaging.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Использование крупных иллюстрированных предупреждений о вреде табака и введение в оборот простой упаковки сигарет – это эффективный метод борьбы с курением</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Использование крупных иллюстрированных предупреждений о вреде табака и введение в оборот простой упаковки сигарет – это эффективный метод борьбы с курением" />
+diff --git a/build/ru/003-smokefree-legislation.html b/build/ru/003-smokefree-legislation.html
+index 9c3b1c1..9cc767f 100644
+--- a/build/ru/003-smokefree-legislation.html
++++ b/build/ru/003-smokefree-legislation.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Законы о запрете курения в общественных местах не вредят гостинично-ресторанному бизнесу</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Законы о запрете курения в общественных местах не вредят гостинично-ресторанному бизнесу" />
+diff --git a/build/ru/004-marketing.html b/build/ru/004-marketing.html
+index e53c55a..a715a63 100644
+--- a/build/ru/004-marketing.html
++++ b/build/ru/004-marketing.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Маркетинг табачных изделий, направленный на детей и молодежь</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Маркетинг табачных изделий, направленный на детей и молодежь" />
+diff --git a/build/ru/005-illicit-trade.html b/build/ru/005-illicit-trade.html
+index 4cc72f9..8d710e2 100644
+--- a/build/ru/005-illicit-trade.html
++++ b/build/ru/005-illicit-trade.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Налогообложение табачных изделий не приводит к незаконной торговле табаком</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Налогообложение табачных изделий не приводит к незаконной торговле табаком" />
+diff --git a/build/ru/006-taxation.html b/build/ru/006-taxation.html
+index b9a4d01..3f923a9 100644
+--- a/build/ru/006-taxation.html
++++ b/build/ru/006-taxation.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Налогообложение табачных изделий – это одна из наиболее экономически эффективных мер в области здравоохранения, так как оно позволяет сократить распространенность курения и одновременно повысить государственные доходы</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Налогообложение табачных изделий – это одна из наиболее экономически эффективных мер в области здравоохранения, так как оно позволяет сократить распространенность курения и одновременно повысить государственные доходы" />
+diff --git a/build/ru/007-regulatory-space.html b/build/ru/007-regulatory-space.html
+index 49c6b3c..96d1639 100644
+--- a/build/ru/007-regulatory-space.html
++++ b/build/ru/007-regulatory-space.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Законы ВТО – это нормативная основа для мер борьбы против табака</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Законы ВТО – это нормативная основа для мер борьбы против табака" />
+diff --git a/build/ru/008-commercial-rights.html b/build/ru/008-commercial-rights.html
+index 3b937b4..5498786 100644
+--- a/build/ru/008-commercial-rights.html
++++ b/build/ru/008-commercial-rights.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Антитабачные меры правительств с целью охраны здоровья населения могут осуществляться без ущемления коммерческих прав табачной промышленности</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Антитабачные меры правительств с целью охраны здоровья населения могут осуществляться без ущемления коммерческих прав табачной промышленности" />
+diff --git a/build/ru/about.html b/build/ru/about.html
+index ede62bf..fd41efc 100644
+--- a/build/ru/about.html
++++ b/build/ru/about.html
+@@ -2,7 +2,7 @@
+ <html lang="">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Сборник аргументов</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Сборник аргументов" />
+diff --git a/build/ru/feed.xml b/build/ru/feed.xml
+index 081faa7..ad59ade 100644
+--- a/build/ru/feed.xml
++++ b/build/ru/feed.xml
+@@ -4,7 +4,7 @@
+         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
+         <link>https://tobaccoplaybook.net/ru/index.html</link>
+         <generator>RSS for Node</generator>
+-        <lastBuildDate>Wed, 14 Sep 2016 19:37:44 GMT</lastBuildDate>
++        <lastBuildDate>Wed, 14 Sep 2016 20:29:21 GMT</lastBuildDate>
+         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
+         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
+         <language><![CDATA[ru]]></language>
+diff --git a/build/ru/index.html b/build/ru/index.html
+index 0851711..0f64734 100644
+--- a/build/ru/index.html
++++ b/build/ru/index.html
+@@ -2,7 +2,7 @@
+ <html lang="ru">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Index</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Index" />
+diff --git a/build/ru/introduction.html b/build/ru/introduction.html
+index accba51..f5c6187 100644
+--- a/build/ru/introduction.html
++++ b/build/ru/introduction.html
+@@ -2,7 +2,7 @@
+ <html lang="">
+ <head>
+ 	<meta charset="utf-8"/>
+-	<meta name="system-version" content="0.8.17"/>
++	<meta name="system-version" content="0.8.18"/>
+ 
+ 	<title>Tobacco Control Playbook: Сборник аргументов</title>
+ 	<meta property="og:title" content="Tobacco Control Playbook: Сборник аргументов" />
+diff --git a/src/build-audits.js b/src/build-audits.js
+index 34f6b03..8c6652c 100644
+--- a/src/build-audits.js
++++ b/src/build-audits.js
+@@ -19,7 +19,25 @@ var allCommits = gitlog(gitcfg);
+ 
+ module.exports = function(filename, language, config){
+ 
+-	var filename = filename.split(cwd)[1].slice(1);
++	//var filename = filename.split(cwd)[1].slice(1);
++
++	//filename = filename.replace(/\//g, '\\');
++
++	//var filename = filename.split("/").pop();
++
++	//filename = filename.replace(/\//g, '\\');
++	//var filename = filename.split(cwd)[1].slice(1);
++
++	console.log('filename', filename);
++	console.log('cwd', cwd);
++	//filename /Users/js/repos/who-tobaccoplaybook/content/en/arguments/001-Comprehensive_smokefree_legislation_is_essential_in_protecting_the_health_of_others.md
++	//cwd      /Users/js/repos/who-tobaccoplaybook
++	//we want  content/en/arguments/001-Comprehensive_smokefree_legislation_is_essential_in_protecting_the_health_of_others.md
++
++	var cwd_norm = cwd.replace(/\\/g, '/');
++	var fn_norm  = filename.replace(/\\/g, '/');
++	filename = fn_norm.split(cwd_norm)[1].slice(1);
++
+ 
+ 	// remove those not concerning $filename
+ 	var commits = allCommits.filter( (itm) => {
+diff --git a/src/build.js b/src/build.js
+index 9ec9400..7b75764 100644
+--- a/src/build.js
++++ b/src/build.js
+@@ -73,8 +73,7 @@ module.exports.run = function(cb){
+ 		['pages', 'front'].map( (section) => {
+ 			content[section] 			= content[section] || [];
+ 			content[section][language] 	= content[section][language] || [];
+-			glob.sync( SRC + language + "/"+ section +"/*.md", {} ).map( function(itm){
+-				var filename = SRC + itm.split(SRC)[1];
++			glob.sync( SRC + language + "/"+ section +"/*.md", {} ).map( function(filename){
+ 				var doc = content_builder.generic(filename, language, config );
+ 				if( doc !== false ){			
+ 					content[section][language].push( doc );

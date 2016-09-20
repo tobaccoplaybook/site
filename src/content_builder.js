@@ -58,7 +58,7 @@ module.exports.article = function(filename, language, config){
 
 	// Publish?
 	var now 	  = moment();
-	now 		  = new moment("2017-08-15");
+	//now 		  = new moment("2017-08-15");
 	var pubdate   = new moment(frontMatter.attributes.publicDate);
 	var doPublish = pubdate.isSameOrBefore(now, 'day');
 

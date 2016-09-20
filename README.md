@@ -8,9 +8,9 @@
 # Tobacco Control Playbook
 
 While the tobacco industry and its allies have always opposed tobacco control measures, their strategies have now become more determined, focussed, misleading, aggressive and sophisticated.
- 
+
 Until now there has been no single source explaining how tobacco industry players act and how governments and the public health community can respond to their arguments.
- 
+
 The **Tobacco Control Playbook** is a living collection of evidence-based arguments and responses, developed by tobacco control leaders to counteract and succeed against the tobacco industry.
 
 [Read more...](https://tobaccoplaybook.net/en/introduction.html)
@@ -32,7 +32,7 @@ All content is expressed in Markdown files, located in the following directories
 | -------------- 	| -------------- 	|
 | /en, /ru			| available languages. Subdirs structure is expected to match. |
 | front				| content for the index page |
-| aux				| content for auxiliary pages, e.g. About |
+| pages				| content for auxiliary pages, e.g. About |
 | arguments			| main content files |
 
 
@@ -41,7 +41,7 @@ All content is expressed in Markdown files, located in the following directories
 All files accept [YAML frontmatter](https://www.npmjs.com/package/front-matter)
 
 
-| Key           | Example 		| Description | 
+| Key           | Example 		| Description |
 | ------------- | ----------- 	| ------------|
 | Title         | Title 		| the title of the argument |
 | Authors       | John Doe, Michael Smith		| one or all document authors |
@@ -58,7 +58,7 @@ All files accept [YAML frontmatter](https://www.npmjs.com/package/front-matter)
 
 #### Naming convention
 
-{langugage}/arguments/`000`_name_of_this_page.md, where:  
+`langugage`/arguments/`000`\_name_of_this_page.md, where:  
 - `language` is a directory containing all content files for a given language (e.g. 'en')  
 - `000` denotes a *unique* page ID
 
@@ -73,8 +73,7 @@ Examples:
 
 ## Installing the system
 
-Make sure your system has a working installation of node, npm, sh and git.  
-(Only tested on macOS...)
+Make sure your system has a working installation of [node, npm](https://nodejs.org/), [sh and git](https://git-scm.com/download/).  
 
 First obtain the source code:
 
@@ -93,12 +92,12 @@ This will start the dev server, which
 - Starts a live-reload server (so you can browse the result) at [http://127.0.0.1:8181/](http://127.0.0.1:8181/)  
 - Starts a file wathcer, that rebuilds when sourcefiles change.  
 
+
 #### Publishing the site
 
+The website is hosted with the free "github pages" feature, that makes *everything* published to the repo's _gh_pages_ branch available on the website domain ([tobaccoplaybook.net](https://tobaccoplaybook.net)).  
+To publish the changes to the live site, copy the generated html files to \_site/, commit- and push it.
 
-
-
-To publish the changes to the live site, 
 
 #### Git Setup:
 We follow the "gh-pages as a submodule of master" pattern from
@@ -106,10 +105,17 @@ http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html
 
 so,
 - work in master,
-- generate the public files to _site/
-- commit and push _site:
+- generate the public files to \_site/
+- commit and push \_site:
 - `$ cd _site; git add .; git commit -m "site update"; git push origin gh-pages`
 - commit and push master:
 - `$ cd ../; git commit -a -m "site update"; git push origin master`
 
-The git workflow is automated in `up.sh`, so simply run  `$ ./up.sh` (in repo root) to publish the content of `build/` to gh-pages.
+The git workflow is automated in `deploy.sh`, so simply run  `$ ./deploy.sh` (in repo root) to publish the content of `build/` to gh-pages.
+
+
+
+## License
+
+Code is licensed under MIT ( https://github.com/tobaccoplaybook/site/blob/master/LICENSE )  
+Content is licensed under CC-BY-4.0 ( )

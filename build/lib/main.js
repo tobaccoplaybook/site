@@ -16,7 +16,7 @@ function share(id){
 	conf.url = conf.url.replace(/%TXT%/g, document.title.replace(/_/g, ' ') );
 
 
-	console.log('share', id, servicenames[id], conf, conf.url);
+	//console.log('share', id, servicenames[id], conf, conf.url);
 	
 	track({
 		hitType: 'social',
