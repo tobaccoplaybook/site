@@ -117,5 +117,5 @@ The git workflow is automated in `deploy.sh`, so simply run  `$ ./deploy.sh` (in
 
 ## License
 
-Code is licensed under [MIT](https://github.com/tobaccoplaybook/site/blob/master/LICENSE) 
+Code is licensed under [MIT](https://github.com/tobaccoplaybook/site/blob/master/LICENSE)  
 Content is licensed under [CC-BY-4.0](https://github.com/tobaccoplaybook/site/blob/master/content/LICENSE)
