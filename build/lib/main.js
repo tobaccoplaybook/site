@@ -46,7 +46,8 @@ function share(id){
 }
 
 function subscribe(){
-	window.open("//who.us4.list-manage.com/subscribe/post?u=bb832ff4c9f8efad547ffcf69&amp;id=9a54f5fae2");
+	//window.open("//who.us4.list-manage.com/subscribe/post?u=bb832ff4c9f8efad547ffcf69&amp;id=9a54f5fae2");
+	window.open("//who.us4.list-manage.com/subscribe/?u=bb832ff4c9f8efad547ffcf69&amp;id=9a54f5fae2");
 	track({
 		hitType: 'social',
 		socialNetwork: 'Mailinglist',
