@@ -1,7 +1,7 @@
 
 function share(id){
 	/// urls from https://blog.bufferapp.com/social-media-icons
-	
+
 	var ww = 700, wh=500;
 
 	var servicenames = {tw: 'Twitter', fb: 'Facebook', gp: 'GooglePlus', li: 'LinkedIn' };
@@ -13,11 +13,15 @@ function share(id){
 	};
 	var conf = services[id];
 	conf.url = conf.url.replace(/%URL%/g, window.location.href);
-	conf.url = conf.url.replace(/%TXT%/g, document.title.replace(/_/g, ' ') );
+	//conf.url = conf.url.replace(/%TXT%/g, document.title.replace(/_/g, ' ') );
+
+	//var txt = document.title;
+	var txt = document.getElementsByName("description")[0].content || document.title;
+	conf.url = conf.url.replace(/%TXT%/g, txt );
 
 
 	//console.log('share', id, servicenames[id], conf, conf.url);
-	
+
 	track({
 		hitType: 'social',
 		socialNetwork: servicenames[id],
@@ -108,12 +112,12 @@ window.onload = function() {
 	//console.log('onload');
 
 	var addr = window.location.href.split(/\//g)[3];
-	
+
 	var lang = getCookie('lang');
 	//console.log('#0 addr lang:', addr, 'cookie lang:', lang);
 
 	if( addr === '' ){
-	
+
 
 		if( addr === '' ) addr = lang;
 
@@ -125,14 +129,14 @@ window.onload = function() {
 			//console.log('#1 using def lang (en), lang was:', lang );
 			lang = 'en'; // default
 		}
-				
+
 		// this is the pre-index, rewrite to $lang
 		setCookie('lang', lang)
 		var dest = window.location.href + lang;
 		//console.log('#2 rewrite', dest);
 		window.location.href = dest;
 		return;
-	
+
 	}else{
 		//console.log('#3 not pre-index, update cookie to', addr);
 		setCookie('lang', addr);
@@ -144,17 +148,17 @@ window.onload = function() {
 	var subbtn = document.getElementById("subscribebtn");
 	if(subbtn){
 		subbtn.addEventListener("click", subscribe);
-	}	
-	
+	}
+
 	var sharebtn = document.getElementById("sharebtn")
 	if(sharebtn){
 		sharebtn.addEventListener("click", function(){
 			sharingPanels.style.opacity = sharingPanels.style.opacity > 0 ? 0.0 : 1.0;
 		});
 	}
-	
+
 	//if( window.location.href.indexOf("/tags.html") > -1 ){
-		if( document.location.hash ){  
+		if( document.location.hash ){
 			markTag()
 		}
 		window.onhashchange = markTag;
@@ -201,7 +205,7 @@ function getCookie(key){
     //console.log('ca', ca);
     for(var i = 0; i <ca.length; i++) {
         var c = ca[i];
-        
+
         while( c.charAt(0) === ' '){
             c = c.substring(1);
         }
@@ -212,7 +216,7 @@ function getCookie(key){
     }
     return "";
 }
-	
+
 function clearCookie(name, domain, path){
     var domain = domain || document.domain;
     var path = path || "/";
