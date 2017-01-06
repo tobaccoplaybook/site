@@ -79,6 +79,10 @@ First obtain the source code:
 
 	$ git clone git@github.com:tobaccoplaybook/site.git
 
+or
+
+	$ git clone https://github.com/tobaccoplaybook/site.git
+
 Then, install its dependencies:
 
 	$ cd site/ && npm install
