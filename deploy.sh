@@ -40,9 +40,9 @@ git push origin gh-pages
 
 # commit and push master
 cd ../
-ls -l
+#ls -l
 git commit -a -m "${MESSAGE}"
-exit
+#exit
 git push origin master
 
 git log --stat -1
