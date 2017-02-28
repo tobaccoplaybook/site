@@ -62,12 +62,16 @@ module.exports.article = function(filename, language, config){
 	var pubdate   = new moment(frontMatter.attributes.publicDate);
 	var doPublish = pubdate.isSameOrBefore(now, 'day');
 
+	var shortFilename = filename.split(config.contentSource)[1];
+
 	//console.log(pubdate.format("MMMM Do, YYYY"), 'isSameOrBefore', now.format("MMMM Do, YYYY")  );
 
 	if( doPublish ){
-		console.log( chalk.green( pubdate.format("MMMM Do, YYYY")), 'isSameOrBefore', chalk.blue(now.format("MMMM Do, YYYY")), filename);
+		//console.log( chalk.green( pubdate.format("MMMM Do, YYYY")), 'isSameOrBefore', chalk.blue(now.format("MMMM Do, YYYY")), shortFilename);
+		console.log( chalk.green('Including'), shortFilename);
 	}else{
-		console.log( chalk.red(   pubdate.format("MMMM Do, YYYY"), 'isSameOrBefore'), chalk.blue(now.format("MMMM Do, YYYY")), chalk.red(filename) );
+		//console.log( chalk.red(   pubdate.format("MMMM Do, YYYY"), 'isSameOrBefore'), chalk.blue(now.format("MMMM Do, YYYY")), chalk.red(filename) );
+		console.log( chalk.red('Excluding'), shortFilename, chalk.grey('until '+ pubdate.format("MMMM Do, YYYY")) );
 	}
 
 

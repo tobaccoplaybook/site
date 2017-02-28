@@ -42,7 +42,11 @@ module.exports.run = function(cb){
 	
 	/// get top-level directories in $SRC directory (languages)
 	var lang = fs.readdirSync(SRC).filter(function(itm) {
-    	return fs.statSync(path.join(SRC, itm)).isDirectory();
+		if( itm == '.git' ){
+			return false;
+		}else{
+    		return fs.statSync(path.join(SRC, itm)).isDirectory();
+    	}
   	});
 
 	/// create structure to hold all data
@@ -61,6 +65,8 @@ module.exports.run = function(cb){
 		}
 
 		/// arguments
+		console.log('');
+		console.log( chalk.yellow('Parsing "'+ language +'" arguments:') );
 		glob.sync( SRC + language + "/arguments/*.md", {} ).map( function(filename){
 			var doc = content_builder.article(filename, language, config);
 			if( doc !== false ){
@@ -91,7 +97,8 @@ module.exports.run = function(cb){
 	});
 	
 	/// Build site
-	console.log( chalk.yellow('Rebuilding:') );
+	console.log('');
+	console.log( chalk.yellow('Rebuilding site:') );
 	builders.map( (fn) => fn(config, content) );
 
 	// stop timer

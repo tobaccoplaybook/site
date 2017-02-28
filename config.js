@@ -1,9 +1,10 @@
 module.exports = {
-	"contentSource": "./content/",
+	"contentSource": "../tobaccoplaybook-content/",
 	"buildDestination": "./build/",
 	"cache": "./cache/",
 
 	"githubRepo": "https://github.com/tobaccoplaybook/site/",
+	"contentRepo": "https://gitlab.com/base.io/tobaccoplaybook-content/",
 	"deepGithubDiffLinks": true,
 
 	"domain": "https://tobaccoplaybook.net/",

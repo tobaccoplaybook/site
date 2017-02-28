@@ -5,12 +5,13 @@ var gitlog 	= require('gitlog');
 var moment 	= require('moment');
 var musta   = require('mustache');
 var request = require('sync-request');
+var config  = require('../config.js');
 
 var cwd = process.cwd();
 
 // See: https://github.com/domharrington/node-gitlog
 var gitcfg = { 
-	repo: cwd,
+	repo: config.contentSource, //cwd
 	number: 500,
 	fields: ['hash', 'authorDate']
 };
@@ -26,8 +27,10 @@ module.exports = function(filename, language, config){
 	//we want  content/en/arguments/001-Comprehensive_smokefree_legislation_is_essential_in_protecting_the_health_of_others.md
 
 	/// convert all path-separators to "/"
-	var cwd_norm = cwd.replace(/\\/g, '/');		
+	var cwd_norm = path.resolve(config.contentSource).replace(/\\/g, '/');		
 	var fn_norm  = filename.replace(/\\/g, '/');
+	//console.log('');
+
 	/// split by cwd, to get the path relative to cwd
 	filename = fn_norm.split(cwd_norm)[1].slice(1);
 	/// convert to platform specific path-separator
@@ -39,7 +42,7 @@ module.exports = function(filename, language, config){
 
 		var idx = itm.files.indexOf(filename);
 		if( idx > -1 ){
-			console.log('AUDIT LOG:', idx, itm.authorDate, 'Found filename', filename);
+			//console.log('AUDIT LOG:', idx, itm.authorDate, 'Found filename', filename);
 		}
 
 		var action = itm.status[idx]; // D, M, A
@@ -56,8 +59,10 @@ module.exports = function(filename, language, config){
 
 
 	var date 		= moment().utc(itm.authorDate).format("MMMM Do, YYYY");
-	var historyUrl 	= config.githubRepo + 'commit/'+ itm.hash;
-	var revisionUrl = config.githubRepo + 'commits/master/'+ filename;
+	//var historyUrl 	= config.githubRepo + 'commit/'+ itm.hash;
+	//var revisionUrl = config.githubRepo + 'commits/master/'+ filename;
+	var historyUrl 	= config.contentRepo + 'commit/'+ itm.hash;
+	var revisionUrl = config.contentRepo + 'commits/master/'+ filename;
 
 	var tpl 	= config.strings.auditLinkShort[ language === 'en' ? 0:1];
 
