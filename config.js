@@ -1,5 +1,5 @@
 module.exports = {
-	"contentSource": "../tobaccoplaybook-content/",
+	"contentSource": "../content/",
 	"buildDestination": "./build/",
 	"cache": "./cache/",
 
