@@ -4,7 +4,7 @@ module.exports = {
 	"cache": "./cache/",
 
 	"githubRepo": "https://github.com/tobaccoplaybook/site/",
-	"contentRepo": "https://gitlab.com/base.io/tobaccoplaybook-content/",
+	"contentRepo": "https://github.com/tobaccoplaybook/content/",
 	"deepGithubDiffLinks": true,
 
 	"domain": "https://tobaccoplaybook.net/",

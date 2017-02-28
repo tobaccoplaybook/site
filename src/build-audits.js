@@ -42,7 +42,7 @@ module.exports = function(filename, language, config){
 
 		var idx = itm.files.indexOf(filename);
 		if( idx > -1 ){
-			//console.log('AUDIT LOG:', idx, itm.authorDate, 'Found filename', filename);
+			console.log('AUDIT LOG:', idx, itm.authorDate, 'Found filename', filename);
 		}
 
 		var action = itm.status[idx]; // D, M, A
@@ -63,6 +63,10 @@ module.exports = function(filename, language, config){
 	//var revisionUrl = config.githubRepo + 'commits/master/'+ filename;
 	var historyUrl 	= config.contentRepo + 'commit/'+ itm.hash;
 	var revisionUrl = config.contentRepo + 'commits/master/'+ filename;
+
+	console.log('historyUrl:', historyUrl);
+	console.log('revisionUrl:', revisionUrl);
+	console.log('--');
 
 	var tpl 	= config.strings.auditLinkShort[ language === 'en' ? 0:1];
 
