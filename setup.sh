@@ -16,18 +16,20 @@
 # Create a new directory on your computer to work from,
 # open a commandline, cd to that directory, and run this script (./setup.sh)
 
-DIR=`pwd`
+#DIR=`pwd`
 
 # clone content repo
-git clone git@github.com:tobaccoplaybook/content.git
+#git clone git@github.com:tobaccoplaybook/content.git
 
 # clone system repo
-git clone git@github.com:tobaccoplaybook/site.git
-cd site
-npm i
+#git clone git@github.com:tobaccoplaybook/site.git
+#cd site
+#npm i
 
-cd $DIR
-ll
+#cd $DIR
+#ll
+
+echo "gitdir: ../.git/modules/_site" > _site/.test
 
 
 
