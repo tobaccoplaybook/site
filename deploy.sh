@@ -29,23 +29,23 @@ echo "message: ${MESSAGE}"
 #exit
 
 # copy everything in build to _site
-rm -rf _site/*
-cp -v -R build/* _site/
+rm -rf docs/*
+cp -v -R build/* docs/
 
 # commit and push gh-pages branch
-cd _site
-git add .
-git commit -m "${MESSAGE}"
-git push origin gh-pages
+#cd _site
+#git add .
+#git commit -m "${MESSAGE}"
+#git push origin gh-pages
 
 # commit and push master
-cd ../
+#cd ../
 #ls -l
 git commit -a -m "${MESSAGE}"
 #exit
 git push origin master
 
-git log --stat -1
+#git log --stat -1
 
 echo $GREEN"Published as '$DATE update'" $ENDCOLOR
 
