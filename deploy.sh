@@ -41,6 +41,8 @@ cp -v -R build/* docs/
 # commit and push master
 #cd ../
 #ls -l
+git add .
+#exit
 git commit -a -m "${MESSAGE}"
 #exit
 git push origin master
