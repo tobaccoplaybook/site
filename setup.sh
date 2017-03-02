@@ -29,7 +29,7 @@
 #cd $DIR
 #ll
 
-echo "gitdir: ../.git/modules/_site" > _site/.test
+echo "gitdir: ../.git/modules/_site" > _site/.git
 
 
 
