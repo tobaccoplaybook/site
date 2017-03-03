@@ -64,7 +64,8 @@ module.exports = function(config, content){
 			+ mustache.render(footer, props);
 
 		var destination = path.normalize( config.buildDestination + lang + '/index.html' );
-		console.log( chalk.yellow(' > writing'), chalk.green('IDX'), destination);
+		var short_destination = path.join(lang, "index.html");
+		console.log( chalk.yellow(' > writing'), chalk.green('IDX '), short_destination);
 
 		fs.writeFileSync(destination, result );
 

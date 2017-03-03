@@ -26,25 +26,21 @@ shift # past argument or value
 done
 
 echo "message: ${MESSAGE}"
-#exit
 
-# copy everything in build to _site
+# copy everything in build to docs (github serves the site from the /docs directory)
 rm -rf docs/*
 cp -v -R build/* docs/
 
-# commit and push gh-pages branch
-#cd _site
-#git add .
-#git commit -m "${MESSAGE}"
-#git push origin gh-pages
+# commit and push content repo
+cd ../content/
+git add .
+git commit -m "${MESSAGE}"
+git push origin master
 
 # commit and push master
-#cd ../
-#ls -l
+cd ../site/
 git add .
-#exit
 git commit -a -m "${MESSAGE}"
-#exit
 git push origin master
 
 #git log --stat -1

@@ -13,13 +13,13 @@ function lowercaseFirstLetter(string) {
 }
 
 module.exports = function(config, content){
-	
+
 	var header	= fs.readFileSync( __dirname + '/../partials/header.html').toString();
 	var pagetop = fs.readFileSync( __dirname + '/../partials/pagetop.html').toString();
 	var footer 	= fs.readFileSync( __dirname + '/../partials/footer.html').toString();
 	var tpl 	= fs.readFileSync( __dirname + '/../partials/pages.html').toString();
 	//console.log('pages', content.pages);
-	
+
 	content.languages.map( (lang) => {
 		content['pages'][lang].map( (itm) => {
 
@@ -36,7 +36,7 @@ module.exports = function(config, content){
 				strings[k] = config.strings[k][ (lang === 'en') ? 0 : 1];
 			});
 			//console.log('strings', strings);
-		
+
 			var props  = Object.assign({}, itm, config, {body:md.render(itm.body)}, {pages:content.pages[lang]}, extra, strings);
 
 			/// switch title and documentDateDisplay so
@@ -49,7 +49,8 @@ module.exports = function(config, content){
 			result += mustache.render(footer, props);
 
 			var destination = path.join(config.buildDestination, lang, itm.url);
-			console.log( chalk.yellow(' > writing'), chalk.green('PAGE'), destination);
+			var short_destination = path.join(lang, itm.url);
+			console.log( chalk.yellow(' > writing'), chalk.green('PAGE'), short_destination);
 			fs.writeFileSync(destination, result);
 		});
 	});

@@ -42,7 +42,7 @@ module.exports = function(filename, language, config){
 
 		var idx = itm.files.indexOf(filename);
 		if( idx > -1 ){
-			console.log('AUDIT LOG:', idx, itm.authorDate, 'Found filename', filename);
+			//console.log('AUDIT LOG:', idx, itm.authorDate, 'Found filename', filename);
 		}
 
 		var action = itm.status[idx]; // D, M, A
@@ -53,7 +53,7 @@ module.exports = function(filename, language, config){
 	if( commits.length < 1 ){
 		return {auditTrailLink: config.strings.first_commit[ language === 'en' ? 0 : 1 ] }; // 'This is the first commit.'
 	}
-	
+
 	var itm 	= commits[0]; // most recent commit
 	var idx 	= itm.files.indexOf(filename);
 
@@ -64,9 +64,9 @@ module.exports = function(filename, language, config){
 	var historyUrl 	= config.contentRepo + 'commit/'+ itm.hash;
 	var revisionUrl = config.contentRepo + 'commits/master/'+ filename;
 
-	console.log('historyUrl:', historyUrl);
-	console.log('revisionUrl:', revisionUrl);
-	console.log('--');
+	//console.log('historyUrl:', historyUrl);
+	//console.log('revisionUrl:', revisionUrl);
+	//console.log('--');
 
 	var tpl 	= config.strings.auditLinkShort[ language === 'en' ? 0:1];
 
@@ -93,6 +93,6 @@ module.exports = function(filename, language, config){
 
 	var props 	= {date, historyLink, revisionLink};
 	var msg 	= musta.render( tpl, props );
-	
+
 	return {auditTrailLink: msg};
 }

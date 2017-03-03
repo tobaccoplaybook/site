@@ -32,7 +32,8 @@ module.exports = function(config, content){
 
 		var xml = feed.xml({indent: true});
 		var destination = path.normalize( config.buildDestination + lang + '/feed.xml' );
-		console.log( chalk.yellow(' > writing'), chalk.green('RSS'), destination);
+		var short_destination = path.join(lang, "feed.xml");
+		console.log( chalk.yellow(' > writing'), chalk.green('RSS '), short_destination);
 		fs.writeFileSync(destination, xml );
 	});
 }
