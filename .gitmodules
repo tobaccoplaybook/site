@@ -1,4 +1,0 @@
-[submodule "_site"]
-	path = _site
-	url = git@github.com:tobaccoplaybook/site.git
-	branch = gh-pages
