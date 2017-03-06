@@ -378,6 +378,10 @@ html[lang="en"] section.footnotes::before {
     line-height: 4rem;
 }
 
+body > article > h3 {
+    page-break-before: always;
+}
+
 .footnotes {
     font-family: helvetica;
 }

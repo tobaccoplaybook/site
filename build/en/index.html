@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<meta name="system-version" content="0.9.10"/>
+	<meta name="system-version" content="0.9.11"/>
 
 	<title>Tobacco Control Playbook: Index</title>
 	<meta property="og:title" content="Tobacco Control Playbook: Index" />
@@ -25,13 +25,16 @@
 		}
 	</style>
     <link href="feed.xml" rel="alternate" type="application/rss+xml" title="Updates" />
+
+    <link rel="stylesheet" href="../lib/gutenberg.min.css" media="print">
+	<!-- <link rel="stylesheet" href="../lib/themes/oldstyle.css" media="print"> -->
 </head>
 <body>
 <!-- end header -->
 <!-- start pagetop -->
 <div id="cover" class="coverimage">
 
-	<div id="menu" class="closed">
+	<div id="menu" class="closed no-print">
 
 		<span class="menutitle"><a href="index.html" class="normal">Tobacco Control Playbook</a></span>
 
@@ -77,7 +80,7 @@
 
 			<span class="menutitle" style="margin-top: 1rem;"><a href="index.html" class="normal">Tobacco Control Playbook</a></span>
 
-			<span class="headerRight">
+			<span class="headerRight no-print">
 				
 				<span id="langbtn" class="headerButton langButton">
 					<span id="langbtnlabel" class="wlabel">
@@ -95,7 +98,7 @@
 			</span>
 		</div>
 
-		<div id="sharingPanels">
+		<div id="sharingPanels" class="no-print">
 			
 			<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
 				<span class="icon-twitter"></span>
@@ -430,7 +433,7 @@
 <!-- end template front -->
 
 <!-- footer -->
-<footer>
+<footer class="no-print">
 
     <div class="content">
 

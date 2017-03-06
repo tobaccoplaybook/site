@@ -84,6 +84,9 @@ module.exports = function(config, content){
 				'<hr class="footnotes-sep" style="margin-top: 2rem;">'+
 				parts[1];
 
+			/// when printing, we want to break the page before the References
+			page = page.replace('<section class="footnotes">', '<div class="page-break-after">!_!</div><section class="footnotes">');
+			
 			/// add to output
 			result += page;
 			

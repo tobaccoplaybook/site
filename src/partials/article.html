@@ -5,7 +5,7 @@
 		<p>{{short}}</p>
 	</div>
 
-	<div class="moztags clearfix">
+	<div class="moztags clearfix no-print">
 		<ul>
 		{{#tags}}
 			<li><a class="tag" href="{{{link}}}">{{name}}</a></li>
@@ -15,6 +15,7 @@
 
 	{{{body}}}
 
+
 	<div class="referenceAccessDate">
 		<p>{{references_accessed_on}} {{referenceAccessDate}}.</p>
 	</div>
@@ -22,7 +23,7 @@
 	<!-- begin history -->
 	<a name="history"></a>
 
-	<div id="history">
+	<div id="history" class="no-print">
 		{{{auditTrailLink}}}
 	</div>
 	<!-- End history -->
