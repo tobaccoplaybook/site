@@ -25,11 +25,10 @@ git push origin master
 cd ../site/
 #git add .
 #git commit -a -m "${MESSAGE}"
-git commit -m 'message' -- docs
+git commit -m "${MESSAGE}" -- docs
 git push origin master
 
 #git log --stat -1
 
 echo $GREEN"Published as '$MESSAGE'" $ENDCOLOR
 
-npm version patch
