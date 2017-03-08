@@ -21,6 +21,7 @@ git add .
 git commit -m "${MESSAGE}"
 git push origin master
 
+
 # commit and push master
 cd ../site/
 #git add .
@@ -31,4 +32,3 @@ git push origin master
 #git log --stat -1
 
 echo $GREEN"Published as '$MESSAGE'" $ENDCOLOR
-
