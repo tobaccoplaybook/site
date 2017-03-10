@@ -32,6 +32,7 @@
     "rmrf": "^1.0.2",
     "rss": "^1.2.1",
     "sync-request": "^3.0.1",
+    "thenby": "^1.2.3",
     "watchreload": "git://github.com/baseio/watchreload.git"
   }
 }

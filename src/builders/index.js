@@ -5,7 +5,7 @@ var chalk 	= require('chalk');
 var moment 	= require('moment');
 var mustache= require('mustache');
 var md 		= require('markdown-it')();
-
+var firstBy = require('thenby');
 
 module.exports = function(config, content){
 
@@ -30,7 +30,18 @@ module.exports = function(config, content){
 			docs.push( Object.assign({}, itm.meta, {url:itm.url}) );
 			//console.log(' documentDateDisplay', itm.meta.documentDateDisplay);
 		});
-		if( DEBUG > 0 ) console.log('DOCS', docs );
+		//if( DEBUG > 0 ) 
+		console.log('1 DOCS', docs );
+
+		//docs = docs.sort(function(a,b){
+		//	return b.argumentId - a.argumentId;
+		//})
+		docs.sort(
+			firstBy("publicDate", {direction:-1})
+			.thenBy("argumentId")
+		);
+		console.log('2 DOCS', docs ); // {direction:-1}
+
 
 		var extra = {
 			title: 'Index',

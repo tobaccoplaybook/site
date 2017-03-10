@@ -61,7 +61,7 @@ function track( payload ){
 		ga('send', payload);
 		ga('baseio.send', payload);
 	}catch(e){
-		console.log('GA Track, Error:', e);
+		//console.log('GA Track, Error:', e);
 	}
 }
 
@@ -69,7 +69,7 @@ var current_tag = '';
 
 function markTag(){
 	var h = document.location.hash.replace('#','tag-');
-	console.log('h', h);
+	//console.log('markTag() h=', h);
 	var all = document.getElementsByClassName('argument');
 	Array.prototype.forEach.call(all, function(elm, index) {
 		if( elm.className.split(" ").indexOf(h) === -1 ){
@@ -89,7 +89,7 @@ function markTag(){
 
 	var active = document.getElementsByName(active_tag);
 	var active = document.querySelectorAll('a[data-tagname="'+ active_tag + '"]');
-	console.log('active', active);
+	//console.log('active', active);
 
 	Array.prototype.forEach.call(active, function(elm, index) {
 		elm.className = 'tag active';
@@ -99,7 +99,7 @@ function markTag(){
 }
 
 function tagClicked( elm ){
-	console.log('tagClicked', elm.target.hash, elm);
+	//console.log('tagClicked', elm.target.hash, elm);
 	var active_tag = elm.target.hash.replace("#", '');
 	if( active_tag === current_tag ){
 		// deselect all
