@@ -215,16 +215,16 @@ window.onload = function() {
 		});
 	}
 
-	if( window.location.href.indexOf("/index.html") > -1 || window.location.href.substr(-1) === '/'){
+	if( window.location.href.indexOf("/index.html") > -1){
 		//if( document.location.hash ){
 			markTag()
 		//}
 		window.onhashchange = markTag;
-
-		limitListCount = 1;
-		limitList();
 	}
 
+
+	limitListCount = 1;
+	limitList();
 
 	//
 
@@ -239,7 +239,7 @@ window.onload = function() {
 	ga('create', 'UA-84155730-1', {'name':'baseio'});
 	//ga('baseio.send', 'pageview');
 
-	track('pageview')
+	track('pageview');
 }
 
 
