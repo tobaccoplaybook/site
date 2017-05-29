@@ -215,7 +215,7 @@ window.onload = function() {
 		});
 	}
 
-	if( window.location.href.indexOf("/index.html") > -1 ){
+	if( window.location.href.indexOf("/index.html") > -1 || window.location.href.substr(-1) === '/'){
 		//if( document.location.hash ){
 			markTag()
 		//}
@@ -259,7 +259,7 @@ function limitList( scroll ){
 		}
 	});
 
-	console.log('lastElm.getBoundingClientRect().top', lastElm.getBoundingClientRect().top);
+	//console.log('lastElm.getBoundingClientRect().top', lastElm.getBoundingClientRect().top);
 	if( scroll) window.scrollTo(0, lastElm.getBoundingClientRect().top + window.scrollY)
 
 }
