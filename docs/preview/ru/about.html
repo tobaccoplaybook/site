@@ -31,26 +31,51 @@
 	<div class="top">
 		<header class="page">
 			
-				<a href="index.html"><h1>Tobacco Control Playbook</h1></a>
+				<a href="index.html"><h1>Сборник аргументов для борьбы с табаком</h1></a>
 
 				<div class="controls">
-					<span>Поделиться</span>
+					<span onclick="toggleMenu()">Поделиться</span>
+						<div id="sharingMenu" class="hidden">
+							<div class="menu-sharewrap">
+								<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
+								<span class="icon-twitter"></span>
+								</span>
+
+								<span onClick="share('fb');" class="panel" style="background-color:#2E4586;">
+								<span class="icon-facebook"></span>
+								</span>
+
+								<span onClick="share('gp'); "class="panel" style="background-color:#D92E20;">
+								<span class="icon-google-plus"></span>
+								</span>
+
+								<span onClick="share('li');" class="panel" style="background-color:#0064A7;">
+								<span class="icon-linkedin2"></span>
+								</span>
+							</div>
+						</div>
+
 					<span class="pipe">|</span>
 					<span><a class="normal" href="&#x2F;en&#x2F;about.html">English</a></span>
 				</div>
 
 		</header>
 	</div>
+
+
+
 <!-- end pagetop --><!-- begin template pages -->
 <div class="page-wrap">
 		
 	<div class="page">
-		<div class="list">
-			<div class="item nopad">
-			
-			<div class="infow">
+		<div class="list wide">
+			<div class="item itemlarge nopad">
 
-	<h3>Философия</h3>
+			<div class="imgw" style="background-image: url()"></div>
+			
+				<div class="infow">
+
+					<h3>Философия</h3>
 <p>Борьба против табака связана со значительными трудностями и сложностями. Ее еще более затрудняет тактика противодействия эффективным антитабачным мерам, которую используют табачные компании и их союзники. Данный сборник аргументов разработан Европейским региональным бюро ВОЗ, чтобы показать, какие аргументы используют табачные компании и как именно правительства и защитники общественного здоровья могут ответить на их аргументы.</p>
 <h3>Авторские права</h3>
 <p>© Всемирная организация здравоохранения, 2016 г.
@@ -65,10 +90,10 @@
 <p>Согласно контракту, мы используем стороннего партнера в Интернете, который собирает информацию о вашем посещении веб-сайта «Сборник аргументов для борьбы с табаком». Для этого мы применяем куки-файлы. Хотя информацию, поступающую с нашего сайта от нашего имени, регистрирует сторонняя компания, мы контролируем то, как эта информация может быть использована. Виды информации, которую мы собираем, включают в себя: адрес Интернет-протокола (IP), с которого вы получаете доступ к Интернету, дату и время, интернет-адрес веб-сайта, с которого вы перешли по ссылке на наш сайт, имя файла или слов, которые вы просматривали, а также браузер, используемый для получения доступа к нашему веб-сайту. Мы используем эту информацию для оценки количества посетителей различных разделов нашего веб-сайта и эффективности системы, а также для выявления проблемных областей. Это помогает нам получить данные о географическом распределении посетителей нашего веб-сайта и о технологиях, используемых для получения доступа к сайту.. Мы также используем эту информацию, чтобы расширить охват сайта и сделать его более полезным. Эта информация никогда не связана с вашей персональной информацией.</p>
 
 
-</div>
-</div>
-</div>
-</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- end template pages --> 
 <!-- footer -->
@@ -77,9 +102,14 @@
   <div class="page">
     
     <div id="footertopics" class="col2">
-      <h3>Topics </h3>
+      <h3>Темы</h3>
 
       <ul class="tags" style="text-align: left;">
+          <li><a class="tag" data-tagname="" href="index.html#вторичный_табачный_дым">Вторичный табачный дым</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#воздействие">Воздействие</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#налогообложение_табачных_изделий">налогообложение табачных изделий</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#общественное_здравоохранение">общественное здравоохранение</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#вто">ВТО</a></li>
       </ul>
     </div>
 
@@ -107,7 +137,7 @@
     </div>
 
     <div class="col1">
-      <h3>Contact</h3>
+      <h3>Контакты</h3>
 
       <a href="https://github.com/tobaccoplaybook/site/issues">
         <div class="btn" style="border: 1px solid #979797;">Сообщить о проблеме</div>

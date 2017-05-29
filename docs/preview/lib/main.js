@@ -148,28 +148,6 @@ function markTag(){
 			elm.classList.remove('active');
 		}
 	});
-
-	//var active = document.getElementsByClassName('active');
-
-
-	/*
-	Array.prototype.forEach.call(document.getElementsByClassName("tag"), function(elm, index) {
-		elm.className = 'tag';
-		elm.onclick = tagClicked;
-	});
-	var active_tag = document.location.hash.replace('#', '');
-
-	var active = document.getElementsByName(active_tag);
-	var active = document.querySelectorAll('a[data-tagname="'+ active_tag + '"]');
-	//console.log('active', active);
-
-	Array.prototype.forEach.call(active, function(elm, index) {
-		//elm.className = 'tag active';
-		elm.parentElement.className = 'active';
-	});
-	
-	current_tag = active_tag;
-	*/
 }
 
 function onlyUnique(value, index, self) { 
@@ -182,17 +160,6 @@ function deleteItem(arr, item){
 	}
 	return arr;
 }
-// function tagClicked( elm ){
-// 	console.log('tagClicked', elm.target.hash, elm);
-	
-// 	var active_tag = elm.target.hash.replace("#", '');
-// 	if( active_tag === current_tag ){
-// 		// deselect all
-// 		document.location = document.location.href.split('#')[0];
-// 	}
-	
-// }
-
 
 window.onload = function() {
 
@@ -253,6 +220,9 @@ window.onload = function() {
 			markTag()
 		//}
 		window.onhashchange = markTag;
+
+		limitListCount = 1;
+		limitList();
 	}
 
 
@@ -272,9 +242,43 @@ window.onload = function() {
 	track('pageview')
 }
 
+
+var limitListCount = 0;
+var limitListIncrement = 2;
+function limitList( scroll ){
+	limitListCount += limitListIncrement;
+	var all = document.getElementsByClassName('argument');
+	console.log('limitListCount', limitListCount);
+
+
+	var lastElm = 0;
+	Array.prototype.forEach.call(all, function(elm, index) {
+		if( index < limitListCount ){
+			elm.classList.remove("hidden");
+			lastElm = elm;
+		}
+	});
+
+	console.log('lastElm.getBoundingClientRect().top', lastElm.getBoundingClientRect().top);
+	if( scroll) window.scrollTo(0, lastElm.getBoundingClientRect().top + window.scrollY)
+
+}
+
+
+
+
+
+
+
+
+
+
+
 function toggleMenu(){
-	var el = document.getElementById("menu");
-	el.className = (el.className === 'closed') ? '' : 'closed';
+	//var el = document.getElementById("menu");
+	//el.className = (el.className === 'closed') ? '' : 'closed';
+
+	document.getElementById("sharingMenu").classList.remove("hidden");
 }
 
 

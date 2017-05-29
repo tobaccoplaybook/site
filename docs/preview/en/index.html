@@ -34,38 +34,56 @@
 				<a href="index.html"><h1>Tobacco Control Playbook</h1></a>
 
 				<div class="controls">
-					<span>Share</span>
+					<span onclick="toggleMenu()">Share</span>
+						<div id="sharingMenu" class="hidden">
+							<div class="menu-sharewrap">
+								<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
+								<span class="icon-twitter"></span>
+								</span>
+
+								<span onClick="share('fb');" class="panel" style="background-color:#2E4586;">
+								<span class="icon-facebook"></span>
+								</span>
+
+								<span onClick="share('gp'); "class="panel" style="background-color:#D92E20;">
+								<span class="icon-google-plus"></span>
+								</span>
+
+								<span onClick="share('li');" class="panel" style="background-color:#0064A7;">
+								<span class="icon-linkedin2"></span>
+								</span>
+							</div>
+						</div>
+
 					<span class="pipe">|</span>
 					<span><a class="normal" href="&#x2F;ru&#x2F;index.html">Русский</a></span>
 				</div>
 
 		</header>
 	</div>
+
+
+
 <!-- end pagetop -->
 
-
-	<div id="banner">
-		<div class="page" style="background-image: url(../lib/banner.png);">
-			
-			<span style="display: inline-block;">
-				<h1>Evidence based arguments for tobacco control</h1>
-				
-				<span style="display: inline-block; width:580px; float: left;">
-					<p style="text-align:left; margin:0; padding:0;">Equipping governments and the public health community with arguments against the tobacco lobby</p>
-				</span>
-
-				<span style="">
-					<a href="introduction.html"><div class="btn large">Read more</div></a>
-				</span>
-			</span>
-
+	<div id="banner" class="lang_en">
+		<div class="page">
+			<table>
+				<tr>
+					<td colspan="2"><h1>Evidence based arguments for tobacco control</h1></td>
+				</tr>
+				<tr>
+					<td style="padding-right: 40px;"><p>Equipping governments and the public health community with arguments against<br />the tobacco lobby</p></td>
+					<td><a href="introduction.html"><div class="btn large">Read More</div></a></td>
+				</tr>
+			</table>
 		</div>
 	</div>
 
 	<div id="filter" style="display: none;">
 		<div class="page">
 			
-			<h3>Filters:</h3>
+			<h3>Filters</h3>
 				
 			<ul id="filterlist" class="tags">
 				<!-- <li><a class="tag" onclick="clearFilter('tagname')">raw</a></li> -->
@@ -83,7 +101,7 @@
 <div class="list">
 
 
-<div class="tag-second-hand_smoke tag-health_effects tag-smokefree_legislation tag-exposure tag-indoor_public_places tag-enforcement argument">
+<div class="tag-second-hand_smoke tag-health_effects tag-smokefree_legislation tag-exposure tag-indoor_public_places tag-enforcement argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="second-hand_smoke" /></a>
@@ -126,7 +144,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-tobacco_products tag-product_packaging tag-tobacco_industry tag-warnings tag-plain_packaging argument">
+<div class="tag-tobacco_products tag-product_packaging tag-tobacco_industry tag-warnings tag-plain_packaging argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="tobacco_products" /></a>
@@ -165,7 +183,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-smokefree_policy tag-public_places tag-hospitality_industry tag-second-hand_smoke tag-exposure argument">
+<div class="tag-smokefree_policy tag-public_places tag-hospitality_industry tag-second-hand_smoke tag-exposure argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="smokefree_policy" /></a>
@@ -204,7 +222,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-tobacco_marketing tag-children tag-young_people tag-tobacco_advertising tag-promotion tag-sponsorship argument">
+<div class="tag-tobacco_marketing tag-children tag-young_people tag-tobacco_advertising tag-promotion tag-sponsorship argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="tobacco_marketing" /></a>
@@ -247,7 +265,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-illicit_tobacco_trade tag-tobacco_taxation tag-tobacco_market tag-smuggling tag-counterfeiting tag-tobacco_prices argument">
+<div class="tag-illicit_tobacco_trade tag-tobacco_taxation tag-tobacco_market tag-smuggling tag-counterfeiting tag-tobacco_prices argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="illicit_tobacco_trade" /></a>
@@ -290,7 +308,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-tobacco_taxation tag-health_intervention tag-revenue tag-tobacco_consumption tag-economy tag-public_health argument">
+<div class="tag-tobacco_taxation tag-health_intervention tag-revenue tag-tobacco_consumption tag-economy tag-public_health argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="tobacco_taxation" /></a>
@@ -333,7 +351,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-trade_law tag-trade_agreements tag-who_fctc tag-wto tag-public_health tag-case_law argument">
+<div class="tag-trade_law tag-trade_agreements tag-who_fctc tag-wto tag-public_health tag-case_law argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="trade_law" /></a>
@@ -376,7 +394,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-investment_law tag-sovereign_right_of_states tag-commercial_rights tag-intellectual_property tag-wto argument">
+<div class="tag-investment_law tag-sovereign_right_of_states tag-commercial_rights tag-intellectual_property tag-wto argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="investment_law" /></a>
@@ -421,7 +439,7 @@
 		<a href="//base.us13.list-manage.com/subscribe/?u=57aa79f1090691d1e473f3ac5&amp;id=fc24ece223" target="_blank"><div class="btn">Subscribe</div></a>
 	</div>
 
-	<div class="btn loadmore filter_hide">Load more</div>
+	<div class="btn loadmore filter_hide" onclick="limitList(true);">Load More</div>
 
 	<div class="spacer filter_hide">&nbsp;</div>
 
@@ -586,49 +604,14 @@
   <div class="page">
     
     <div id="footertopics" class="col2">
-      <h3>Topics </h3>
+      <h3>Topics</h3>
 
       <ul class="tags" style="text-align: left;">
-          <li><a class="tag" data-tagname="second-hand_smoke" href="index.html#second-hand_smoke">Second-hand smoke</a></li>
-          <li><a class="tag" data-tagname="health_effects" href="index.html#health_effects">Health effects</a></li>
-          <li><a class="tag" data-tagname="smokefree_legislation" href="index.html#smokefree_legislation">Smokefree legislation</a></li>
-          <li><a class="tag" data-tagname="exposure" href="index.html#exposure">Exposure</a></li>
-          <li><a class="tag" data-tagname="indoor_public_places" href="index.html#indoor_public_places">Indoor public places</a></li>
-          <li><a class="tag" data-tagname="enforcement" href="index.html#enforcement">Enforcement</a></li>
-          <li><a class="tag" data-tagname="tobacco_products" href="index.html#tobacco_products">Tobacco products</a></li>
-          <li><a class="tag" data-tagname="product_packaging" href="index.html#product_packaging">product packaging</a></li>
-          <li><a class="tag" data-tagname="tobacco_industry" href="index.html#tobacco_industry">tobacco industry</a></li>
-          <li><a class="tag" data-tagname="warnings" href="index.html#warnings">warnings</a></li>
-          <li><a class="tag" data-tagname="plain_packaging" href="index.html#plain_packaging">plain packaging</a></li>
-          <li><a class="tag" data-tagname="smokefree_policy" href="index.html#smokefree_policy">Smokefree policy</a></li>
-          <li><a class="tag" data-tagname="public_places" href="index.html#public_places">public places</a></li>
-          <li><a class="tag" data-tagname="hospitality_industry" href="index.html#hospitality_industry">hospitality industry</a></li>
-          <li><a class="tag" data-tagname="tobacco_marketing" href="index.html#tobacco_marketing">Tobacco marketing</a></li>
-          <li><a class="tag" data-tagname="children" href="index.html#children">children</a></li>
-          <li><a class="tag" data-tagname="young_people" href="index.html#young_people">young people</a></li>
-          <li><a class="tag" data-tagname="tobacco_advertising" href="index.html#tobacco_advertising">tobacco advertising</a></li>
-          <li><a class="tag" data-tagname="promotion" href="index.html#promotion">promotion</a></li>
-          <li><a class="tag" data-tagname="sponsorship" href="index.html#sponsorship">sponsorship</a></li>
-          <li><a class="tag" data-tagname="illicit_tobacco_trade" href="index.html#illicit_tobacco_trade">Illicit tobacco trade</a></li>
-          <li><a class="tag" data-tagname="tobacco_taxation" href="index.html#tobacco_taxation">tobacco taxation</a></li>
-          <li><a class="tag" data-tagname="tobacco_market" href="index.html#tobacco_market">tobacco market</a></li>
-          <li><a class="tag" data-tagname="smuggling" href="index.html#smuggling">smuggling</a></li>
-          <li><a class="tag" data-tagname="counterfeiting" href="index.html#counterfeiting">counterfeiting</a></li>
-          <li><a class="tag" data-tagname="tobacco_prices" href="index.html#tobacco_prices">tobacco prices</a></li>
-          <li><a class="tag" data-tagname="health_intervention" href="index.html#health_intervention">health intervention</a></li>
-          <li><a class="tag" data-tagname="revenue" href="index.html#revenue">revenue</a></li>
-          <li><a class="tag" data-tagname="tobacco_consumption" href="index.html#tobacco_consumption">tobacco consumption</a></li>
-          <li><a class="tag" data-tagname="economy" href="index.html#economy">economy</a></li>
-          <li><a class="tag" data-tagname="public_health" href="index.html#public_health">public health</a></li>
-          <li><a class="tag" data-tagname="trade_law" href="index.html#trade_law">Trade law</a></li>
-          <li><a class="tag" data-tagname="trade_agreements" href="index.html#trade_agreements">trade agreements</a></li>
-          <li><a class="tag" data-tagname="who_fctc" href="index.html#who_fctc">WHO FCTC</a></li>
-          <li><a class="tag" data-tagname="wto" href="index.html#wto">WTO</a></li>
-          <li><a class="tag" data-tagname="case_law" href="index.html#case_law">case law</a></li>
-          <li><a class="tag" data-tagname="investment_law" href="index.html#investment_law">Investment law</a></li>
-          <li><a class="tag" data-tagname="sovereign_right_of_states" href="index.html#sovereign_right_of_states">sovereign right of states</a></li>
-          <li><a class="tag" data-tagname="commercial_rights" href="index.html#commercial_rights">commercial rights</a></li>
-          <li><a class="tag" data-tagname="intellectual_property" href="index.html#intellectual_property">intellectual property</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#second-hand_smoke">Second-hand smoke</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#exposure">Exposure</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#tobacco_taxation">tobacco taxation</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#public_health">public health</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#wto">WTO</a></li>
       </ul>
     </div>
 

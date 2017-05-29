@@ -34,13 +34,36 @@
 				<a href="index.html"><h1>Tobacco Control Playbook</h1></a>
 
 				<div class="controls">
-					<span>Share</span>
+					<span onclick="toggleMenu()">Share</span>
+						<div id="sharingMenu" class="hidden">
+							<div class="menu-sharewrap">
+								<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
+								<span class="icon-twitter"></span>
+								</span>
+
+								<span onClick="share('fb');" class="panel" style="background-color:#2E4586;">
+								<span class="icon-facebook"></span>
+								</span>
+
+								<span onClick="share('gp'); "class="panel" style="background-color:#D92E20;">
+								<span class="icon-google-plus"></span>
+								</span>
+
+								<span onClick="share('li');" class="panel" style="background-color:#0064A7;">
+								<span class="icon-linkedin2"></span>
+								</span>
+							</div>
+						</div>
+
 					<span class="pipe">|</span>
 					<span><a class="normal" href="&#x2F;ru&#x2F;007-regulatory-space.html">Русский</a></span>
 				</div>
 
 		</header>
 	</div>
+
+
+
 <!-- end pagetop --><!-- begin article -->
 	<div class="page-wrap">
 		
@@ -48,7 +71,7 @@
 			<div class="list">
 				<div class="item nopad itemlarge">
 					
-					<div class="imgw" style="background-image: url(../lib/dummy.jpg)"></div>
+					<div class="imgw" style="background-image: url(&#x2F;unsplash.com&#x2F;5Kt4DKFUiQk.jpg)"></div>
 					
 					<div class="infow">
 
@@ -206,7 +229,7 @@ Domestic tobacco control measures implemented by members have been challenged un
 							</div>
 
 							<div id="history" class="no-print">
-								Modified on May 25th, 2017. See <a target="_blank" href="https://github.com/tobaccoplaybook/content/commit/dee89fd4223fa42694516408ab409e453075971a#diff-stat">History</a> and <a target="_blank" href="https://github.com/tobaccoplaybook/content/commits/master/en/arguments/007.md">Revisions</a>
+								Modified on May 29th, 2017. See <a target="_blank" href="https://github.com/tobaccoplaybook/content/commit/dee89fd4223fa42694516408ab409e453075971a#diff-stat">History</a> and <a target="_blank" href="https://github.com/tobaccoplaybook/content/commits/master/en/arguments/007.md">Revisions</a>
 							</div>
 						<!-- End history -->
 					</div>
@@ -221,8 +244,8 @@ Domestic tobacco control measures implemented by members have been challenged un
 		document.getElementById("footnotes").classList.toggle("show");
 
 		document.getElementById("toggleRefsBtn").innerText = document.getElementById("footnotes").classList.contains("show")
-			? "Hide refs"
-			: "Show refs";
+			? "Hide References"
+			: "Show References";
 		
 	}
 	window.onhashchange = function(e){
@@ -230,12 +253,14 @@ Domestic tobacco control measures implemented by members have been challenged un
 		if( document.location.hash.indexOf("fn") === 1 ){
 			document.getElementById("footnotes").classList.add("show");
 			document.getElementById("toggleRefsBtn").innerText = document.getElementById("footnotes").classList.contains("show")
-			? "Hide refs"
-			: "Show refs";
+			? "Hide References"
+			: "Show References";
 			document.location = e.newURL;
 
 		}
 	}
+
+	document.getElementById("toggleRefsBtn").innerText = "Show References";
 </script>
 
 
@@ -258,9 +283,14 @@ Domestic tobacco control measures implemented by members have been challenged un
 
 					<table class="otherargs">
 						<tr>
-							<td><img src="../lib/dummy.jpg" /></td>
-							<td><p>Large pictorial pack warnings and plain packaging work extra word</p></td>
+							<td><a href="006-taxation.html"><img src="&#x2F;unsplash.com&#x2F;aAQwxN-EOUI.jpg" /></a></td>
+							<td><a href="006-taxation.html"><p>Tobacco taxation is one of the most cost-effective health interventions, as government revenues increase while smoking rates fall.</p></a></td>
 						</tr>
+						<tr>
+							<td><a href="008-commercial-rights.html"><img src="&#x2F;unsplash.com&#x2F;NehgTfCRJqg.jpg" /></a></td>
+							<td><a href="008-commercial-rights.html"><p>Both international trade law and investment law recognize the sovereign right of states to regulate in the interests of public health.</p></a></td>
+						</tr>
+						<!--
 						<tr>
 							<td><img src="../lib/dummy.jpg" />
 							<td><p>Smokefree legislation does not harm the hospitality industry</p></td>
@@ -270,6 +300,7 @@ Domestic tobacco control measures implemented by members have been challenged un
 							<td><img src="../lib/dummy.jpg" />
 							<td><p>Smokefree legislation does not harm the hospitality industry</p></td>
 						</tr>
+						-->
 					</table>
 				</div>
 
@@ -294,9 +325,14 @@ Domestic tobacco control measures implemented by members have been challenged un
   <div class="page">
     
     <div id="footertopics" class="col2">
-      <h3>Topics </h3>
+      <h3>Topics</h3>
 
       <ul class="tags" style="text-align: left;">
+          <li><a class="tag" data-tagname="" href="index.html#second-hand_smoke">Second-hand smoke</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#exposure">Exposure</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#tobacco_taxation">tobacco taxation</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#public_health">public health</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#wto">WTO</a></li>
       </ul>
     </div>
 

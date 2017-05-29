@@ -31,47 +31,65 @@
 	<div class="top">
 		<header class="page">
 			
-				<a href="index.html"><h1>Tobacco Control Playbook</h1></a>
+				<a href="index.html"><h1>Сборник аргументов для борьбы с табаком</h1></a>
 
 				<div class="controls">
-					<span>Поделиться</span>
+					<span onclick="toggleMenu()">Поделиться</span>
+						<div id="sharingMenu" class="hidden">
+							<div class="menu-sharewrap">
+								<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
+								<span class="icon-twitter"></span>
+								</span>
+
+								<span onClick="share('fb');" class="panel" style="background-color:#2E4586;">
+								<span class="icon-facebook"></span>
+								</span>
+
+								<span onClick="share('gp'); "class="panel" style="background-color:#D92E20;">
+								<span class="icon-google-plus"></span>
+								</span>
+
+								<span onClick="share('li');" class="panel" style="background-color:#0064A7;">
+								<span class="icon-linkedin2"></span>
+								</span>
+							</div>
+						</div>
+
 					<span class="pipe">|</span>
 					<span><a class="normal" href="&#x2F;en&#x2F;index.html">English</a></span>
 				</div>
 
 		</header>
 	</div>
+
+
+
 <!-- end pagetop -->
 
-
-	<div id="banner">
-		<div class="page" style="background-image: url(../lib/banner.png);">
-			
-			<span style="display: inline-block;">
-				<h1>Evidence based arguments for tobacco control</h1>
-				
-				<span style="display: inline-block; width:580px; float: left;">
-					<p style="text-align:left; margin:0; padding:0;">Equipping governments and the public health community with arguments against the tobacco lobby</p>
-				</span>
-
-				<span style="">
-					<a href="introduction.html"><div class="btn large">Read more</div></a>
-				</span>
-			</span>
-
+	<div id="banner" class="lang_ru">
+		<div class="page">
+			<table>
+				<tr>
+					<td colspan="2"><h1>Научно-обоснованные аргументы для борьбы против табака</h1></td>
+				</tr>
+				<tr>
+					<td style="padding-right: 40px;"><p>Предоставить правительствам и сообществу общественного здравоохранения аргументы для борьбы против табачного лобби </p></td>
+					<td><a href="introduction.html"><div class="btn large">Читать далее</div></a></td>
+				</tr>
+			</table>
 		</div>
 	</div>
 
 	<div id="filter" style="display: none;">
 		<div class="page">
 			
-			<h3>Filters:</h3>
+			<h3>Фильтры</h3>
 				
 			<ul id="filterlist" class="tags">
 				<!-- <li><a class="tag" onclick="clearFilter('tagname')">raw</a></li> -->
 			</ul>
 				
-			<div class="btn large" style="width:200px;margin: 10px auto;" onclick="clearFilters()">Clear</div>
+			<div class="btn large" style="width:200px;margin: 10px auto;" onclick="clearFilters()">Очистить</div>
 
 		</div>
 	</div>
@@ -83,7 +101,7 @@
 <div class="list">
 
 
-<div class="tag-вторичный_табачный_дым tag-влияние_на_здоровье_человека tag-законодательство_о_запрете_курения tag-воздействие tag-закрытые_общественные_места tag-осуществление argument">
+<div class="tag-вторичный_табачный_дым tag-влияние_на_здоровье_человека tag-законодательство_о_запрете_курения tag-воздействие tag-закрытые_общественные_места tag-осуществление argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="вторичный_табачный_дым" /></a>
@@ -126,7 +144,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-табачные_изделия tag-упаковка tag-табачная_промышленность tag-предупреждения_о_вреде_для_здоровья tag-простая_упаковка argument">
+<div class="tag-табачные_изделия tag-упаковка tag-табачная_промышленность tag-предупреждения_о_вреде_для_здоровья tag-простая_упаковка argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="табачные_изделия" /></a>
@@ -165,7 +183,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-политика_по_обеспечению_бездымной_среды tag-места_общественного_пользования tag-гостинично-ресторанный_бизнес tag-вторичный_табачный_дым tag-воздействие argument">
+<div class="tag-политика_по_обеспечению_бездымной_среды tag-места_общественного_пользования tag-гостинично-ресторанный_бизнес tag-вторичный_табачный_дым tag-воздействие argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="политика_по_обеспечению_бездымной_среды" /></a>
@@ -204,7 +222,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-табачный_маркетинг tag-дети tag-молодые_люди tag-реклама_табачных_изделий tag-стимулирование_продажи tag-спонсорство argument">
+<div class="tag-табачный_маркетинг tag-дети tag-молодые_люди tag-реклама_табачных_изделий tag-стимулирование_продажи tag-спонсорство argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="табачный_маркетинг" /></a>
@@ -247,7 +265,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-незаконная_торговля_табачными_изделиями tag-налогообложение_табачных_изделий tag-рынок_табачных_изделий tag-контрабанда tag-производство_контрафактной_продукции tag-цены_на_табак argument">
+<div class="tag-незаконная_торговля_табачными_изделиями tag-налогообложение_табачных_изделий tag-рынок_табачных_изделий tag-контрабанда tag-производство_контрафактной_продукции tag-цены_на_табак argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="незаконная_торговля_табачными_изделиями" /></a>
@@ -290,7 +308,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-налогообложение_табачных_изделий tag-вмешательства_по_укреплению_здоровья tag-поступления tag-потребление_табачной_продукции tag-экономика tag-общественное_здравоохранение argument">
+<div class="tag-налогообложение_табачных_изделий tag-вмешательства_по_укреплению_здоровья tag-поступления tag-потребление_табачной_продукции tag-экономика tag-общественное_здравоохранение argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="налогообложение_табачных_изделий" /></a>
@@ -333,7 +351,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-торговое_право tag-торговые_соглашения tag-ркбт_воз tag-вто tag-общественное_здравоохранение tag-судебная_практика argument">
+<div class="tag-торговое_право tag-торговые_соглашения tag-ркбт_воз tag-вто tag-общественное_здравоохранение tag-судебная_практика argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="торговое_право" /></a>
@@ -376,7 +394,7 @@
 		</div>
 	</div>
 </div>
-<div class="tag-инвестиционное_право tag-суверенное_право_государств tag-коммерческие_права tag-интеллектуальная_собственность tag-вто argument">
+<div class="tag-инвестиционное_право tag-суверенное_право_государств tag-коммерческие_права tag-интеллектуальная_собственность tag-вто argument hidden">
 
 	<!-- fragment anchors -->
 	<a name="инвестиционное_право" /></a>
@@ -421,7 +439,7 @@
 		<a href="//base.us13.list-manage.com/subscribe/?u=57aa79f1090691d1e473f3ac5&amp;id=fc24ece223" target="_blank"><div class="btn">Подписаться</div></a>
 	</div>
 
-	<div class="btn loadmore filter_hide">Load more</div>
+	<div class="btn loadmore filter_hide" onclick="limitList(true);">Загрузить еще</div>
 
 	<div class="spacer filter_hide">&nbsp;</div>
 
@@ -432,7 +450,7 @@
 <div class="sidebar">
 	<div class="item">
 
-		<h3>Topics</h3>
+		<h3>Темы</h3>
 
 		<ul class="tags">
 				<!-- <li><a class="tag" onclick="addFilter('вторичный_табачный_дым');" data-tagname="вторичный_табачный_дым" xxhref="index.html#вторичный_табачный_дым">Вторичный табачный дым</a></li> -->
@@ -562,14 +580,14 @@
 	<div class="item">
 		<h3>О проекте</h3>
 
-		<p>The Tobacco Control Playbook is a living collection of evidence-based arguments and responses,...</p>
+		<p>Сборник аргументов - это живая коллекция научно-обоснованных аргументов и ответов,...</p>
 
 		<a href="about.html"><div class="btn large">Читать далее</div></a>
 
 	</div>
 
 	<div class="item">
-		<h3>Newsletter</h3>
+		<h3>Информационный бюллетень</h3>
 		<a href="//base.us13.list-manage.com/subscribe/?u=57aa79f1090691d1e473f3ac5&amp;id=fc24ece223" target="_blank"><div class="btn">Подписаться</div></a>
 	</div>
 </div>
@@ -586,49 +604,14 @@
   <div class="page">
     
     <div id="footertopics" class="col2">
-      <h3>Topics </h3>
+      <h3>Темы</h3>
 
       <ul class="tags" style="text-align: left;">
-          <li><a class="tag" data-tagname="вторичный_табачный_дым" href="index.html#вторичный_табачный_дым">Вторичный табачный дым</a></li>
-          <li><a class="tag" data-tagname="влияние_на_здоровье_человека" href="index.html#влияние_на_здоровье_человека">Влияние на здоровье человека</a></li>
-          <li><a class="tag" data-tagname="законодательство_о_запрете_курения" href="index.html#законодательство_о_запрете_курения">Законодательство о запрете курения</a></li>
-          <li><a class="tag" data-tagname="воздействие" href="index.html#воздействие">Воздействие</a></li>
-          <li><a class="tag" data-tagname="закрытые_общественные_места" href="index.html#закрытые_общественные_места">Закрытые общественные места</a></li>
-          <li><a class="tag" data-tagname="осуществление" href="index.html#осуществление">Осуществление</a></li>
-          <li><a class="tag" data-tagname="табачные_изделия" href="index.html#табачные_изделия">Табачные изделия</a></li>
-          <li><a class="tag" data-tagname="упаковка" href="index.html#упаковка">Упаковка</a></li>
-          <li><a class="tag" data-tagname="табачная_промышленность" href="index.html#табачная_промышленность">Табачная промышленность</a></li>
-          <li><a class="tag" data-tagname="предупреждения_о_вреде_для_здоровья" href="index.html#предупреждения_о_вреде_для_здоровья">Предупреждения о вреде для здоровья</a></li>
-          <li><a class="tag" data-tagname="простая_упаковка" href="index.html#простая_упаковка">Простая упаковка</a></li>
-          <li><a class="tag" data-tagname="политика_по_обеспечению_бездымной_среды" href="index.html#политика_по_обеспечению_бездымной_среды">Политика по обеспечению бездымной среды</a></li>
-          <li><a class="tag" data-tagname="места_общественного_пользования" href="index.html#места_общественного_пользования">Места общественного пользования</a></li>
-          <li><a class="tag" data-tagname="гостинично-ресторанный_бизнес" href="index.html#гостинично-ресторанный_бизнес">Гостинично-ресторанный бизнес</a></li>
-          <li><a class="tag" data-tagname="табачный_маркетинг" href="index.html#табачный_маркетинг">Табачный маркетинг</a></li>
-          <li><a class="tag" data-tagname="дети" href="index.html#дети">дети</a></li>
-          <li><a class="tag" data-tagname="молодые_люди" href="index.html#молодые_люди">молодые люди</a></li>
-          <li><a class="tag" data-tagname="реклама_табачных_изделий" href="index.html#реклама_табачных_изделий">реклама табачных изделий</a></li>
-          <li><a class="tag" data-tagname="стимулирование_продажи" href="index.html#стимулирование_продажи">стимулирование продажи</a></li>
-          <li><a class="tag" data-tagname="спонсорство" href="index.html#спонсорство">спонсорство</a></li>
-          <li><a class="tag" data-tagname="незаконная_торговля_табачными_изделиями" href="index.html#незаконная_торговля_табачными_изделиями">Незаконная торговля табачными изделиями</a></li>
-          <li><a class="tag" data-tagname="налогообложение_табачных_изделий" href="index.html#налогообложение_табачных_изделий">налогообложение табачных изделий</a></li>
-          <li><a class="tag" data-tagname="рынок_табачных_изделий" href="index.html#рынок_табачных_изделий">рынок табачных изделий</a></li>
-          <li><a class="tag" data-tagname="контрабанда" href="index.html#контрабанда">контрабанда</a></li>
-          <li><a class="tag" data-tagname="производство_контрафактной_продукции" href="index.html#производство_контрафактной_продукции">производство контрафактной продукции</a></li>
-          <li><a class="tag" data-tagname="цены_на_табак" href="index.html#цены_на_табак">цены на табак</a></li>
-          <li><a class="tag" data-tagname="вмешательства_по_укреплению_здоровья" href="index.html#вмешательства_по_укреплению_здоровья">вмешательства по укреплению здоровья</a></li>
-          <li><a class="tag" data-tagname="поступления" href="index.html#поступления">поступления</a></li>
-          <li><a class="tag" data-tagname="потребление_табачной_продукции" href="index.html#потребление_табачной_продукции">потребление табачной продукции</a></li>
-          <li><a class="tag" data-tagname="экономика" href="index.html#экономика">экономика</a></li>
-          <li><a class="tag" data-tagname="общественное_здравоохранение" href="index.html#общественное_здравоохранение">общественное здравоохранение</a></li>
-          <li><a class="tag" data-tagname="торговое_право" href="index.html#торговое_право">торговое право</a></li>
-          <li><a class="tag" data-tagname="торговые_соглашения" href="index.html#торговые_соглашения">торговые соглашения</a></li>
-          <li><a class="tag" data-tagname="ркбт_воз" href="index.html#ркбт_воз">РКБТ ВОЗ</a></li>
-          <li><a class="tag" data-tagname="вто" href="index.html#вто">ВТО</a></li>
-          <li><a class="tag" data-tagname="судебная_практика" href="index.html#судебная_практика">судебная практика</a></li>
-          <li><a class="tag" data-tagname="инвестиционное_право" href="index.html#инвестиционное_право">инвестиционное право</a></li>
-          <li><a class="tag" data-tagname="суверенное_право_государств" href="index.html#суверенное_право_государств">суверенное право государств</a></li>
-          <li><a class="tag" data-tagname="коммерческие_права" href="index.html#коммерческие_права">коммерческие права</a></li>
-          <li><a class="tag" data-tagname="интеллектуальная_собственность" href="index.html#интеллектуальная_собственность">интеллектуальная собственность</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#вторичный_табачный_дым">Вторичный табачный дым</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#воздействие">Воздействие</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#налогообложение_табачных_изделий">налогообложение табачных изделий</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#общественное_здравоохранение">общественное здравоохранение</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#вто">ВТО</a></li>
       </ul>
     </div>
 
@@ -656,7 +639,7 @@
     </div>
 
     <div class="col1">
-      <h3>Contact</h3>
+      <h3>Контакты</h3>
 
       <a href="https://github.com/tobaccoplaybook/site/issues">
         <div class="btn" style="border: 1px solid #979797;">Сообщить о проблеме</div>

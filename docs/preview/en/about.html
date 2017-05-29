@@ -34,23 +34,48 @@
 				<a href="index.html"><h1>Tobacco Control Playbook</h1></a>
 
 				<div class="controls">
-					<span>Share</span>
+					<span onclick="toggleMenu()">Share</span>
+						<div id="sharingMenu" class="hidden">
+							<div class="menu-sharewrap">
+								<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
+								<span class="icon-twitter"></span>
+								</span>
+
+								<span onClick="share('fb');" class="panel" style="background-color:#2E4586;">
+								<span class="icon-facebook"></span>
+								</span>
+
+								<span onClick="share('gp'); "class="panel" style="background-color:#D92E20;">
+								<span class="icon-google-plus"></span>
+								</span>
+
+								<span onClick="share('li');" class="panel" style="background-color:#0064A7;">
+								<span class="icon-linkedin2"></span>
+								</span>
+							</div>
+						</div>
+
 					<span class="pipe">|</span>
 					<span><a class="normal" href="&#x2F;ru&#x2F;about.html">Русский</a></span>
 				</div>
 
 		</header>
 	</div>
+
+
+
 <!-- end pagetop --><!-- begin template pages -->
 <div class="page-wrap">
 		
 	<div class="page">
-		<div class="list">
-			<div class="item nopad">
-			
-			<div class="infow">
+		<div class="list wide">
+			<div class="item itemlarge nopad">
 
-	<h3>Philosophy</h3>
+			<div class="imgw" style="background-image: url(&#x2F;unsplash.com&#x2F;le60j2br1BI.jpg)"></div>
+			
+				<div class="infow">
+
+					<h3>Philosophy</h3>
 <p>Tobacco control is difficult and complex and obstructed by the tactics of the tobacco industry and its allies to oppose effective tobacco control measures. This playbook of arguments is developed by the WHO Regional Office for Europe to illustrate how tobacco industry players act and how governments and the public health community can respond to their arguments.</p>
 <h3>Copyright</h3>
 <p>© World Health Organization 2016
@@ -65,10 +90,10 @@ WHO does not warrant that the information contained in the Web site is complete 
 <p>Under contract, we use a third-party online partner that collects information about your visit to the Tobacco Control Playbook web site. To do this, we use web cookies. Although the company logs the information coming from our site on our behalf, we control how it may be used. The type of information we collect includes: the Internet protocol (IP) address from which you access the Internet, the date and time, the Internet address of the web site from which you linked directly to our site, the name of the file or the words that you searched, and the browser used to access our site. We use this information to measure the number of visitors to the various sections of our site and system performance, and to identify problem areas. It helps us learn about the geographical distribution of our visitors and the technology they use to access our site. We also use this information to help us expand the coverage of the site and to make it more useful. This information is never connected with personal information.</p>
 
 
-</div>
-</div>
-</div>
-</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- end template pages --> 
 <!-- footer -->
@@ -77,9 +102,14 @@ WHO does not warrant that the information contained in the Web site is complete 
   <div class="page">
     
     <div id="footertopics" class="col2">
-      <h3>Topics </h3>
+      <h3>Topics</h3>
 
       <ul class="tags" style="text-align: left;">
+          <li><a class="tag" data-tagname="" href="index.html#second-hand_smoke">Second-hand smoke</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#exposure">Exposure</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#tobacco_taxation">tobacco taxation</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#public_health">public health</a></li>
+          <li><a class="tag" data-tagname="" href="index.html#wto">WTO</a></li>
       </ul>
     </div>
 

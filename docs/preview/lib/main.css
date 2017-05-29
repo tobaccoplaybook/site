@@ -2,6 +2,7 @@
     /* border: 1px solid #f00; */
     box-sizing: border-box;
     font-family: 'PT Sans', sans-serif;
+    word-break: break-word;
 }
 
 a:link, a:visited {
@@ -60,36 +61,59 @@ header span.pipe {
     margin-right: 5px;
 }
 
+
+
+/*  banner */
 #banner {
+    
+    /*background-image: url(../lib/banner.png);*/
     background-color: #000;
-    height: 142px;
+    min-height: 142px;
     color: #fff;
     text-align: center;
 }
-#banner h1 {
-    font-size: 36px;
-    font-weight: 500;
-    padding: 21px 0px 14px 0px;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    letter-spacing: 1px;
-    text-shadow: 2px 0px 3px #000000;
+#banner table {
+    background: #000 url(../lib/banner.png) no-repeat scroll center center/cover;
+    display: inline-block;
+    min-height: 142px;
 }
+
 #banner .btn {
     border: 1px solid #fff;
     width: 200px;
     float: right;
     background-color: #000;
 }
+
+#banner h1 {
+    text-align: left;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    padding: 20px 0px 0px 0px;
+    letter-spacing: 1px;
+    text-shadow: 2px 0px 3px #000000;
+    margin:0;
+}
+#banner.lang_ru h1 {
+    font-size: 30px;
+}
 #banner p {
     color: #a3a3a3;
+    text-align: left;
+    background-color: rgba(0,0,0, 0.5);
 }
-
 
 
 
 .page .list {
     width: 620px;
+    float: left;
+    margin-right: 20px;
+}
+
+.page .list.wide{
+    width: 940px;
     float: left;
     margin-right: 20px;
 }
@@ -178,13 +202,20 @@ table.otherargs {
 table.otherargs td {
     vertical-align: top;
     padding-bottom: 30px;
+    /*text-overflow: ellipsis; */ /* FIXME */
+}
+table.otherargs tr td p {
+    display: inline-block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis; /* FIXME */
 }
-table.otherargs td > img {
+table.otherargs td > a > img {
     height: 80px;
     margin-right: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /*border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;*/
 }
 .sidebar > .item > table.otherargs td > p {
     margin:0; padding: 0;
@@ -249,7 +280,10 @@ footer {
 
 
 
-
+.page .list > div.hidden {
+    /*background-color: #f00;*/
+    display: none;
+}
 
 .page .list .item.nopad {
     padding: 0px;
@@ -444,6 +478,27 @@ footer .col2 {
     content: "\ead1";
 }
 
+#sharingMenu {
+    position: absolute;
+    background-color: #212121;
+    text-align: left;
+    top: -8px;
+    left: -99px;
+    padding: 4px;
+    white-space: nowrap;
+    z-index: 900;
+    opacity: 1;
+    transition: all 0.5s;
+}
+#sharingMenu.hidden {
+    /*display: none;*/
+    opacity: 0;
+    z-index: -990;
+}
+
+#sharingMenu > div.menu-sharewrap {
+    text-align: center;
+}
 
 .menu-sharewrap > span {
     color: #fff;
