@@ -226,7 +226,7 @@ window.onload = function() {
 
 	if( window.location.href.substr(-1) == '/' || window.location.href.indexOf("/index.html") > -1){
 		//document.getElementsByClassName("item")[0].classList.add("itemlarge");
-		//console.log('JA');
+		console.log('front onload');
 		markTag();
 		window.onhashchange = markTag;
 		limitList();
