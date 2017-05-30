@@ -501,10 +501,20 @@ footer .col2 {
     ul.tags > li {
         white-space: nowrap;
     }
+
+    table.otherargs {
+        width: 100%;
+    }
+
+    table.otherargs td.image {
+        width: 30vw;
+        background: #000 no-repeat scroll center center/cover;
+        cursor: pointer;
+        height: 21vw;
+    }
+
+
 }
-
-
-
 
 
 
