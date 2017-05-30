@@ -4,7 +4,7 @@
         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 29 May 2017 13:38:15 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 May 2017 11:33:21 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
@@ -102,6 +102,20 @@
             <link>https://tobaccoplaybook.net/ru/008-commercial-rights.html</link>
             <guid isPermaLink="false">34786473f4b05500d073eb91c99140d6</guid>
             <pubDate>Tue, 13 Sep 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Является  ли курение  табака  свободным  и осознанным  выбором?]]></title>
+            <description><![CDATA[Табакокурение вызывает сильное привыкание и в большинстве случаев эта привычка формируется в детстве. Маркетинг, научно-исследовательская деятельность и PR-активность табачной промышленности являются источником дезинформации. Из-за вышеуказанных моментов людям трудно делать свободный и осознанный выбор в отношении табакокурения.]]></description>
+            <link>https://tobaccoplaybook.net/ru/009-free-and-informed-choice.html</link>
+            <guid isPermaLink="false">410522e4f631efa5619be6cbc00a1b02</guid>
+            <pubDate>Thu, 08 Jun 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Полезно ли людям с психическими заболеваниями бросить курить и способны ли они это сделать?]]></title>
+            <description><![CDATA[Отказ от курения способствует улучшению состояния психического здоровья. Люди с нарушениями психического здоровья являются столь же мотивированными и способными бросить курить, как и другие курящие люди. При лечении пациентов с психическими расстройствами вопросам поощрения и поддержки прекращения курения следует уделять первоочередное внимание, так как это помогает улучшить их физическое и психическое здоровье.]]></description>
+            <link>https://tobaccoplaybook.net/ru/010-cessation-for-people-with-mental-ilness.html</link>
+            <guid isPermaLink="false">8e71ad0f85ce581d84cecd98cd6362ca</guid>
+            <pubDate>Thu, 08 Jun 2017 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

@@ -94,6 +94,8 @@ function clearFilters(){
 	document.location = document.location.href.split('#')[0];
 }
 function markTag(){
+	console.log('markTag() ', window.location.href, document.location.hash );
+
 	if( document.location.hash || filters.length ){
 		filters = document.location.hash.replace("#", '').split(",");//replace('#','tag-');
 		//console.log('markTag() filters ', filters);
@@ -161,6 +163,14 @@ function deleteItem(arr, item){
 	return arr;
 }
 
+window.onpopstate = function(event) {
+  console.log("onpopstate location:", document.location, "hash:", document.location.hash, "state:", JSON.stringify(event.state));
+  if( document.location.hash == '' ){
+  	console.log('RESET');
+  	clearFilters();
+  }
+};
+
 window.onload = function() {
 
 	//console.log('onload');
@@ -224,12 +234,14 @@ window.onload = function() {
 	}
 	*/
 
-	if( window.location.href.substr(-1) == '/' || window.location.href.indexOf("/index.html") > -1){
+	if( window.location.hash || window.location.href.substr(-1) == '/' || window.location.href.indexOf("/index.html") > -1){
 		//document.getElementsByClassName("item")[0].classList.add("itemlarge");
 		console.log('front onload');
 		markTag();
 		window.onhashchange = markTag;
 		limitList();
+	}else{
+		console.log('NO CATCH', window.location.href, window.location.hash );
 	}
 
 	//
@@ -249,19 +261,35 @@ window.onload = function() {
 }
 
 
-var limitListCount = 1;
+var limitListCount = 2;
 var limitListIncrement = 2;
 function limitList( scroll ){
 	limitListCount += limitListIncrement;
 	var all = document.getElementsByClassName('argument');
-	console.log('limitListCount', limitListCount);
+	//console.log('limitListCount', limitListCount, all.length);
 
+	if( limitListCount >= all.length ){
+		Array.prototype.forEach.call(document.getElementsByClassName('loadmoreButton'), function(elm, index) {
+			elm.style.display = "none";
+		});		
+	}
 
 	var lastElm = 0;
 	Array.prototype.forEach.call(all, function(elm, index) {
 		if( index < limitListCount ){
-			elm.classList.remove("hidden");
+			//if( elm.classList.contains("hidden") ){
+			if( parseFloat(elm.style.opacity) == 0 ){
+				elm.classList.remove("hidden");
+				//elm.classList.add("show");
+				//elm.style.opacity = 0;
+				setTimeout( () => {
+					elm.style.opacity = 1;
+				}, 1);
+			}
 			lastElm = elm;
+		}else{
+			elm.style.opacity = 0;
+			elm.classList.add("hidden");
 		}
 	});
 

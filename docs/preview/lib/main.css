@@ -1,8 +1,12 @@
 * {
     /* border: 1px solid #f00; */
     box-sizing: border-box;
-    font-family: 'PT Sans', sans-serif;
+    /*font-family: 'PT Sans', sans-serif;*/
     word-break: break-word;
+}
+
+p {
+    font-family: 'PT Sans', sans-serif;
 }
 
 a:link, a:visited {
@@ -43,6 +47,7 @@ header {
 .page {
     width: 940px;
     margin: 0 auto;
+    
 }
 
 header h1 {
@@ -57,6 +62,7 @@ header div.controls {
     position: relative;
     top: -22px;
     font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
 }
 header span.pipe {
     color: rgba(255,255,255,0.5);
@@ -108,6 +114,13 @@ header span.pipe {
     background-color: rgba(0,0,0, 0.5);
 }
 
+#smallbanner {
+    display: none;
+}
+
+#inlineSubscribeButton{
+    display: none;
+}
 
 
 .page .list {
@@ -146,7 +159,7 @@ header span.pipe {
 
 }
 .sidebar > .item p {
-    font-family: 'PT Serif', serif;
+    /*font-family: 'PT Serif', serif;*/
     font-weight: 500;
     font-size: 16px;
     color: #555;
@@ -163,6 +176,7 @@ ul.tags {
     margin: 0;
     display: block;
     line-height: 30px;
+    font-family: 'PT Sans', sans-serif;
 }
 ul.tags:after {
   content: "";
@@ -182,9 +196,11 @@ ul.tags > li {
     padding-left: 6px;
 
     margin-right: 5px;
-    white-space: nowrap;
 
     cursor: pointer;
+}
+ul.tags > li:hover {
+    background-color: #DDD;
 }
 
 ul.tags > li.active {
@@ -270,6 +286,7 @@ footer {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .btn.loadmore {
@@ -284,11 +301,15 @@ footer {
 }
 
 
-
-.page .list > div.hidden {
-    /*background-color: #f00;*/
-    display: none;
+.page .list div.argument {
+    display: block;
+    transition: all 1s;
 }
+.page .list div.argument.hidden {
+    display: none;
+    opacity: 0;
+}
+
 
 .page .list .item.nopad {
     padding: 0px;
@@ -301,6 +322,7 @@ div.item.itemlarge .imgw {
     position: relative;
     background-color: #ccc;
     background-size: cover;
+    background-position: center;
 }
 div.item.itemlarge .infow {
     margin-left: 0px;
@@ -316,6 +338,7 @@ div.item div.date, div.item.itemlarge div.date, div.item.itemlarge div.author {
     font-size: 13px;
     margin-bottom: 10px;
     display: inline-block;
+    font-family: 'PT Sans', sans-serif;
 }
 div.item.itemlarge div.author strong {
     color: #5F5F5F;
@@ -329,6 +352,7 @@ div.item .imgw {
     position: absolute;
     background-color: #ccc;
     background-size: cover;
+    background-position: center;
 }
 div.item .infow {
     margin-left: 200px;
@@ -360,6 +384,14 @@ footer .col2 {
 }
 
 
+
+
+
+
+
+
+
+
 @media only screen and (max-device-width: 960px) , (max-width: 960px) {
 
 
@@ -367,16 +399,61 @@ footer .col2 {
         width: 100%;
         margin: 0;
     }
+
+    header {
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+    }
+
     header h1 {
-        margin-left: 20px;
+        margin-left: 10px;
+        font-size: 16px;
     }
     header div.controls {
-        margin-right: 20px;
+        margin-right: 10px;
+        font-size: 13px;
+        top: -19px;
+    }
+
+    #banner {
+        background-color: #F0F; /* test */
+        min-height: 100px;
+    }
+    #banner div.page table {
+        display: none;
+    }
+    #smallbanner {
+        display: block;
+        background: #000 url(../lib/banner.png) no-repeat scroll center center/cover;
+        min-height: 100px;
+        text-align: center;
+        padding: 20px;
+    }
+    #smallbanner h1 {
+        text-align: center;
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #inlineSubscribeButton {
+        display: block;
     }
 
     .page > .list {
         width: 100%;
         margin: 0;
+    }
+    .page > .list > .item {
+        margin: 0;
+    }
+
+    .page .list.wide {
+        width: 100%;
+        float: left;
+        margin-right: 20px;
     }
 
     .page > .sidebar {
@@ -399,23 +476,30 @@ footer .col2 {
         display: none;
     }
 
-
     div.item.itemlarge .imgw,
     div.item .imgw {
         width: 100%;
-        height: 300pt;
+        height: 50vw;
         position: relative;
         background: #ccc no-repeat scroll center center/cover;
     }
     div.item.itemlarge .imgw {
-        height: 400pt;
         width: 100%;
+        height: 50vw;
     }
     div.item.itemlarge .infow,
     div.item .infow {
         margin-left: 0px;
         padding: 20px;
 
+    }
+
+    div.item.itemlarge .infow h2 {
+        font-size: 26px;
+    }
+
+    ul.tags > li {
+        white-space: nowrap;
     }
 }
 
@@ -533,7 +617,9 @@ footer .col2 {
 
 
 
-
+#toggleRefsBtn {
+    margin-top: 40px;
+}
 
 .infow img {
     width: 100%;
@@ -551,13 +637,35 @@ footer .col2 {
     line-height: 1.625em;
 }
 
-.list blockquote p {
+em {
+    font-style: normal;
+}
+
+section#argument h3 {
+     margin-top: 40px;
+}
+
+section#argument ul {
+    line-height: 30px;
+    margin-bottom: 80px;
+}
+section#argument ul li,
+section#argument ul li p em {
+    line-height: 1.625em;
+    font-size: 16px;
+    color: #000;
+    /*font-style: italic;*/
+    font-family: 'PT Sans', sans-serif;
+}
+.list blockquote p em {
     color: #000;
     line-height: 1.625em;
-    font-size: 17px;
+    font-size: 20px;
     
 }
 .list blockquote strong {
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
     display: block;
     color: #000;
     margin-bottom: 1rem;
@@ -571,9 +679,7 @@ sup {
     font-family: monospace;
 }
 
-em {
-    font-style: normal;
-}
+
 
 pre code {
     word-wrap: normal;
@@ -601,6 +707,7 @@ pre {
     padding:0;
     margin:0;
     color: #555;
+    font-family: 'PT Sans', sans-serif;
 }
 
 
