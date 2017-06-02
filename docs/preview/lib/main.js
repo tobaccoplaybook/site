@@ -68,13 +68,14 @@ function track( payload ){
 var current_tag = '';
 var filterwrap = document.getElementById("filter");
 var filterlist = document.getElementById("filterlist");
+var isFiltered = false;
 var scrolly = 0;
 
 var filters = [];
 function addFilter(tag){
-	console.log('addFilter', tag);
+	//console.log('addFilter', tag);
 	if( filters.indexOf(tag) > -1 ){
-		console.log('addFilter -> clearFilter');
+		//console.log('addFilter -> clearFilter');
 		clearFilter(tag);
 		return;
 	}
@@ -83,7 +84,7 @@ function addFilter(tag){
 	document.location.hash = "#"+ filters.join(",");
 }
 function clearFilter(tag){
-	console.log('clearFilter', tag);
+	//console.log('clearFilter', tag);
 	filters = filters.filter( onlyUnique );
 	filters = deleteItem(filters, tag);
 	document.location.hash = "#"+ filters.join(",");
@@ -94,12 +95,13 @@ function clearFilters(){
 	document.location = document.location.href.split('#')[0];
 }
 function markTag(){
-	console.log('markTag() ', window.location.href, document.location.hash );
+	//console.log('markTag() ', window.location.href, document.location.hash );
 
 	if( document.location.hash || filters.length ){
 		filters = document.location.hash.replace("#", '').split(",");//replace('#','tag-');
 		//console.log('markTag() filters ', filters);
 		filterwrap.style.display = "block";
+		isFiltered = true;
 		document.getElementsByClassName("item")[0].classList.remove("itemlarge");
 		Array.prototype.forEach.call(document.getElementsByClassName("filter_hide"), function(elm) {
 			elm.style.display = "none";
@@ -111,6 +113,7 @@ function markTag(){
 	}else{
 		//console.log('no filters');
 		filterwrap.style.display = "none";
+		isFiltered = false;
 		document.getElementsByClassName("item")[0].classList.add("itemlarge");
 		Array.prototype.forEach.call(document.getElementsByClassName("filter_hide"), function(elm) {
 			elm.style.display = "block";
@@ -150,6 +153,7 @@ function markTag(){
 			elm.classList.remove('active');
 		}
 	});
+
 }
 
 function onlyUnique(value, index, self) { 
@@ -164,9 +168,9 @@ function deleteItem(arr, item){
 }
 
 window.onpopstate = function(event) {
-  console.log("onpopstate location:", document.location, "hash:", document.location.hash, "state:", JSON.stringify(event.state));
+  //console.log("onpopstate location:", document.location, "hash:", document.location.hash, "state:", JSON.stringify(event.state));
   if( document.location.hash == '' ){
-  	console.log('RESET');
+  	//console.log('RESET');
   	clearFilters();
   }
 };
@@ -193,7 +197,8 @@ window.onload = function() {
 		if( addr !== lang ) lang = addr;
 
 		// sanitise
-		if( lang === '' && lang !== 'en' && lang !== 'ru' ){
+		//if( lang === '' && lang !== 'en' && lang !== 'ru' ){
+		if( lang !== 'en' || lang !== 'ru' ){
 			//console.log('#1 using def lang (en), lang was:', lang );
 			lang = 'en'; // default
 		}
@@ -236,12 +241,12 @@ window.onload = function() {
 
 	if( window.location.hash || window.location.href.substr(-1) == '/' || window.location.href.indexOf("/index.html") > -1){
 		//document.getElementsByClassName("item")[0].classList.add("itemlarge");
-		console.log('front onload');
+		//console.log('front onload');
 		markTag();
 		window.onhashchange = markTag;
 		limitList();
 	}else{
-		console.log('NO CATCH', window.location.href, window.location.hash );
+		//console.log('NO CATCH', window.location.href, window.location.hash );
 	}
 
 	//
@@ -262,11 +267,12 @@ window.onload = function() {
 
 
 var limitListCount = 2;
-var limitListIncrement = 2;
+var limitListIncrement = 4;
 function limitList( scroll ){
 	limitListCount += limitListIncrement;
 	var all = document.getElementsByClassName('argument');
-	//console.log('limitListCount', limitListCount, all.length);
+	//console.log('limitListCount', limitListCount, all.length, "isFiltered:", isFiltered);
+	if( isFiltered ) return;
 
 	if( limitListCount >= all.length ){
 		Array.prototype.forEach.call(document.getElementsByClassName('loadmoreButton'), function(elm, index) {
@@ -280,8 +286,6 @@ function limitList( scroll ){
 			//if( elm.classList.contains("hidden") ){
 			if( parseFloat(elm.style.opacity) == 0 ){
 				elm.classList.remove("hidden");
-				//elm.classList.add("show");
-				//elm.style.opacity = 0;
 				setTimeout( () => {
 					elm.style.opacity = 1;
 				}, 1);
