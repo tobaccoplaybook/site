@@ -84,7 +84,7 @@ header span.pipe {
 }
 #banner .page {
     /*background: #000 url(../lib/banner.png) no-repeat scroll center center/cover;*/
-    display: inline-block;
+    /*display: inline-block;*/
     min-height: 142px;
 }
 #banner div.bannerbtn {

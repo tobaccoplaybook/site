@@ -97,8 +97,12 @@ function clearFilters(){
 function markTag(){
 	//console.log('markTag() ', window.location.href, document.location.hash );
 
-	if( document.location.hash || filters.length ){
-		filters = document.location.hash.replace("#", '').split(",");//replace('#','tag-');
+	var hash = decodeURIComponent(document.location.hash);
+	//console.log('dec', hash);//.replace('#', '')) );
+	
+
+	if( hash || filters.length ){
+		filters = hash.replace("#", '').split(",");//replace('#','tag-');
 		//console.log('markTag() filters ', filters);
 		filterwrap.style.display = "block";
 		isFiltered = true;
@@ -135,22 +139,31 @@ function markTag(){
 	var all = document.getElementsByClassName('argument');
 	Array.prototype.forEach.call(all, function(elm, index) {
 		var found = false;
+		console.log('Checking ', elm);
 		filters.map( (f) => {
 			if( elm.classList.contains("tag-"+ f) ){
 				found = true;
-				var active = document.querySelectorAll('a[data-tagname="'+ f + '"]');
-				Array.prototype.forEach.call(active, function(elm, index) {
+				//console.log('Found ', elm);
+				var tagElements = document.querySelectorAll('a[data-tagname="'+ f + '"]');
+				//console.log('tagElements', tagElements);
+				Array.prototype.forEach.call(tagElements, function(elm, index) {
 					elm.parentElement.className = 'active';
+					//elm.classList.remove("hidden");
 					//elm.onclick = clearFilter(f);
 				});
+				
 			}
 		});
 		if( found ){
+			//console.log('Activating ', elm);
 			elm.style.display = 'block';
+			elm.classList.remove("hidden");
 			elm.classList.add('active');
+			elm.style.opacity = 1;
 		}else{
 			elm.style.display = 'none';
 			elm.classList.remove('active');
+			elm.classList.add("hidden");
 		}
 	});
 
