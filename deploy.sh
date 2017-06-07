@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# run this to publish whatever is in the _site directory
-# pattern described at http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html
-
 DATE=$(date +%y%m%d\ %H:%M)
 GREEN="\033[1;32m"
 ENDCOLOR="\033[0m"
@@ -30,6 +27,13 @@ echo "message: ${MESSAGE}"
 # copy everything in build to docs (github serves the site from the /docs directory)
 rm -rf docs/*
 cp -v -R build/* docs/
+
+# untested:
+find ./docs/ -name ".DS_Store" -depth -exec rm {} \;
+
+# requires: npm install html-minifier -g
+html-minifier --input-dir docs --output-dir docs --file-ext html --collapse-whitespace --minify-js --remove-comments --minify-css
+
 
 # commit and push content repo
 cd ../content/
