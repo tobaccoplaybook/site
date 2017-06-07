@@ -1,113 +1,148 @@
 
+	<div id="banner" class="lang_{{language}}">
+		<div class="page">
+			<div id="largebanner">
+				<h1>{{banner_title}}</h1></td>
+					
+				<div class="bannerbtn">
+					<a href="introduction.html"><div class="btn large">{{read_more}}</div></a>
+				</div>
+			</div>
 
-<div class="front content">
+			<div id="smallbanner">
+				<a href="introduction.html"><h1>{{banner_title}}</h1></a>
+			</div>
+		</div>
+	</div>
 
-<div class="teaser">
-	{{{teaser}}}
-</div>
+<!--
+	<div id="banner" class="lang_{{language}}">
+		<div class="page">
+			<table>
+				<tr>
+					<td colspan="2"><h1>{{banner_title}}</h1></td>
+				</tr>
+				<tr>
+					<td style="padding-right: 40px;"><p>{{{banner_body}}}</p></td>
+					<td><a href="introduction.html"><div class="btn large">{{read_more}}</div></a></td>
+				</tr>
+			</table>
 
-<style type="text/css">
-	
-	#cover h1 {
-		color: #fff;
-	    text-shadow: none;
-	    text-align: center;
-	    padding-bottom: 3.5rem;
-	    padding-top: 2rem;
-	    letter-spacing: normal;
-	    line-height: 3rem;
-	    font-size: 3rem;
-	}
-	
-	#cover.coverimage {
-		/* height: 40rem; */
-		/* background-image: url(/lib/front-002.jpg); */
-	}
-	time.datetime {
-		display: none;
-	}
-	
-	table.toc h3 a {
-		color: #000;
-	}
-	table.toc td {
-		vertical-align: top;
-	}
-	table.toc td.idcell {
-		border-right: 1px solid #ddd;
-	}
-	table {
-		border: none;
-	}
+			<div id="smallbanner">
+				<a href="introduction.html"><h1>{{banner_title}}</h1></a>
+			</div>
+		</div>
+	</div>
+-->
 
-	#cover-share {
-	    /* background-color: #09f; */
-		position: relative;
-    	top: 7rem;
-	}
+	<div id="filter" style="display: none;">
+		<div class="page">
+			
+			<h3>{{filters}}:</h3>
 
-	.menutitle {
-		display: none;
-	}
-	
-	.covercontent {
-		padding-top: 18rem;
-	}
-	@media only screen and (max-width: 414px){
-		.covercontent {
-			padding-top: 1rem;
-		}
-		#cover h1 {
-			color: #000;
-		}
-		#cover-share {
-		    /* background-color: #09f; */
-			position: inherit;
-		}
-		.menutitle {
-			display: inline-block;
-		}
-	}
-	
-	
-</style>
+			<div>
+				
+				<ul id="filterlist" class="tags">
+					<!-- <li><a class="tag" onclick="clearFilter('tagname')">raw</a></li> -->
+				</ul>
+				<div id="filterBtnWrap">
+					<div class="btn large" style="width:200px;" onclick="clearFilters()">{{filter_clear}}</div>
+				</div>
+				<div class="clear">&nbsp;</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="page-wrap">
+		
+		<div class="page">
+<!-- begin list -->
+<div class="list">
 
 
 {{#docs}}
-<div class="{{#tags}}tag-{{lcname}} {{/tags}}argument">
+<div class="{{#tags}}tag-{{lcname}} {{/tags}}argument" style="opacity: 1;">
 
-<!-- fragment anchors -->
-{{#tags}}
-<a name="{{lcname}}" /></a>
-{{/tags}}
+	<!-- fragment anchors -->
+	{{#tags}}
+	<a name="{{lcname}}" /></a>
+	{{/tags}}
 
-	<table class="toc">
-		<tr>
-			<td class="idcell">
-				<span class="pubdate">&nbsp;</span>
-				<h3>{{argumentId}}</h3>
-			</td>
-			<td>
-				<span class="pubdate">{{documentDateDisplay}}</span>
-				<h3><a class="title" href="{{{url}}}">{{title}}</a></h3>
-				
-				<!--<p><span class="author">By: {{author}}</span></p>-->
-				
-				<div class="moztags">
-					<ul>
-					{{#tags}}
-						<li><a class="tag" data-tagname="{{lcname}}" href="{{{link}}}">{{name}}</a></li>
-					{{/tags}}
-					</ul>
-				</div>
-			</td>
-		</tr>
-	</table>
+		<div class="item nopad">
+		
+		<a href="{{{url}}}"><div class="imgw" style="background-image: url({{{coverImageHref}}})"></div></a>
+		
+		<div class="infow">
+			<div class="date">{{documentDateDisplay}}
+				{{#isNew}}
+				<span class="newbadge">New!</span>
+				{{/isNew}}
+			</div>
+			
+			<h2><a href="{{{url}}}">{{title}}</a></h2>
+
+			<span class="hsep">&nbsp;</span>
+
+			<ul class="tags">
+			{{#tags}}
+				<li><a class="tag" data-tagname="{{lcname}}" onclick="addFilter('{{lcname}}');">{{raw}}</a></li>
+			{{/tags}}
+			</ul>
+		</div>
+	</div>
 </div>
 {{/docs}}
 
+	<div class="spacer filter_hide loadmoreButton">&nbsp;</div>
+	<div class="btn loadmore filter_hide loadmoreButton" onclick="limitList(true);">{{loadMore}}</div>
+	<div class="spacer filter_hide loadmoreButton">&nbsp;</div>
+
+<!-- 	<div id="inlineSubscribeButton">
+		<div class="item filter_hide" style="text-align: center;">
+			<h3>{{newsletter_title}}</h3>
+			<p>{{newsletter_caption}}</p>
+			<a href="//base.us13.list-manage.com/subscribe/?u=57aa79f1090691d1e473f3ac5&amp;id=fc24ece223" target="_blank"><div class="btn">{{subscribe}}</div></a>
+		</div>
+	</div> -->
+
+
 
 </div>
-<!-- end content --> 
+<!-- end list --> 
+
+<!-- sidebar -->
+<div class="sidebar">
+	<div class="item">
+
+		<h3>{{topics}}</h3>
+
+		<ul class="tags">
+			{{#tags_global}}
+				<li><a class="tag" data-tagname="{{lcname}}" onclick="addFilter('{{lcname}}');">{{raw}}</a></li>
+			{{/tags_global}}
+		</ul>
+
+	</div>
+
+	<div class="item" style="text-align: center;">
+		<h3>{{about}}</h3>
+
+		<p>{{shortdesc}}</p>
+
+		<a href="about.html"><div class="btn large">{{read_more}}</div></a>
+
+	</div>
+
+	<div class="item" style="text-align: center;">
+		<h3>{{newsletter_title}}</h3>
+		<p>{{newsletter_caption}}</p>
+		<a href="{{{subscribeLink}}}" target="_blank"><div class="btn">{{subscribe}}</div></a>
+	</div>
+
+</div>
+<!-- end sidebar -->
+
+		</div>
+	</div>
+</div>
 <!-- end template front -->

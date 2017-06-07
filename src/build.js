@@ -94,7 +94,87 @@ module.exports.run = function(cb){
 		content.locals[language] = localConfig;
 
 		config.package_version = pack.version;
+
+
+		// Tags
+		let global_tags = [];
+		let global_tags_stats = {};
+		let global_tags_found = [];
+
+		content[language].map( (doc) => {
+			if( doc.meta.tags){
+				doc.meta.tags.map( (tag) => {
+				
+					//console.log('TAGLOOP', tag);	
+					
+					if( !global_tags_stats[ tag["lcname"] ] ){
+						global_tags_stats[ tag["lcname"] ] = Object.assign({}, tag, {count:1});
+					}
+					
+					if( global_tags_found.indexOf( tag["lcname"] ) < 0 ){
+						global_tags_found.push( tag["lcname"] );
+						global_tags.push(tag);
+					}else{
+						global_tags_stats[ tag["lcname"] ].count ++;
+					}
+				});
+			}
+		});
+		content.tags_global = content.tags_global || {};
+		content.tags_global[language] = global_tags;
+
+		content.tags_shorlist = content.tags_shorlist || {};
+		content.tags_shorlist[language] = Object.keys(global_tags_stats)
+			.filter( (t) => global_tags_stats[t].count > 1 )
+			.map( (t) => global_tags_stats[t] );
+	
+
+		// Related
+		// Find arguments with similar tags
+		console.time('related');
+		content[language].map( (doc) => {
+			//console.log('finding related docs for doc', doc.meta.argumentId);
+			let myTags = doc.meta.tags;
+			let related = [];
+			let related_found = [];
+			content[language].map( (otherDoc) => {
+				if( otherDoc.meta.argumentId != doc.meta.argumentId ){
+					let otherTags = otherDoc.meta.tags;
+					myTags.forEach( (t) => {
+						otherTags.forEach( (ot) => {
+							if( ot.lcname === t.lcname ){
+								if( related_found.indexOf(otherDoc.meta.argumentId) < 0 ){
+									related_found.push(otherDoc.meta.argumentId);
+								
+									related.push({
+										img: otherDoc.meta.coverImageHref,
+										//short: otherDoc.meta.short,
+										short: otherDoc.meta.title,
+										link: otherDoc.url
+									});
+								}
+							}
+						});
+					});
+				}
+			});
+			//console.log('> related', related);
+			doc.related = related;
+			doc.has_related = related.length > 0;
+			/*
+			doc.related = [
+				{img:"../lib/dummy.jpg", short:"[SHORT] arge pictorial pack warnings"}
+			];
+			*/
+		});
+		console.timeEnd('related');
+
 	});
+	//console.log('content.tags_global', content.tags_global);
+	//console.log('content.tags_shorlist', content.tags_shorlist);
+
+	//console.log('content[language][0]', content['en'][0]);
+
 	
 	/// Build site
 	console.log('');

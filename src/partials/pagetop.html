@@ -1,96 +1,38 @@
 <!-- start pagetop -->
-<div id="cover" class="coverimage">
+<div class="content">
 
-	<div id="menu" class="closed no-print">
-
-		<span class="menutitle"><a href="index.html" class="normal">{{sitename}}</a></span>
-
-		<a href="#" onclick="toggleMenu()">
-			<svg style="float: right; padding: .5rem;" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-			    <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
-			</svg>
-		</a>
-
-		<div class="menuitem">
-			<div class="menu-sharewrap">
-				<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
-					<span class="icon-twitter"></span>
-				</span>
-
-				<span onClick="share('fb');" class="panel" style="background-color:#2E4586;">
-					<span class="icon-facebook"></span>
-				</span>
-
-				<span onClick="share('gp'); "class="panel" style="background-color:#D92E20;">
-					<span class="icon-google-plus"></span>
-				</span>
-
-				<span onClick="share('li');" class="panel" style="background-color:#0064A7;">
-					<span class="icon-linkedin2"></span>
-				</span>
-			</div>
-		</div>
-		
-		<div class="menuitem tall">
-			<a href="//base.us13.list-manage.com/subscribe/?u=57aa79f1090691d1e473f3ac5&amp;id=fc24ece223">{{subscribe}}</a>
-		</div>
-		
-		<div class="menuitem tall">
-			<a href="{{t_url}}">{{t_lang}}</a>
-		</div>
-
-	</div>
-
-	<header>
-
-		<div id="header-elements">
-
-			<span class="menutitle" style="margin-top: 1rem;"><a href="index.html" class="normal">{{sitename}}</a></span>
-
-			<span class="headerRight no-print">
-				
-				<span id="langbtn" class="headerButton langButton">
-					<span id="langbtnlabel" class="wlabel">
-						<a class="normal" href="{{t_url}}">{{t_lang}}</a>
-					</span>
-				</span>
-
-				<span id="sharebtn" class="headerButton shareButton">
-					<span class="wlabel">{{share}}</span>
-				</span>
-
-				<span id="subscribebtn" class="headerButton subscribeButton">
-					<span class="wlabel">{{subscribe}}</span>
-				</span>
-			</span>
-		</div>
-
-		<div id="sharingPanels" class="no-print">
+	<div class="top">
+		<header class="page">
 			
-			<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
-				<span class="icon-twitter"></span>
-			</span>
+				<a href="index.html"><h1>{{tobaccoControlPlaybook}}</h1></a>
 
-			<span onClick="share('fb');" class="panel" style="background-color:#2E4586;">
-				<span class="icon-facebook"></span>
-			</span>
+				<div class="controls">
+					<span onclick="toggleMenu()">{{share}}</span>
+						<div id="sharingMenu" class="hidden">
+							<div class="menu-sharewrap">
+								<span onClick="share('tw');" class="panel" style="background-color:#3AC1F5;">
+								<span class="icon-twitter"></span>
+								</span>
 
-			<span onClick="share('gp'); "class="panel" style="background-color:#D92E20;">
-				<span class="icon-google-plus"></span>
-			</span>
+								<span onClick="share('fb');" class="panel" style="background-color:#2E4586;">
+								<span class="icon-facebook"></span>
+								</span>
 
-			<span onClick="share('li');" class="panel" style="background-color:#0064A7;">
-				<span class="icon-linkedin2"></span>
-			</span>
-		</div>
-	</header>
+								<span onClick="share('gp'); "class="panel" style="background-color:#D92E20;">
+								<span class="icon-google-plus"></span>
+								</span>
 
+								<span onClick="share('li');" class="panel" style="background-color:#0064A7;">
+								<span class="icon-linkedin2"></span>
+								</span>
+							</div>
+						</div>
 
-	<div class="content covercontent">
-		<div id="cover-share">
-			<time datetime="{{documentDateISO}}" class="datetime">{{documentDateDisplay}}</time><br />
-			<h1>{{title}}</h1>
-		</div>
+					<span class="pipe">|</span>
+					<span><a class="normal" href="{{t_url}}">{{t_lang}}</a></span>
+				</div>
+
+		</header>
 	</div>
-</div>
+
 <!-- end pagetop -->

@@ -7,6 +7,8 @@ var mustache= require('mustache');
 var md 		= require('markdown-it')();
 var firstBy = require('thenby');
 
+
+
 module.exports = function(config, content){
 
 	var header  = fs.readFileSync( __dirname + '/../partials/header.html').toString();
@@ -15,7 +17,6 @@ module.exports = function(config, content){
 	var footer  = fs.readFileSync( __dirname + '/../partials/footer.html').toString();
 
 	content.languages.map( (lang) => {
-
 
 		/// the Teaser is a little special
 		var t = md.render( content.front[lang][0].body );
@@ -31,7 +32,7 @@ module.exports = function(config, content){
 			//console.log(' documentDateDisplay', itm.meta.documentDateDisplay);
 		});
 		//if( DEBUG > 0 ) 
-		console.log('1 DOCS', docs );
+		//console.log('1 DOCS', docs );
 
 		//docs = docs.sort(function(a,b){
 		//	return b.argumentId - a.argumentId;
@@ -40,14 +41,14 @@ module.exports = function(config, content){
 			firstBy("publicDate", {direction:-1})
 			.thenBy("argumentId")
 		);
-		console.log('2 DOCS', docs ); // {direction:-1}
+		//console.log('2 DOCS', docs ); // {direction:-1}
 
 
 		var extra = {
 			title: 'Index',
 			documentDateDisplay: '', //date of last update?',
 			t_lang: (lang === 'en') ? 'Русский' : 'English',
-			t_url:  (lang === 'en') ? '/ru/index.html' : '/en/index.html',
+			t_url:  (lang === 'en') ? '../ru/index.html' : '../en/index.html',
 			coverImageHref: config.frontimage,
 			teaser: t,
 			localizedDesc: 		config.feedOptions[lang].description,
@@ -62,8 +63,12 @@ module.exports = function(config, content){
 		//console.log('strings', strings);
 
 
+
 		var props = Object.assign({}, extra, {language:lang}, {docs:docs}, {pages:content.pages[lang]}, config, strings);
 		
+		props.tags_global = content.tags_global[lang];
+		props.tags_shorlist = content.tags_shorlist[lang];
+
 		var result = mustache.render(header, props);
 
 		/// Set title for cover display

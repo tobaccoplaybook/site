@@ -1,0 +1,33 @@
+<!-- begin template article -->
+<article class="content">
+
+	<div class="short">
+		<p>{{short}}</p>
+	</div>
+
+	<div class="moztags clearfix no-print">
+		<ul>
+		{{#tags}}
+			<li><a class="tag" href="{{{link}}}">{{name}}</a></li>
+		{{/tags}}
+		</ul>
+	</div>
+
+	{{{body}}}
+
+
+	<div class="referenceAccessDate">
+		<p>{{references_accessed_on}} {{referenceAccessDate}}.</p>
+	</div>
+
+	<!-- begin history -->
+	<a name="history"></a>
+
+	<div id="history" class="no-print">
+		{{{auditTrailLink}}}
+	</div>
+	<!-- End history -->
+
+</div>
+<!-- end content div -->  
+<!-- end template article --> 

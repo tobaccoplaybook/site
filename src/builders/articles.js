@@ -36,8 +36,8 @@ module.exports = function(config, content){
 			let other_exists = content[other_lang].filter( (doc) => doc.url.split('-')[0] === doc_id);
 			var translated = {
 				t_url: (other_exists.length > 0) 
-					? '/'+ other_lang +'/'+ other_exists[0].url
-					: '/'+ other_lang +'/index.html',
+					? '../'+ other_lang +'/'+ other_exists[0].url
+					: '../'+ other_lang +'/index.html',
 				t_lang: (lang === 'en') ? "Русский" : 'English',
 				t_urllang: other_lang,
 				localizedDesc: 		config.feedOptions[lang].description,
@@ -51,9 +51,16 @@ module.exports = function(config, content){
 			});
 			//console.log('strings', strings);
 
+			//console.log('article isNew', itm.meta.isNew );
 
 			var props = Object.assign({}, itm.meta, translated, prevnext, {pages:content.pages[lang]}, config, strings);
-			if( DEBUG > 0 ) console.log('props', props);
+			
+			props.tags_global = content.tags_global[lang];
+			props.tags_shorlist = content.tags_shorlist[lang];
+			props.related = itm.related;
+			props.has_related = itm.has_related;
+
+			//if( DEBUG > 0 ) console.log('props', props);
 
 			/// begin with the page header
 			var result = mustache.render(header, props);
@@ -71,11 +78,12 @@ module.exports = function(config, content){
 			props.body = body.split("\n").slice(1).join("\n"); // ?
 
 			/// inject prev- next navigation at the top of the article
-			props.body = pn_parsed + props.body;
+			//props.body = pn_parsed + props.body;
 
 			/// render the page template
 			var page = mustache.render(article, props);
 
+			/*
 			/// inject prev- next navigation before the footnotes section
 			var parts = page.split('<hr class="footnotes-sep">');
 			page = parts[0]+
@@ -86,7 +94,11 @@ module.exports = function(config, content){
 
 			/// when printing, we want to break the page before the References
 			page = page.replace('<section class="footnotes">', '<div class="page-break-after"></div><section class="footnotes">');
-			
+			*/
+			page = page.replace('<hr class="footnotes-sep">', '<div id="toggleRefsBtn" class="btn loadmore" onclick="toggleRefs();">Show References</div>');
+			page = page.replace('<section class="footnotes">', '<section class="footnotes" id="footnotes">');
+
+
 			/// add to output
 			result += page;
 			

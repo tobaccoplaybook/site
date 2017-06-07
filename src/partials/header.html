@@ -2,6 +2,7 @@
 <html lang="{{language}}">
 <head>
 	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="system-version" content="{{package_version}}"/>
 
 	<title>{{sitename}}: {{title}}</title>
@@ -17,17 +18,13 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="../lib/main.css">
-	<style type="text/css">
-		/* Prevent coverimage load (as its hidden on handhelds) */
-		.coverimage {
-			background: #fff no-repeat scroll center center/cover;
-			background-image: url({{{coverImageHref}}});
-		}
-	</style>
+	
     <link href="feed.xml" rel="alternate" type="application/rss+xml" title="Updates" />
 
     <link rel="stylesheet" href="../lib/gutenberg.min.css" media="print">
 	<!-- <link rel="stylesheet" href="../lib/themes/oldstyle.css" media="print"> -->
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif" rel="stylesheet">
 </head>
 <body>
 <!-- end header -->

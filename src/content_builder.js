@@ -43,10 +43,12 @@ module.exports.generic = function(filename, language, config){
 		//extra.coverImageHref = 'https://source.unsplash.com/'+ id +'/1600x900';
 		
 		/// load images from local cache
-		var coverImageHref = '/unsplash.com/'+ id +'.jpg';
+		var coverImageHref = '../unsplash.com/'+ id +'.jpg';
+		console.log('using coverImageHref ', coverImageHref, "for id:", id);
 	}
 
-	return Object.assign({}, frontMatter.attributes, meta, {body:frontMatter.body.trim()}, {coverImageHref:coverImageHref} );
+	var body = frontMatter.body.trim().replace(/[\u00A0\u1680​\u180e\u2000-\u2009\u200a​\u200b​\u202f\u205f​\u3000\u2028]/g,'');
+	return Object.assign({}, frontMatter.attributes, meta, {body:body}, {coverImageHref:coverImageHref} );
 }
 
 module.exports.article = function(filename, language, config){
@@ -62,9 +64,14 @@ module.exports.article = function(filename, language, config){
 	var pubdate   = new moment(frontMatter.attributes.publicDate);
 	var doPublish = pubdate.isSameOrBefore(now, 'day');
 
+	var isNew 	  = moment().subtract(2, 'months').isSameOrBefore(pubdate, 'day');
+	//console.log('isNew', isNew, pubdate.format("YYMMDD"), moment().subtract(2, 'months').format("YYMMDD") );
+
 	var shortFilename = filename.split(config.contentSource)[1];
 
 	//console.log(pubdate.format("MMMM Do, YYYY"), 'isSameOrBefore', now.format("MMMM Do, YYYY")  );
+
+	doPublish = true; /// FORCE PUBLISHING
 
 	if( doPublish ){
 		//console.log( chalk.green( pubdate.format("MMMM Do, YYYY")), 'isSameOrBefore', chalk.blue(now.format("MMMM Do, YYYY")), shortFilename);
@@ -88,6 +95,7 @@ module.exports.article = function(filename, language, config){
 		coverImageHref: 'https://source.unsplash.com/random/1600x900',
 		language: language,
 		tags: [],
+		isNew: isNew,
 	}
 	
 	if( frontMatter.attributes.headerImage ){
@@ -98,7 +106,9 @@ module.exports.article = function(filename, language, config){
 		//extra.coverImageHref = 'https://source.unsplash.com/'+ id +'/1600x900';
 		
 		/// load images from local cache
-		extra.coverImageHref = '/unsplash.com/'+ id +'.jpg';
+		extra.coverImageHref = '../unsplash.com/'+ id +'.jpg';
+
+
 	}
 
 	// Display date
@@ -111,10 +121,10 @@ module.exports.article = function(filename, language, config){
 	if( DEBUG > 2 ) console.log('frontMatter.attributes.tags', frontMatter.attributes.tags);
 	if( frontMatter.attributes.tags ){
 		frontMatter.attributes.tags = frontMatter.attributes.tags.replace(/;/g, ',');
-		frontMatter.attributes.tags.split(",").map( function(itm){ 
-			itm = itm.trim().replace(/ /g, "_");
+		frontMatter.attributes.tags.split(",").map( function(tag){ 
+			let itm = tag.trim().replace(/ /g, "_");
 			//extra.tags.push({name:itm.toUpperCase(), lcname:itm.toLowerCase(), link:"tags.html#"+ itm.toLowerCase() });
-			extra.tags.push({name:itm.toUpperCase(), lcname:itm.toLowerCase(), link:"index.html#"+ itm.toLowerCase() });
+			extra.tags.push({name:itm.toUpperCase(), lcname:itm.toLowerCase(), link:"index.html#"+ itm.toLowerCase(), raw:tag.trim() });
 			//console.log('extra.tags', itm);
 		});
 	}
@@ -143,7 +153,9 @@ module.exports.article = function(filename, language, config){
 
 	//var url  = filename.replace('arguments', '').replace('.md', '.html').split("/").pop();
 	var url  = leftPad(meta.argumentId, 3, 0) +'-'+ meta.slug + '.html';
-	var body = frontMatter.body.trim();
+	
+	//var body = frontMatter.body.trim();
+	var body = frontMatter.body.trim().replace(/[\u00A0\u1680​\u180e\u2000-\u2009\u200a​\u200b​\u202f\u205f​\u3000\u2028]/g,'');
 
 	meta.guid = md5(body);
 

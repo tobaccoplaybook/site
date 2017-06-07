@@ -5,6 +5,8 @@ module.exports = {
 
 	"githubRepo": "https://github.com/tobaccoplaybook/site/",
 	"contentRepo": "https://github.com/tobaccoplaybook/content/",
+	"subscribeLink": "https://who.us4.list-manage.com/subscribe/?u=bb832ff4c9f8efad547ffcf69&amp;id=9a54f5fae2",
+	
 	"deepGithubDiffLinks": true,
 
 	"domain": "https://tobaccoplaybook.net/",
@@ -34,6 +36,26 @@ module.exports = {
 	},
 	"strings": {
 		"share": ["Share", "Поделиться"],
+		"about": ["About", "О проекте"],
+		"tobaccoControlPlaybook": ["Tobacco Control Playbook", "Сборник аргументов для борьбы против табака"],
+
+		"banner_title": ["Evidence based arguments for tobacco control", "Научно-обоснованные аргументы для борьбы против табака"],
+		"banner_body": ["Equipping governments and the public health community with arguments against<br />the tobacco lobby", "Предоставить правительствам и сообществу общественного здравоохранения аргументы для борьбы против табачного лобби "],
+		"shortdesc": ["The Tobacco Control Playbook is a living collection of evidence-based arguments and responses,...", "Сборник аргументов - это живая коллекция научно-обоснованных аргументов и ответов,..."],
+		"newsletter": ["Newsletter", "Информационный бюллетень"],
+		"topics": ["Topics", "Темы"],
+		"loadMore": ["Load More", "Загрузить еще"],
+
+		"moreArguments": ["More Arguments", "Показать остальные аргументы"],
+		"hideReferences": ["Hide References", "Скрыть библиографию"],
+		"showReferences": ["Show References", "Показать библиографию"],
+		"filters": ["Filters", "Фильтры"],
+		"filter_clear": ["Clear", "Очистить"],
+		"contact": ["Contact", "Контакты"],
+		"newsletter_title": ["Subscribe to our Newsletter", "Информационный бюллетень"],
+		"newsletter_caption": ["Get the latest arguments in your inbox. Enter your email below.", "Для получения новостных бюллетеней по электронной почте вам необходимо подписаться на нашу рассылку."],
+
+		
 		"subscribe": ["Subscribe", "Подписаться"],
 		"previous_arg": ["Previous Argument", "Предыдущий аргумент"],
 		"next_arg": ["Next Argument", "Следующий аргумент"],
