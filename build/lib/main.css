@@ -9,6 +9,12 @@ p {
     font-family: 'PT Sans', sans-serif;
 }
 
+div.imgw > div.photographer {
+  position: absolute;
+  right: 2px;
+  bottom: 4px;
+}
+
 a:link, a:visited {
     color: inherit;
     text-decoration: none;
@@ -47,7 +53,7 @@ header {
 .page {
     width: 940px;
     margin: 0 auto;
-    
+
 }
 
 header h1 {
@@ -75,7 +81,7 @@ header span.pipe {
 
 /*  banner */
 #banner {
-    
+
     background: #000 url(../lib/banner.png) no-repeat scroll center center/cover;
     /*background-color: #000;*/
     min-height: 142px;
@@ -282,7 +288,7 @@ table.otherargs tr td p {
 .sidebar > .item > table.otherargs td > p {
     margin:0; padding: 0;
     color: #000;
-    
+
 
 }
 
@@ -388,7 +394,7 @@ div.item.itemlarge div.author strong {
 }
 
 
-    
+
 div.item div.date {
     margin-bottom: 10px;
 }
@@ -600,7 +606,7 @@ section#argument ul li p em {
     color: #000;
     line-height: 1.625em;
     /*font-size: 20px;*/
-    
+
 }
 .list blockquote strong {
     font-family: 'PT Serif', serif;
@@ -818,7 +824,7 @@ section.footnotes.show {
     #filter .page > div {
         border: 1px solid #ccc;
         padding: 10px;
-        
+
     }
 
     #filterlist {
@@ -842,5 +848,4 @@ section.footnotes.show {
     #filterBtnWrap div.btn {
         margin: auto;
     }
-}   
-
+}

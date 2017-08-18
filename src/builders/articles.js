@@ -5,16 +5,19 @@ var chalk 	= require('chalk');
 var mustache= require('mustache');
 var md 		= require('markdown-it')({linkify:true}).use(require('markdown-it-footnote'));
 
+var imagedata = require( __dirname + '/../../unsplash.com-cache/cache.json');
+//console.log('imagedata', imagedata);
+
 
 module.exports = function(config, content){
-	
+
 	var header	= fs.readFileSync( __dirname + '/../partials/header.html').toString();
 	var pagetop = fs.readFileSync( __dirname + '/../partials/pagetop.html').toString();
 	var footer 	= fs.readFileSync( __dirname + '/../partials/footer.html').toString();
 	var article = fs.readFileSync( __dirname + '/../partials/article.html').toString();
 	var pn_tpl 	= fs.readFileSync( __dirname + '/../partials/prevnext.html').toString();
-	
-	content.languages.map( (lang) => {	
+
+	content.languages.map( (lang) => {
 		content[lang].map( (itm, idx) => {
 
 			/// build prev-next navigation
@@ -35,7 +38,7 @@ module.exports = function(config, content){
 			let other_lang = (lang === 'en') ? 'ru' : 'en';
 			let other_exists = content[other_lang].filter( (doc) => doc.url.split('-')[0] === doc_id);
 			var translated = {
-				t_url: (other_exists.length > 0) 
+				t_url: (other_exists.length > 0)
 					? '../'+ other_lang +'/'+ other_exists[0].url
 					: '../'+ other_lang +'/index.html',
 				t_lang: (lang === 'en') ? "Русский" : 'English',
@@ -51,10 +54,28 @@ module.exports = function(config, content){
 			});
 			//console.log('strings', strings);
 
+			// photographer
+			//console.log('itm.meta', itm.meta)
+			// 'https://unsplash.com/photos/Di9ffX_Lb5Y' -> 'Di9ffX_Lb5Y'
+			let headerImage = itm.meta.headerImage.split(/\//g).pop();
+			let photoInfo   = imagedata[headerImage];
+			//console.log('photoInfo', photoInfo);
+
+			let photographer = 'Unknown';
+			//if( photoInfo.name ) photographer = `<a href="${photoInfo.link}" target="_blank">${photoInfo.name}</a>`;
+
+			strings['photographer_name'] = photoInfo.name ? photoInfo.name : false;
+			strings['photographer_link'] = photoInfo.name ? photoInfo.link : false;
+
 			//console.log('article isNew', itm.meta.isNew );
 
 			var props = Object.assign({}, itm.meta, translated, prevnext, {pages:content.pages[lang]}, config, strings);
-			
+
+			// extra.coverImageHref
+			console.log('>> coverImageHref', props.coverImageHref);
+			//props.coverImageHref = '/'+ lang +'/unsplash.com/'+ headerImage +'.jpg';
+			props.coverImageHref = '/unsplash/'+ headerImage +'.jpg';
+
 			props.tags_global = content.tags_global[lang];
 			props.tags_shorlist = content.tags_shorlist[lang];
 			props.related = itm.related;
@@ -66,7 +87,7 @@ module.exports = function(config, content){
 			var result = mustache.render(header, props);
 
 			result += mustache.render(pagetop, props);
-			
+
 			/// render the prev- next navigation
 			var pn_parsed = mustache.render(pn_tpl, props);
 
@@ -101,7 +122,7 @@ module.exports = function(config, content){
 
 			/// add to output
 			result += page;
-			
+
 			/// add footer
 			result += mustache.render(footer, props);
 
