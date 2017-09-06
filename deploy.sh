@@ -37,13 +37,13 @@ html-minifier --input-dir docs --output-dir docs --file-ext html --collapse-whit
 
 
 # commit and push content repo
-#cd ../content/
-#git add .
-#git commit -m "${MESSAGE}"
-#git push origin master
+cd ../content/
+git add .
+git commit -m "${MESSAGE}"
+git push origin master
 
 # commit and push master
-#cd ../site/
+cd ../site/
 git add .
 git commit -a -m "${MESSAGE}"
 git push origin master
