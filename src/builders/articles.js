@@ -5,7 +5,8 @@ var chalk 	= require('chalk');
 var mustache= require('mustache');
 var md 		= require('markdown-it')({linkify:true}).use(require('markdown-it-footnote'));
 
-var imagedata = require( __dirname + '/../../unsplash.com-cache/cache.json');
+//var imagedata = require( __dirname + '/../../unsplash.com-cache/cache.json');
+var imagedata = require( __dirname + '/../../build/unsplash.com/cache.json');
 //console.log('imagedata', imagedata);
 
 
@@ -58,7 +59,7 @@ module.exports = function(config, content){
 			//console.log('itm.meta', itm.meta)
 			// 'https://unsplash.com/photos/Di9ffX_Lb5Y' -> 'Di9ffX_Lb5Y'
 			let headerImage = itm.meta.headerImage.split(/\//g).pop();
-			let photoInfo   = imagedata[headerImage];
+			let photoInfo   = imagedata[headerImage] || {};
 			//console.log('photoInfo', photoInfo);
 
 			let photographer = 'Unknown';
@@ -74,7 +75,7 @@ module.exports = function(config, content){
 			// extra.coverImageHref
 			console.log('>> coverImageHref', props.coverImageHref);
 			//props.coverImageHref = '/'+ lang +'/unsplash.com/'+ headerImage +'.jpg';
-			props.coverImageHref = '/unsplash/'+ headerImage +'.jpg';
+			props.coverImageHref = '/unsplash.com/'+ headerImage +'.jpg';
 
 			props.tags_global = content.tags_global[lang];
 			props.tags_shorlist = content.tags_shorlist[lang];

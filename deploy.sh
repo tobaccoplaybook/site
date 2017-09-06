@@ -28,18 +28,19 @@ echo "message: ${MESSAGE}"
 rm -rf docs/*
 cp -v -R build/* docs/
 
-# untested:
-find ./docs/ -name ".DS_Store" -depth -exec rm {} \;
+# remove mac stuff
+find . -name '.DS_Store' -type f -delete
 
 # requires: npm install html-minifier -g
 html-minifier --input-dir docs --output-dir docs --file-ext html --collapse-whitespace --minify-js --remove-comments --minify-css
 
 
+
 # commit and push content repo
-cd ../content/
-git add .
-git commit -m "${MESSAGE}"
-git push origin master
+#cd ../content/
+#git add .
+#git commit -m "${MESSAGE}"
+#git push origin master
 
 # commit and push master
 cd ../site/

@@ -16,11 +16,20 @@ const fs          = require('fs');
 const glob        = require('glob');
 const fm 		      = require('front-matter');
 
-const cachedir    = './unsplash.com-cache';
+//const cachedir    = './unsplash.com-cache';
+const cachedir    = './build/unsplash.com';
 const content     = '../content/*/**/*.md';
 
 const cachefile   = cachedir +'/cache.json';
-const cacheObj    = require(cachefile);
+//const cacheObj    = require(cachefile);
+let cacheObj = {};
+try {
+  let _cacheObj = require(cachefile);
+  console.log('using existing cache.json file');
+  cacheObj = _cacheObj;
+}catch(e){
+  console.log('using empty cache.json file');
+};
 
 const unsplash = new Unsplash({
   applicationId: '23cee39261b31a7b6a736ba583a5aaf6a16082f55b913d182d5b231636f987f4',
