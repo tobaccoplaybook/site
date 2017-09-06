@@ -30,10 +30,10 @@ node_modules/*
 
 npm-debug.log
 
-build/en/*
+build/en/*.*ml
 
-build/ru/*
+build/ru/*.*ml
 
-build/unsplash.com/*
+build/unsplash.com/*.jpg
 
 build/index.html
