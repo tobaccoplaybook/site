@@ -30,7 +30,9 @@ node_modules/*
 
 npm-debug.log
 
+#build/en/*.xml
 build/en/*.html
+#build/ru/*.xml
 build/ru/*.html
 
 build/unsplash.com/*.jpg
