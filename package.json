@@ -1,6 +1,6 @@
 {
   "name": "who-tobaccoplaybook",
-  "version": "0.9.29",
+  "version": "0.9.30",
   "description": "static site generator",
   "main": "index.js",
   "scripts": {
