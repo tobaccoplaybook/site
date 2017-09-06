@@ -27,7 +27,10 @@ Temporary Items
 
 node_modules
 node_modules/*
+
 npm-debug.log
-build/en/*
-build/ru/*
-build/unsplash.com/*
+
+#build/en
+#build/ru
+
+build/unsplash.com

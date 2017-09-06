@@ -43,7 +43,7 @@ html-minifier --input-dir docs --output-dir docs --file-ext html --collapse-whit
 #git push origin master
 
 # commit and push master
-cd ../site/
+#cd ../site/
 git add .
 git commit -a -m "${MESSAGE}"
 git push origin master
