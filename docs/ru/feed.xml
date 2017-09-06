@@ -4,7 +4,7 @@
         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 18 Aug 2017 07:57:49 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Aug 2017 06:54:59 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
@@ -114,8 +114,22 @@
             <title><![CDATA[Полезно ли людям с психическими заболеваниями бросить курить и способны ли они это сделать?]]></title>
             <description><![CDATA[Отказ от курения способствует улучшению состояния психического здоровья. Люди с нарушениями психического здоровья являются столь же мотивированными и способными бросить курить, как и другие курящие люди. При лечении пациентов с психическими расстройствами вопросам поощрения и поддержки прекращения курения следует уделять первоочередное внимание, так как это помогает улучшить их физическое и психическое здоровье.]]></description>
             <link>https://tobaccoplaybook.net/ru/010-cessation-for-people-with-mental-ilness.html</link>
-            <guid isPermaLink="false">e9c89afc71bbb47f54f8ef4beaacd923</guid>
+            <guid isPermaLink="false">3ab8c0662039ecd3f0764c73a308a5a5</guid>
             <pubDate>Thu, 08 Jun 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Поддерживает ли общественность антитабачные меры?]]></title>
+            <description><![CDATA[Население, включая курильщиков, активно поддерживает антитабачные меры. Опросы, проведенные в различных странах, показывают, что население приветствует реализацию таких комплексных антитабачных мер, как запрет курения в закрытых и открытых общественных местах, запрет на демонстрацию табачных изделий в местах продажи, использование простой упаковки табачных изделий и налогообложение табака.]]></description>
+            <link>https://tobaccoplaybook.net/ru/011-public-support.html</link>
+            <guid isPermaLink="false">f8d4e127e985ab572071a4c6251b5e68</guid>
+            <pubDate>Fri, 25 Aug 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Приводит ли принятие антитабачных мер к серьезным негативным последствиям?]]></title>
+            <description><![CDATA[В странах, где были проведены эффективные антитабачные меры, не сбылось ни одно из предсказаний табачной промышленности относительно сильного общественного возмущения, роста незаконной торговли табачными изделиями или негативных экономических последствий, обусловленных такими мерами.]]></description>
+            <link>https://tobaccoplaybook.net/ru/012-does-tobacco-control-measure-result-in-catastrophe.html</link>
+            <guid isPermaLink="false">01f56d8388c907e30540f859fdba2ca3</guid>
+            <pubDate>Fri, 25 Aug 2017 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
