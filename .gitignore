@@ -37,4 +37,4 @@ build/ru/*.html
 
 build/unsplash.com/*.jpg
 
-build/index.html
+#build/index.html
