@@ -4,7 +4,7 @@
         <description><![CDATA[The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.]]></description>
         <link>https://tobaccoplaybook.net/en/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 08 Sep 2017 13:35:29 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Oct 2017 09:38:50 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/en/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
         <language><![CDATA[en]]></language>
@@ -124,7 +124,7 @@
             <title><![CDATA[Is there public support for tobacco control measures?]]></title>
             <description><![CDATA[There is strong public support for tobacco control measures, even from people who smoke. Surveys in various countries show that comprehensive measures such as smoke-free indoor and outdoor areas, bans on point-of-sale tobacco displays, plain packaging and tobacco taxation are welcomed by the public.]]></description>
             <link>https://tobaccoplaybook.net/en/011-public-support.html</link>
-            <guid isPermaLink="false">ae4b28044451f8ca6296f074427226c6</guid>
+            <guid isPermaLink="false">78c6b37f1a47477cbd004bb756c43026</guid>
             <pubDate>Fri, 25 Aug 2017 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -133,6 +133,20 @@
             <link>https://tobaccoplaybook.net/en/012-does-tobacco-control-measure-result-in-catastrophe.html</link>
             <guid isPermaLink="false">78bc580970a27e4b5460ac6bb7fc659a</guid>
             <pubDate>Fri, 25 Aug 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Do tobacco companies take a responsible approach to education and information?]]></title>
+            <description><![CDATA[There is overwhelming evidence that tobacco companies continue to make massive efforts to mislead the public about the harms of smoking, deny and undermine the evidence, and to oppose strong public education programs that would present the evidence effectively.]]></description>
+            <link>https://tobaccoplaybook.net/en/013-education-and-information.html</link>
+            <guid isPermaLink="false">1014bf06903074d300e1727c4781b0ab</guid>
+            <pubDate>Wed, 11 Oct 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Is action on smoking the first step on a slippery slope?]]></title>
+            <description><![CDATA[Tobacco is uniquely harmful, requiring unique approaches. There are some similarities with other preventable health problems and harmful behaviours, but also differences. Action on tobacco recommended by health authorities is evidence-based, proportionate to the magnitude of the problem and will prevent millions of unnecessary deaths.]]></description>
+            <link>https://tobaccoplaybook.net/en/014-slippery-slope.html</link>
+            <guid isPermaLink="false">8820b8109cb27f9193771fc11d12d551</guid>
+            <pubDate>Wed, 11 Oct 2017 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

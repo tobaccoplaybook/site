@@ -76,5 +76,17 @@
 		"name": "Quino Al",
 		"link": "https://unsplash.com/@quinoal",
 		"url": "https://images.unsplash.com/photo-1466007599518-a696875f4757?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&rect=&fit=crop&s=8156c6a2380c995975a5a03bf61eb269"
+	},
+	"Mhvj7OUsXZE": {
+		"image": "Mhvj7OUsXZE",
+		"name": "Teddy Kelley",
+		"link": "https://unsplash.com/@teddykelley",
+		"url": "https://images.unsplash.com/photo-1454994531449-9e64374ff9e6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&rect=&fit=crop&s=bb383ecfa4a4664a79714ff726684110"
+	},
+	"ahjVRHrS07o": {
+		"image": "ahjVRHrS07o",
+		"name": "Layne Lawson",
+		"link": "https://unsplash.com/@laynelawson",
+		"url": "https://images.unsplash.com/photo-1474572522289-b09bbcaa9284?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&rect=&fit=crop&s=d8391503dc0da56fcdf00b149e8b5635"
 	}
 }

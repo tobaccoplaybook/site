@@ -4,7 +4,7 @@
         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 08 Sep 2017 13:35:29 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Oct 2017 09:38:50 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
@@ -121,7 +121,7 @@
             <title><![CDATA[Поддерживает ли общественность антитабачные меры?]]></title>
             <description><![CDATA[Население, включая курильщиков, активно поддерживает антитабачные меры. Опросы, проведенные в различных странах, показывают, что население приветствует реализацию таких комплексных антитабачных мер, как запрет курения в закрытых и открытых общественных местах, запрет на демонстрацию табачных изделий в местах продажи, использование простой упаковки табачных изделий и налогообложение табака.]]></description>
             <link>https://tobaccoplaybook.net/ru/011-public-support.html</link>
-            <guid isPermaLink="false">f8d4e127e985ab572071a4c6251b5e68</guid>
+            <guid isPermaLink="false">fc89a80bde4a1c94ffcb771249b26ecd</guid>
             <pubDate>Fri, 25 Aug 2017 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -130,6 +130,20 @@
             <link>https://tobaccoplaybook.net/ru/012-does-tobacco-control-measure-result-in-catastrophe.html</link>
             <guid isPermaLink="false">01f56d8388c907e30540f859fdba2ca3</guid>
             <pubDate>Fri, 25 Aug 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Можно ли считать, что информационно-образовательная деятельность табачных компаний является эффективной и ответственной?]]></title>
+            <description><![CDATA[Существует  множество неопровержимых фактов, свидетельствующих о массивных усилиях табачных компаний в следующих областях: дезинформирование общественности о вреде курения; отрицание и подрыв доказательств о вреде курения; противодействие научно обоснованным и эффективным программам, направленным на повышение информированности населения о вреде, связанном с потреблением табака.]]></description>
+            <link>https://tobaccoplaybook.net/ru/013-education-and-information.html</link>
+            <guid isPermaLink="false">d021ce3a4e54e9cad8fe3076f82626e5</guid>
+            <pubDate>Wed, 11 Oct 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Является ли антитабачная деятельность первым шагом на пути к регулированию других продуктов, отраслей и видов поведения?]]></title>
+            <description><![CDATA[Вред, который наносит табак, является уникальным по своему характеру и масштабам. Поэтому для устранения или снижения этого вреда необходимы нестандартные подходы. В практике борьбы против табака наблюдаются некоторые сходства с другими видами деятельности по профилактике нарушений здоровья и нездорового поведения, но имеются и существенные различия. Действия, рекомендованные органами здравоохранения, основаны на фактических данных, они пропорциональны масштабу проблемы и их реализация позволит предотвратить миллионы ненужных смертей.]]></description>
+            <link>https://tobaccoplaybook.net/ru/014-slippery-slope.html</link>
+            <guid isPermaLink="false">a552b2b86dd137088b9f4681c9bffb2a</guid>
+            <pubDate>Wed, 11 Oct 2017 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
