@@ -4,7 +4,7 @@
         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 16 Oct 2017 09:38:50 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Nov 2017 10:39:27 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
@@ -144,6 +144,13 @@
             <link>https://tobaccoplaybook.net/ru/014-slippery-slope.html</link>
             <guid isPermaLink="false">a552b2b86dd137088b9f4681c9bffb2a</guid>
             <pubDate>Wed, 11 Oct 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Оказывают ли антитабачные меры негативное воздействие на табачных фермеров?]]></title>
+            <description><![CDATA[Антитабачные меры не причиняют вреда фермерам, выращивающим табак, и не приводят к внезапному падению спроса на табачный лист. Табачные фермеры оказались в трудном положении из-за того, что чрезвычайно монополизированная табачная промышленность предпринимает энергичные усилия для ослабления их рыночных позиций, что приводит к бедности и другим проблемам в регионах, где выращивают табак.]]></description>
+            <link>https://tobaccoplaybook.net/ru/015-tobacco-growers.html</link>
+            <guid isPermaLink="false">9a27af7d15d2edabaa456125293831e8</guid>
+            <pubDate>Thu, 16 Nov 2017 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
