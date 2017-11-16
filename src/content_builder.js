@@ -38,10 +38,10 @@ module.exports.generic = function(filename, language, config){
 	if( frontMatter.attributes.headerImage ){
 		var img = frontMatter.attributes.headerImage;
 		var id  = img.split('/').pop();
-		
+
 		/// load images from unsplash.com
 		//extra.coverImageHref = 'https://source.unsplash.com/'+ id +'/1600x900';
-		
+
 		/// load images from local cache
 		var coverImageHref = '../unsplash.com/'+ id +'.jpg';
 		console.log('using coverImageHref ', coverImageHref, "for id:", id);
@@ -64,7 +64,7 @@ module.exports.article = function(filename, language, config){
 	var pubdate   = new moment(frontMatter.attributes.publicDate);
 	var doPublish = pubdate.isSameOrBefore(now, 'day');
 
-	var isNew 	  = moment().subtract(2, 'months').isSameOrBefore(pubdate, 'day');
+	var isNew 	  = moment().subtract(1, 'months').isSameOrBefore(pubdate, 'day');
 	//console.log('isNew', isNew, pubdate.format("YYMMDD"), moment().subtract(2, 'months').format("YYMMDD") );
 
 	var shortFilename = filename.split(config.contentSource)[1];
@@ -97,14 +97,14 @@ module.exports.article = function(filename, language, config){
 		tags: [],
 		isNew: isNew,
 	}
-	
+
 	if( frontMatter.attributes.headerImage ){
 		var img = frontMatter.attributes.headerImage;
 		var id  = img.split('/').pop();
-		
+
 		/// load images from unsplash.com
 		//extra.coverImageHref = 'https://source.unsplash.com/'+ id +'/1600x900';
-		
+
 		/// load images from local cache
 		extra.coverImageHref = '../unsplash.com/'+ id +'.jpg';
 
@@ -121,14 +121,14 @@ module.exports.article = function(filename, language, config){
 	if( DEBUG > 2 ) console.log('frontMatter.attributes.tags', frontMatter.attributes.tags);
 	if( frontMatter.attributes.tags ){
 		frontMatter.attributes.tags = frontMatter.attributes.tags.replace(/;/g, ',');
-		frontMatter.attributes.tags.split(",").map( function(tag){ 
+		frontMatter.attributes.tags.split(",").map( function(tag){
 			let itm = tag.trim().replace(/ /g, "_");
 			//extra.tags.push({name:itm.toUpperCase(), lcname:itm.toLowerCase(), link:"tags.html#"+ itm.toLowerCase() });
 			extra.tags.push({name:itm.toUpperCase(), lcname:itm.toLowerCase(), link:"index.html#"+ itm.toLowerCase(), raw:tag.trim() });
 			//console.log('extra.tags', itm);
 		});
 	}
-	
+
 
 	// Short
 	if( !frontMatter.attributes.short ){
@@ -145,7 +145,7 @@ module.exports.article = function(filename, language, config){
 	}else{
 		frontMatter.attributes.referenceAccessDate = '';
 	}
-	
+
 	// get commit history
 	var hist = build_audit(filename, language, config);
 
@@ -153,7 +153,7 @@ module.exports.article = function(filename, language, config){
 
 	//var url  = filename.replace('arguments', '').replace('.md', '.html').split("/").pop();
 	var url  = leftPad(meta.argumentId, 3, 0) +'-'+ meta.slug + '.html';
-	
+
 	//var body = frontMatter.body.trim();
 	var body = frontMatter.body.trim().replace(/[\u00A0\u1680​\u180e\u2000-\u2009\u200a​\u200b​\u202f\u205f​\u3000\u2028]/g,'');
 
@@ -169,5 +169,5 @@ module.exports.article = function(filename, language, config){
 		url:  url,
 		text: body
 	}
-	
+
 }
