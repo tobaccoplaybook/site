@@ -4,7 +4,7 @@
         <description><![CDATA[The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.]]></description>
         <link>https://tobaccoplaybook.net/en/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 16 Nov 2017 11:54:58 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 15 Dec 2017 20:33:45 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/en/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
         <language><![CDATA[en]]></language>
@@ -154,6 +154,13 @@
             <link>https://tobaccoplaybook.net/en/015-tobacco-growers.html</link>
             <guid isPermaLink="false">ed216680d7ea2c81544191226e0b3b95</guid>
             <pubDate>Thu, 16 Nov 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Special issue: judicial statements from legal action involving the tobacco industry]]></title>
+            <description><![CDATA[]]></description>
+            <link>https://tobaccoplaybook.net/en/016-judicial-statements.html</link>
+            <guid isPermaLink="false">f70cd3d5fbfb114a367f98bcb734788b</guid>
+            <pubDate>Fri, 15 Dec 2017 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
