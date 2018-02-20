@@ -4,7 +4,7 @@
         <description><![CDATA[The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.]]></description>
         <link>https://tobaccoplaybook.net/en/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 15 Dec 2017 20:33:45 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 20 Feb 2018 20:21:03 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/en/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
         <language><![CDATA[en]]></language>
@@ -159,8 +159,15 @@
             <title><![CDATA[Special issue: judicial statements from legal action involving the tobacco industry]]></title>
             <description><![CDATA[]]></description>
             <link>https://tobaccoplaybook.net/en/016-judicial-statements.html</link>
-            <guid isPermaLink="false">f70cd3d5fbfb114a367f98bcb734788b</guid>
+            <guid isPermaLink="false">2316103da14bd0c5229a82560f82ce83</guid>
             <pubDate>Fri, 15 Dec 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Special issue: judicial statements from legal action involving the tobacco industry (cont.)]]></title>
+            <description><![CDATA[]]></description>
+            <link>https://tobaccoplaybook.net/en/017-judicial-statements-cont.html</link>
+            <guid isPermaLink="false">8b26b47268c5130a6afe320c2f1aa924</guid>
+            <pubDate>Tue, 20 Feb 2018 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

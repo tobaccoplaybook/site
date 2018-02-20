@@ -4,7 +4,7 @@
         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 15 Dec 2017 20:33:45 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 20 Feb 2018 20:21:03 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
@@ -158,6 +158,13 @@
             <link>https://tobaccoplaybook.net/ru/016-judicial- statements.html</link>
             <guid isPermaLink="false">d33f676cf9c44771ecac9ad4179317cf</guid>
             <pubDate>Fri, 15 Dec 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Специальное издание: Судебные иски против табачных компаний – выдержки из судебных решений (продолжение)]]></title>
+            <description><![CDATA[British American Tobacco (BAT) против Государственного секретаря по вопросам здравоохранения]]></description>
+            <link>https://tobaccoplaybook.net/ru/017-judicial-statements-cont.html</link>
+            <guid isPermaLink="false">f3997b896061bbaf27bec23770b9ed4f</guid>
+            <pubDate>Tue, 20 Feb 2018 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
