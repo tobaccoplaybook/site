@@ -4,7 +4,7 @@
         <description><![CDATA[The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.]]></description>
         <link>https://tobaccoplaybook.net/en/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 20 Feb 2018 20:21:03 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Apr 2018 07:56:27 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/en/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
         <language><![CDATA[en]]></language>
@@ -168,6 +168,13 @@
             <link>https://tobaccoplaybook.net/en/017-judicial-statements-cont.html</link>
             <guid isPermaLink="false">8b26b47268c5130a6afe320c2f1aa924</guid>
             <pubDate>Tue, 20 Feb 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Do longer, healthier lives have a positive overall effect on the economy?]]></title>
+            <description><![CDATA[Tobacco-free initiatives help people to live longer and more healthily, which in turn has a positive economic impact. The financial benefits gained from investing in a more productive, healthy society far outweigh the costs, and there is plenty of evidence from various countries to support this.]]></description>
+            <link>https://tobaccoplaybook.net/en/018-positive-effect-on-economy.html</link>
+            <guid isPermaLink="false">6f51ccaa85db2bf427a0023f1874c598</guid>
+            <pubDate>Fri, 06 Apr 2018 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

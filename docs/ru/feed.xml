@@ -4,7 +4,7 @@
         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 20 Feb 2018 20:21:03 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Apr 2018 07:56:27 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
@@ -165,6 +165,13 @@
             <link>https://tobaccoplaybook.net/ru/017-judicial-statements-cont.html</link>
             <guid isPermaLink="false">f3997b896061bbaf27bec23770b9ed4f</guid>
             <pubDate>Tue, 20 Feb 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Оказывает ли повышение продолжительности здоровой жизни людей положительное влияние на экономику страны?]]></title>
+            <description><![CDATA[Инициативы по освобождению от табачной зависимости способствуют увеличению продолжительности здоровой жизни, что в свою очередь оказывает положительное влияние на экономику. Финансовые выгоды от инвестирования в создание более продуктивного и здорового общества значительно перевешивают затраченные средства, о чем убедительно свидетельствует опыт многих стран.]]></description>
+            <link>https://tobaccoplaybook.net/ru/018-positive-effect-on-economy.html</link>
+            <guid isPermaLink="false">1ec85bd700ab4a3aa9cd82a67f1c4825</guid>
+            <pubDate>Fri, 06 Apr 2018 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
