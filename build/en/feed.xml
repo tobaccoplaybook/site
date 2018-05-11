@@ -4,7 +4,7 @@
         <description><![CDATA[The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.]]></description>
         <link>https://tobaccoplaybook.net/en/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 06 Apr 2018 07:56:27 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 May 2018 09:52:37 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/en/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
         <language><![CDATA[en]]></language>
@@ -175,6 +175,13 @@
             <link>https://tobaccoplaybook.net/en/018-positive-effect-on-economy.html</link>
             <guid isPermaLink="false">6f51ccaa85db2bf427a0023f1874c598</guid>
             <pubDate>Fri, 06 Apr 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Smoking is an adult behaviour and smokers are aware of the risks]]></title>
+            <description><![CDATA[Smoking is not an adult behaviour. Most smokers start as children, and around the world millions of children are smokers. Tobacco companies have a long history of targeting children and young people, exposing them to a wide range of advertising and other forms of marketing, and seeking to prevent measures that will reduce smoking in children and young people.]]></description>
+            <link>https://tobaccoplaybook.net/en/019-adult-behaviour.html</link>
+            <guid isPermaLink="false">ca1352e015118cd569785670ac1a27b6</guid>
+            <pubDate>Tue, 08 May 2018 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

@@ -4,7 +4,7 @@
         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 06 Apr 2018 07:56:27 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 May 2018 09:52:37 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
@@ -172,6 +172,13 @@
             <link>https://tobaccoplaybook.net/ru/018-positive-effect-on-economy.html</link>
             <guid isPermaLink="false">1ec85bd700ab4a3aa9cd82a67f1c4825</guid>
             <pubDate>Fri, 06 Apr 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Курение – это модель поведения взрослых и курильщики осведомлены о риске, связанном с курением]]></title>
+            <description><![CDATA[Курение нельзя считать моделью поведения только взрослых. В большинстве случаев люди начинают курить в детстве и на глобальном уровне в число курильщиков входят миллионы детей. Табачные компании уже давно осуществляют деятельность, направленную на то, чтобы сделать детей и молодых людей своими клиентами. В частности, они используют для этой цели самые различные виды рекламы и маркетинга и активно противодействуют принятию мер, направленных на профилактику и снижение курения среди детей и молодежи.]]></description>
+            <link>https://tobaccoplaybook.net/ru/019-adult-behaviour.html</link>
+            <guid isPermaLink="false">9433b9d6e5495551d8c6fe5065ca668b</guid>
+            <pubDate>Tue, 08 May 2018 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
