@@ -4,7 +4,7 @@
         <description><![CDATA[Сборник аргументов демонстрирует аргументы, используемые табачными компаниями, и как именно правительства и защитники общественного здоровья могут ответить на них.]]></description>
         <link>https://tobaccoplaybook.net/ru/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 11 May 2018 09:52:37 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 20 Jun 2018 08:02:16 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/ru/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Европейское региональное бюро ВОЗ]]></copyright>
         <language><![CDATA[ru]]></language>
@@ -179,6 +179,13 @@
             <link>https://tobaccoplaybook.net/ru/019-adult-behaviour.html</link>
             <guid isPermaLink="false">9433b9d6e5495551d8c6fe5065ca668b</guid>
             <pubDate>Tue, 08 May 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Является ли табачная промышленность нормальной и легитимной отраслью экономики?]]></title>
+            <description><![CDATA[Табачную промышленность нельзя считать одной из нормальных отраслей экономики. Напротив, она является самой смертоносной промышленностью в мире, и из-за потребления ее продуктов ежегодно умирает 7 миллионов человек. Суть табачной промышленности не изменилась, так как ее основной целью по-прежнему остается продажа как можно большего количества сигарет и других табачных изделий и она по-прежнему активно противодействует любым мерам, которые могут снизить объем продаж ее продукции.]]></description>
+            <link>https://tobaccoplaybook.net/ru/020-most-lethal-industry.html</link>
+            <guid isPermaLink="false">9c52bb04361f5baf494a21f10380e6b4</guid>
+            <pubDate>Wed, 20 Jun 2018 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

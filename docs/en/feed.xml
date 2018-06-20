@@ -4,7 +4,7 @@
         <description><![CDATA[The tobacco playbook of arguments illustrates how the industry players act to oppose tobacco control measures and how governments and the public health community can respond to their arguments.]]></description>
         <link>https://tobaccoplaybook.net/en/index.html</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 11 May 2018 09:52:37 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 20 Jun 2018 08:02:16 GMT</lastBuildDate>
         <atom:link href="https://tobaccoplaybook.net/en/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[WHO Regional Office for Europe]]></copyright>
         <language><![CDATA[en]]></language>
@@ -182,6 +182,13 @@
             <link>https://tobaccoplaybook.net/en/019-adult-behaviour.html</link>
             <guid isPermaLink="false">ca1352e015118cd569785670ac1a27b6</guid>
             <pubDate>Tue, 08 May 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Is the tobacco industry a normal, legitimate industry?]]></title>
+            <description><![CDATA[Tobacco is not a normal industry: it is the world’s most lethal industry, which products cause 7 million deaths each year around the world. The tobacco industry has not changed despite the evidence for the harm it causes: its primary role remains to sell as many cigarettes as possible, and it still seeks to oppose any action that might reduce sales.]]></description>
+            <link>https://tobaccoplaybook.net/en/020-most-lethal-industry.html</link>
+            <guid isPermaLink="false">274489fe6faea62e20f9a72242983f2c</guid>
+            <pubDate>Wed, 20 Jun 2018 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
